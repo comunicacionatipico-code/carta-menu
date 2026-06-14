@@ -1,0 +1,16 @@
+export const ALERGENOS: Record<string, { label: string; emoji: string }> = {
+  gluten:       { label: 'Gluten',       emoji: '🌾' },
+  lacteos:      { label: 'Lácteos',      emoji: '🥛' },
+  huevo:        { label: 'Huevo',        emoji: '🥚' },
+  pescado:      { label: 'Pescado',      emoji: '🐟' },
+  marisco:      { label: 'Marisco',      emoji: '🦐' },
+  cacahuetes:   { label: 'Cacahuetes',   emoji: '🥜' },
+  sesamo:       { label: 'Sésamo',       emoji: '🌰' },
+  soja:         { label: 'Soja',         emoji: '🫘' },
+  sulfitos:     { label: 'Sulfitos',     emoji: '🍷' },
+  mostaza:      { label: 'Mostaza',      emoji: '🌿' },
+  apio:         { label: 'Apio',         emoji: '🥬' },
+  moluscos:     { label: 'Moluscos',     emoji: '🐙' },
+  altramuces:   { label: 'Altramuces',   emoji: '🫛' },
+  frutos_secos: { label: 'F. Secos',     emoji: '🥜' },
+}

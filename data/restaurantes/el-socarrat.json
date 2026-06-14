@@ -1,0 +1,241 @@
+{
+  "nombre": "El Socarrat",
+  "subtitulo": "Arroces y cocina valenciana · Valencia",
+  "color_primario": "#0d2b1a",
+  "color_acento": "#4caf7d",
+  "logo_url": null,
+  "wifi": "socarrat2024",
+  "idiomas": ["es", "en"],
+  "categorias": [
+    {
+      "id": "para-empezar",
+      "nombre": { "es": "Para empezar", "en": "To Start" },
+      "platos": [
+        {
+          "id": "esgarraet",
+          "nombre": { "es": "Esgarraet valenciano", "en": "Valencian Esgarraet" },
+          "descripcion": { "es": "Bacalao desalado desmigado con pimientos rojos asados, ajo y aceite de oliva. Receta tradicional de la huerta valenciana.", "en": "Shredded desalted cod with roasted red peppers, garlic and olive oil. Traditional Valencian recipe." },
+          "precio": 8.50,
+          "emoji": "🫑",
+          "imagen_url": null,
+          "alergenos": ["pescado"],
+          "disponible": true
+        },
+        {
+          "id": "croquetas-arroz",
+          "nombre": { "es": "Croquetas de arroz negro", "en": "Black Rice Croquettes" },
+          "descripcion": { "es": "Croquetas cremosas de arroz negro con sepia y alioli de ajo asado. 6 unidades.", "en": "Creamy black rice and cuttlefish croquettes with roasted garlic aioli. 6 pieces." },
+          "precio": 9.00,
+          "emoji": "🖤",
+          "imagen_url": null,
+          "alergenos": ["gluten", "lacteos", "huevo", "moluscos"],
+          "disponible": true
+        },
+        {
+          "id": "buñuelos-bacalao",
+          "nombre": { "es": "Buñuelos de bacalao", "en": "Salt Cod Fritters" },
+          "descripcion": { "es": "Buñuelos crujientes de bacalao desalado con perejil y limón. Receta de la abuela. 6 unidades.", "en": "Crispy desalted salt cod fritters with parsley and lemon. Grandma's recipe. 6 pieces." },
+          "precio": 7.50,
+          "emoji": "🐟",
+          "imagen_url": null,
+          "alergenos": ["gluten", "pescado", "huevo"],
+          "disponible": true
+        },
+        {
+          "id": "ensalada-naranja",
+          "nombre": { "es": "Ensalada de naranja y bacalao", "en": "Orange & Cod Salad" },
+          "descripcion": { "es": "Ensalada valenciana de naranja de la huerta, bacalao en salazón, aceitunas negras y cebolla morada.", "en": "Valencian salad with garden orange, salt cod, black olives and red onion." },
+          "precio": 9.50,
+          "emoji": "🍊",
+          "imagen_url": null,
+          "alergenos": ["pescado"],
+          "disponible": true
+        },
+        {
+          "id": "alcachofas-plancha",
+          "nombre": { "es": "Alcachofas a la plancha", "en": "Grilled Artichokes" },
+          "descripcion": { "es": "Alcachofas frescas de la Vega Baja a la plancha con vinagreta de mostaza antigua y hierbas.", "en": "Fresh Vega Baja artichokes on the grill with whole-grain mustard vinaigrette and herbs." },
+          "precio": 8.00,
+          "emoji": "🌿",
+          "imagen_url": null,
+          "alergenos": ["mostaza"],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "arroces",
+      "nombre": { "es": "Arroces", "en": "Rice Dishes" },
+      "platos": [
+        {
+          "id": "paella-valenciana",
+          "nombre": { "es": "Paella valenciana D.O.", "en": "Valencian Paella D.O." },
+          "descripcion": { "es": "Paella tradicional con pollo de corral, conejo, judía verde, garrofó, tomate, azafrán y romero. La auténtica. Mínimo 2 personas.", "en": "Traditional paella with free-range chicken, rabbit, green beans, garrofó beans, tomato, saffron and rosemary. Authentic. Minimum 2 people." },
+          "precio": 16.00,
+          "emoji": "🥘",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "arroz-negro",
+          "nombre": { "es": "Arroz negro con sepia", "en": "Black Rice with Cuttlefish" },
+          "descripcion": { "es": "Arroz meloso negro con tinta de sepia, sepia a la plancha y alioli casero. Sabor intenso de mar. Mínimo 2 personas.", "en": "Creamy black rice with cuttlefish ink, grilled cuttlefish and homemade aioli. Intense sea flavor. Minimum 2 people." },
+          "precio": 17.00,
+          "emoji": "🦑",
+          "imagen_url": null,
+          "alergenos": ["huevo", "moluscos"],
+          "disponible": true
+        },
+        {
+          "id": "arroz-bogavante",
+          "nombre": { "es": "Arroz caldoso de bogavante", "en": "Lobster Rice Stew" },
+          "descripcion": { "es": "Arroz caldoso con bogavante gallego, tomate frito casero, ñora y azafrán. El rey de los arroces. Mínimo 2 personas.", "en": "Brothy rice with Galician lobster, homemade fried tomato, ñora peppers and saffron. Minimum 2 people." },
+          "precio": 28.00,
+          "emoji": "🦞",
+          "imagen_url": null,
+          "alergenos": ["marisco"],
+          "disponible": true
+        },
+        {
+          "id": "arroz-verduras",
+          "nombre": { "es": "Arroz de verduras de temporada", "en": "Seasonal Vegetable Rice" },
+          "descripcion": { "es": "Paella vegana con verduras de la huerta valenciana, garrofó, tomate rallado, pimentón y azafrán. Mínimo 2 personas.", "en": "Vegan paella with Valencian garden vegetables, garrofó beans, grated tomato, paprika and saffron. Minimum 2 people." },
+          "precio": 13.00,
+          "emoji": "🥦",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "fideos-marineros",
+          "nombre": { "es": "Fideuà marinera", "en": "Seafood Fideuà" },
+          "descripcion": { "es": "Fideos finos con gambas, cigalas, mejillones y caldo de pescado de roca. Con alioli de ajo negro. Mínimo 2 personas.", "en": "Fine noodles with prawns, langoustines, mussels and rock fish broth. With black garlic aioli. Minimum 2 people." },
+          "precio": 18.00,
+          "emoji": "🍝",
+          "imagen_url": null,
+          "alergenos": ["gluten", "marisco", "pescado", "moluscos", "huevo"],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "carnes-pescados",
+      "nombre": { "es": "Carnes y pescados", "en": "Meat & Fish" },
+      "platos": [
+        {
+          "id": "lubina-sal",
+          "nombre": { "es": "Lubina a la sal", "en": "Salt-baked Sea Bass" },
+          "descripcion": { "es": "Lubina mediterránea entera cocinada en costra de sal marina con hierbas aromáticas. Se desespina en mesa.", "en": "Whole Mediterranean sea bass baked in sea salt crust with aromatic herbs. Deboned at the table." },
+          "precio": 24.00,
+          "emoji": "🐠",
+          "imagen_url": null,
+          "alergenos": ["pescado"],
+          "disponible": true
+        },
+        {
+          "id": "pato-naranja",
+          "nombre": { "es": "Magret de pato a la naranja", "en": "Duck Magret with Orange" },
+          "descripcion": { "es": "Magret de pato con salsa de naranja valenciana, boniato caramelizado y crujiente de piel.", "en": "Duck magret with Valencian orange sauce, caramelized sweet potato and crispy skin." },
+          "precio": 21.00,
+          "emoji": "🦆",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "pulpo-brasa",
+          "nombre": { "es": "Pulpo a la brasa", "en": "Grilled Octopus" },
+          "descripcion": { "es": "Pulpo de roca a la brasa con puré de coliflor ahumado, aceite de pimentón y sal maldon.", "en": "Rock octopus on the grill with smoked cauliflower purée, paprika oil and maldon salt." },
+          "precio": 19.00,
+          "emoji": "🐙",
+          "imagen_url": null,
+          "alergenos": ["moluscos"],
+          "disponible": false
+        }
+      ]
+    },
+    {
+      "id": "postres",
+      "nombre": { "es": "Postres", "en": "Desserts" },
+      "platos": [
+        {
+          "id": "crema-horchata",
+          "nombre": { "es": "Crema quemada de horchata", "en": "Horchata Crème Brûlée" },
+          "descripcion": { "es": "Crema quemada elaborada con horchata de chufa valenciana D.O. Textura sedosa y sabor único.", "en": "Crème brûlée made with Valencian chufa horchata D.O. Silky texture and unique flavor." },
+          "precio": 6.50,
+          "emoji": "🍮",
+          "imagen_url": null,
+          "alergenos": ["lacteos", "huevo"],
+          "disponible": true
+        },
+        {
+          "id": "tarta-almendra",
+          "nombre": { "es": "Tarta de almendra valenciana", "en": "Valencian Almond Tart" },
+          "descripcion": { "es": "Tarta sin harina de almendra marcona, naranja y azahar. Sin gluten. Con helado de canela.", "en": "Flour-free tart with Marcona almond, orange and orange blossom. Gluten-free. With cinnamon ice cream." },
+          "precio": 7.00,
+          "emoji": "🎂",
+          "imagen_url": null,
+          "alergenos": ["frutos_secos", "lacteos", "huevo"],
+          "disponible": true
+        },
+        {
+          "id": "helado-turron",
+          "nombre": { "es": "Helado artesano de turrón", "en": "Artisan Nougat Ice Cream" },
+          "descripcion": { "es": "Helado elaborado con turrón de Jijona D.O. Almendras tostadas y miel de romero.", "en": "Ice cream made with Jijona D.O. nougat. Toasted almonds and rosemary honey." },
+          "precio": 5.50,
+          "emoji": "🍦",
+          "imagen_url": null,
+          "alergenos": ["frutos_secos", "lacteos"],
+          "disponible": true
+        },
+        {
+          "id": "agua-valencia",
+          "nombre": { "es": "Agua de Valencia (postre líquido)", "en": "Agua de Valencia (Liquid Dessert)" },
+          "descripcion": { "es": "El cóctel valenciano por excelencia: cava, vodka, ginebra y zumo de naranja natural. El broche perfecto.", "en": "The quintessential Valencian cocktail: cava, vodka, gin and fresh orange juice. The perfect ending." },
+          "precio": 8.00,
+          "emoji": "🍹",
+          "imagen_url": null,
+          "alergenos": ["sulfitos"],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "nombre": { "es": "Bebidas", "en": "Drinks" },
+      "platos": [
+        {
+          "id": "vino-tinto",
+          "nombre": { "es": "Vino tinto Bobal D.O. Utiel-Requena", "en": "Bobal Red Wine D.O." },
+          "descripcion": { "es": "Copa de Bobal de la D.O. Utiel-Requena. Uva autóctona valenciana con notas de frutos rojos y especias.", "en": "Glass of Bobal from D.O. Utiel-Requena. Native Valencian grape with red fruit and spice notes." },
+          "precio": 4.50,
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": ["sulfitos"],
+          "disponible": true
+        },
+        {
+          "id": "horchata",
+          "nombre": { "es": "Horchata de chufa D.O.", "en": "Chufa Horchata D.O." },
+          "descripcion": { "es": "Horchata artesana de chufa valenciana D.O. Elaborada cada día. Servida bien fría.", "en": "Artisan chufa horchata D.O. Made daily. Served very cold." },
+          "precio": 3.50,
+          "emoji": "🥛",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "limonada-valenciana",
+          "nombre": { "es": "Limonada de naranja y jengibre", "en": "Orange & Ginger Lemonade" },
+          "descripcion": { "es": "Limonada casera con zumo de naranja de la huerta valenciana, jengibre fresco y menta.", "en": "Homemade lemonade with Valencian garden orange juice, fresh ginger and mint." },
+          "precio": 3.50,
+          "emoji": "🍊",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        }
+      ]
+    }
+  ]
+}

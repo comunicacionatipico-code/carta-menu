@@ -1,0 +1,118 @@
+{
+  "nombre": "Restaurante Demo",
+  "subtitulo": "Cocina mediterránea · Barcelona",
+  "color_primario": "#1a1a2e",
+  "color_acento": "#e94560",
+  "wifi": "demo2024",
+  "idiomas": ["es", "en"],
+  "categorias": [
+    {
+      "id": "entrantes",
+      "nombre": { "es": "Entrantes", "en": "Starters" },
+      "platos": [
+        {
+          "id": "pan-tomate",
+          "nombre": { "es": "Pan con tomate", "en": "Tomato Bread" },
+          "descripcion": { "es": "Pan de cristal tostado con tomate rallado, aceite de oliva virgen extra y sal en escamas.", "en": "Crispy crystal bread with grated tomato, extra virgin olive oil and flaky salt." },
+          "precio": 4.50,
+          "emoji": "🍞",
+          "imagen_url": null,
+          "alergenos": ["gluten"],
+          "disponible": true
+        },
+        {
+          "id": "croquetas",
+          "nombre": { "es": "Croquetas de jamón ibérico", "en": "Iberian Ham Croquettes" },
+          "descripcion": { "es": "Croquetas artesanas de jamón ibérico de bellota con bechamel cremosa. 6 unidades.", "en": "Artisan croquettes with acorn-fed Iberian ham and creamy béchamel. 6 pieces." },
+          "precio": 9.00,
+          "emoji": "🍘",
+          "imagen_url": null,
+          "alergenos": ["gluten", "lacteos", "huevo"],
+          "disponible": true
+        },
+        {
+          "id": "pulpo-gallega",
+          "nombre": { "es": "Pulpo a la gallega", "en": "Galician-style Octopus" },
+          "descripcion": { "es": "Pulpo cocido sobre patata cachelo, con pimentón de La Vera y aceite de oliva.", "en": "Boiled octopus on cachelo potato with La Vera paprika and olive oil." },
+          "precio": 16.50,
+          "emoji": "🐙",
+          "imagen_url": null,
+          "alergenos": ["moluscos"],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "principales",
+      "nombre": { "es": "Principales", "en": "Main Courses" },
+      "platos": [
+        {
+          "id": "merluza",
+          "nombre": { "es": "Merluza al horno", "en": "Baked Hake" },
+          "descripcion": { "es": "Merluza fresca al horno con patatas panadera, pimientos del piquillo y salsa verde de perejil.", "en": "Fresh baked hake with baker's potatoes, piquillo peppers and parsley green sauce." },
+          "precio": 18.00,
+          "emoji": "🐟",
+          "imagen_url": null,
+          "alergenos": ["pescado"],
+          "disponible": true
+        },
+        {
+          "id": "entrecot",
+          "nombre": { "es": "Entrecot de ternera", "en": "Beef Entrecôte" },
+          "descripcion": { "es": "Entrecot de ternera gallega a la brasa con patatas fritas y guarnición de temporada.", "en": "Grilled Galician beef entrecôte with french fries and seasonal garnish." },
+          "precio": 24.00,
+          "emoji": "🥩",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "risotto-setas",
+          "nombre": { "es": "Risotto de setas", "en": "Mushroom Risotto" },
+          "descripcion": { "es": "Risotto cremoso con mezcla de setas de temporada, parmesano envejecido y trufa negra.", "en": "Creamy risotto with seasonal mushroom mix, aged parmesan and black truffle." },
+          "precio": 15.50,
+          "emoji": "🍄",
+          "imagen_url": null,
+          "alergenos": ["lacteos"],
+          "disponible": false
+        }
+      ]
+    },
+    {
+      "id": "postres",
+      "nombre": { "es": "Postres", "en": "Desserts" },
+      "platos": [
+        {
+          "id": "crema-catalana",
+          "nombre": { "es": "Crema catalana", "en": "Catalan Cream" },
+          "descripcion": { "es": "Crema tradicional catalana con azúcar quemado crujiente. Receta de la abuela.", "en": "Traditional Catalan cream with crunchy burnt sugar. Grandma's recipe." },
+          "precio": 6.00,
+          "emoji": "🍮",
+          "imagen_url": null,
+          "alergenos": ["lacteos", "huevo"],
+          "disponible": true
+        },
+        {
+          "id": "tarta-chocolate",
+          "nombre": { "es": "Tarta de chocolate", "en": "Chocolate Cake" },
+          "descripcion": { "es": "Bizcocho húmedo de chocolate negro 70% con ganache y helado de vainilla.", "en": "Moist 70% dark chocolate cake with ganache and vanilla ice cream." },
+          "precio": 7.50,
+          "emoji": "🎂",
+          "imagen_url": null,
+          "alergenos": ["gluten", "lacteos", "huevo"],
+          "disponible": true
+        },
+        {
+          "id": "sorbete",
+          "nombre": { "es": "Sorbete de limón al cava", "en": "Lemon Cava Sorbet" },
+          "descripcion": { "es": "Sorbete artesano de limón con espuma de cava catalán. Refrescante y ligero.", "en": "Artisan lemon sorbet with Catalan cava foam. Refreshing and light." },
+          "precio": 5.50,
+          "emoji": "🍋",
+          "imagen_url": null,
+          "alergenos": ["sulfitos"],
+          "disponible": true
+        }
+      ]
+    }
+  ]
+}

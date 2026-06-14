@@ -1,0 +1,316 @@
+{
+  "nombre": "Hommus Falafel",
+  "subtitulo": "Cocina sirio-libanesa · Valencia",
+  "color_primario": "#111111",
+  "color_acento": "#c9a96e",
+  "wifi": "hommus2024",
+  "idiomas": ["es", "en"],
+  "categorias": [
+    {
+      "id": "entrantes",
+      "nombre": { "es": "Entrantes", "en": "Starters" },
+      "platos": [
+        {
+          "id": "hommus-clasico",
+          "nombre": { "es": "Hommus clásico", "en": "Classic Hummus" },
+          "descripcion": { "es": "Crema de garbanzos con tahini, aceite de oliva virgen extra y un toque de limón. Servido con pan de pita.", "en": "Chickpea cream with tahini, extra virgin olive oil and lemon. Served with pita bread." },
+          "precio": 5.50,
+          "emoji": "🥙",
+          "imagen_url": null,
+          "alergenos": ["gluten", "sesamo"],
+          "disponible": true
+        },
+        {
+          "id": "falafel-bandeja",
+          "nombre": { "es": "Falafel casero (6 uds)", "en": "Homemade Falafel (6 pcs)" },
+          "descripcion": { "es": "Croquetas de garbanzo y habas con hierbas frescas, especias y salsa de yogur de menta.", "en": "Chickpea and fava bean croquettes with fresh herbs, spices and mint yogurt sauce." },
+          "precio": 7.50,
+          "emoji": "🧆",
+          "imagen_url": null,
+          "alergenos": ["gluten", "sesamo", "lacteos"],
+          "disponible": true
+        },
+        {
+          "id": "kibbeh",
+          "nombre": { "es": "Kibbeh frito", "en": "Fried Kibbeh" },
+          "descripcion": { "es": "Croquetas de bulgur rellenas de carne de cordero picada, piñones y especias libanesas. 4 unidades.", "en": "Bulgur croquettes filled with minced lamb, pine nuts and Lebanese spices. 4 pieces." },
+          "precio": 9.00,
+          "emoji": "🍖",
+          "imagen_url": null,
+          "alergenos": ["gluten", "frutos_secos"],
+          "disponible": true
+        },
+        {
+          "id": "pan-pita",
+          "nombre": { "es": "Pan de pita casero", "en": "Homemade Pita Bread" },
+          "descripcion": { "es": "Pan de pita horneado al momento, suave y esponjoso. Servido con aceite de oliva y za'atar.", "en": "Freshly baked pita bread, soft and fluffy. Served with olive oil and za'atar." },
+          "precio": 3.00,
+          "emoji": "🫓",
+          "imagen_url": null,
+          "alergenos": ["gluten", "sesamo"],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "mezze-frio",
+      "nombre": { "es": "Mezze frío", "en": "Cold Mezze" },
+      "platos": [
+        {
+          "id": "tabule",
+          "nombre": { "es": "Tabulé libanés", "en": "Lebanese Tabbouleh" },
+          "descripcion": { "es": "Ensalada fresca de perejil, tomate, bulgur fino, cebolleta y menta, aliñada con limón y aceite.", "en": "Fresh parsley, tomato, fine bulgur, spring onion and mint salad, dressed with lemon and oil." },
+          "precio": 7.00,
+          "emoji": "🥗",
+          "imagen_url": null,
+          "alergenos": ["gluten"],
+          "disponible": true
+        },
+        {
+          "id": "fattoush",
+          "nombre": { "es": "Fattoush", "en": "Fattoush" },
+          "descripcion": { "es": "Ensalada levantina con verduras frescas, pan de pita tostado, sumac y aderezo de granada.", "en": "Levantine salad with fresh vegetables, toasted pita, sumac and pomegranate dressing." },
+          "precio": 7.50,
+          "emoji": "🥙",
+          "imagen_url": null,
+          "alergenos": ["gluten"],
+          "disponible": true
+        },
+        {
+          "id": "mutabal",
+          "nombre": { "es": "Mutabal (baba ghanoush)", "en": "Mutabal (Baba Ghanoush)" },
+          "descripcion": { "es": "Crema ahumada de berenjena asada con tahini, limón, ajo y aceite. Una joya del mezze.", "en": "Smoky roasted eggplant cream with tahini, lemon, garlic and olive oil. A mezze jewel." },
+          "precio": 6.50,
+          "emoji": "🍆",
+          "imagen_url": null,
+          "alergenos": ["sesamo"],
+          "disponible": true
+        },
+        {
+          "id": "labneh",
+          "nombre": { "es": "Labneh con za'atar", "en": "Labneh with Za'atar" },
+          "descripcion": { "es": "Yogur cremoso escurrido en bolas, marinado en aceite de oliva, za'atar y especias. Con pan de pita.", "en": "Strained creamy yogurt balls marinated in olive oil, za'atar and spices. With pita bread." },
+          "precio": 6.00,
+          "emoji": "🫙",
+          "imagen_url": null,
+          "alergenos": ["lacteos", "gluten", "sesamo"],
+          "disponible": true
+        },
+        {
+          "id": "warak-enab",
+          "nombre": { "es": "Warak enab (hojas de vid)", "en": "Warak Enab (Stuffed Vine Leaves)" },
+          "descripcion": { "es": "Hojas de parra rellenas de arroz, tomate, perejil y especias. Servidas frías con limón. 6 unidades.", "en": "Vine leaves stuffed with rice, tomato, parsley and spices. Served cold with lemon. 6 pieces." },
+          "precio": 8.00,
+          "emoji": "🍃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "mezze-caliente",
+      "nombre": { "es": "Mezze caliente", "en": "Hot Mezze" },
+      "platos": [
+        {
+          "id": "halloumi",
+          "nombre": { "es": "Halloumi a la plancha", "en": "Grilled Halloumi" },
+          "descripcion": { "es": "Queso chipriota semiduro a la plancha con miel de tomillo, sésamo tostado y tomillo fresco.", "en": "Grilled Cypriot semi-hard cheese with thyme honey, toasted sesame and fresh thyme." },
+          "precio": 9.50,
+          "emoji": "🧀",
+          "imagen_url": null,
+          "alergenos": ["lacteos", "sesamo"],
+          "disponible": true
+        },
+        {
+          "id": "sambousek",
+          "nombre": { "es": "Sambousek de carne", "en": "Meat Sambousek" },
+          "descripcion": { "es": "Empanadillas libanesas fritas rellenas de carne picada, piñones y especias. 4 unidades.", "en": "Fried Lebanese pastries filled with minced meat, pine nuts and spices. 4 pieces." },
+          "precio": 8.50,
+          "emoji": "🥟",
+          "imagen_url": null,
+          "alergenos": ["gluten", "frutos_secos"],
+          "disponible": true
+        },
+        {
+          "id": "spinach-fatayer",
+          "nombre": { "es": "Fatayer de espinacas", "en": "Spinach Fatayer" },
+          "descripcion": { "es": "Triángulos de masa rellenos de espinacas, cebolla, limón y sumac. Vegano y delicioso.", "en": "Dough triangles filled with spinach, onion, lemon and sumac. Vegan and delicious." },
+          "precio": 7.50,
+          "emoji": "🔺",
+          "imagen_url": null,
+          "alergenos": ["gluten"],
+          "disponible": true
+        },
+        {
+          "id": "sopa-lentejas",
+          "nombre": { "es": "Sopa de lentejas rojas", "en": "Red Lentil Soup" },
+          "descripcion": { "es": "Sopa aterciopelada de lentejas rojas con comino, cúrcuma y limón. Con picatostes de pan de pita.", "en": "Velvety red lentil soup with cumin, turmeric and lemon. With pita bread croutons." },
+          "precio": 6.50,
+          "emoji": "🍲",
+          "imagen_url": null,
+          "alergenos": ["gluten"],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "principales",
+      "nombre": { "es": "Principales", "en": "Main Courses" },
+      "platos": [
+        {
+          "id": "shawarma-pollo",
+          "nombre": { "es": "Shawarma de pollo", "en": "Chicken Shawarma" },
+          "descripcion": { "es": "Pollo marinado en especias libanesas, asado lentamente y servido en pan de pita con toum, pepino y tomate.", "en": "Chicken marinated in Lebanese spices, slow-roasted and served in pita with toum, cucumber and tomato." },
+          "precio": 13.50,
+          "emoji": "🌯",
+          "imagen_url": null,
+          "alergenos": ["gluten", "sesamo"],
+          "disponible": true
+        },
+        {
+          "id": "kafta-brasa",
+          "nombre": { "es": "Kafta a la brasa", "en": "Grilled Kafta" },
+          "descripcion": { "es": "Brochetas de carne picada de cordero y ternera con perejil y especias, a la brasa. Con arroz y ensalada.", "en": "Minced lamb and beef skewers with parsley and spices, grilled. With rice and salad." },
+          "precio": 16.00,
+          "emoji": "🍢",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "pollo-limon",
+          "nombre": { "es": "Pollo al limón y ajo", "en": "Lemon & Garlic Chicken" },
+          "descripcion": { "es": "Muslos de pollo marinados en limón, ajo y especias orientales, asados al horno. Con arroz basmati.", "en": "Chicken thighs marinated in lemon, garlic and oriental spices, oven-roasted. With basmati rice." },
+          "precio": 15.00,
+          "emoji": "🍗",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "mousakaa",
+          "nombre": { "es": "Moussaka libanesa", "en": "Lebanese Moussaka" },
+          "descripcion": { "es": "Berenjenas fritas en salsa de tomate especiada con garbanzos. Vegano. Servido con pan de pita.", "en": "Fried eggplant in spiced tomato sauce with chickpeas. Vegan. Served with pita bread." },
+          "precio": 12.00,
+          "emoji": "🍆",
+          "imagen_url": null,
+          "alergenos": ["gluten"],
+          "disponible": true
+        },
+        {
+          "id": "bandeja-mezze",
+          "nombre": { "es": "Bandeja mezze completa", "en": "Full Mezze Platter" },
+          "descripcion": { "es": "Selección de 8 mezzes fríos y calientes para compartir: hommus, mutabal, tabulé, falafel, sambousek y más. Para 2-3 personas.", "en": "Selection of 8 cold and hot mezzes to share: hummus, mutabal, tabbouleh, falafel, sambousek and more. For 2-3 people." },
+          "precio": 32.00,
+          "emoji": "🫕",
+          "imagen_url": null,
+          "alergenos": ["gluten", "sesamo", "lacteos", "frutos_secos"],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "postres",
+      "nombre": { "es": "Postres", "en": "Desserts" },
+      "platos": [
+        {
+          "id": "baklava",
+          "nombre": { "es": "Baklava casera", "en": "Homemade Baklava" },
+          "descripcion": { "es": "Hojaldre crujiente relleno de pistachos triturados y nueces, bañado en sirope de agua de rosas. 3 piezas.", "en": "Crispy filo pastry filled with crushed pistachios and walnuts, soaked in rose water syrup. 3 pieces." },
+          "precio": 6.50,
+          "emoji": "🍯",
+          "imagen_url": null,
+          "alergenos": ["gluten", "frutos_secos"],
+          "disponible": true
+        },
+        {
+          "id": "knafeh",
+          "nombre": { "es": "Knafeh con queso", "en": "Knafeh with Cheese" },
+          "descripcion": { "es": "Postre caliente de masa kataifi crujiente rellena de queso ricotta, bañada en sirope de azahar y pistachos.", "en": "Warm dessert of crispy kataifi pastry filled with ricotta cheese, soaked in orange blossom syrup and pistachios." },
+          "precio": 8.00,
+          "emoji": "🧇",
+          "imagen_url": null,
+          "alergenos": ["gluten", "lacteos", "frutos_secos"],
+          "disponible": true
+        },
+        {
+          "id": "mouhalabiyeh",
+          "nombre": { "es": "Mouhalabiyeh", "en": "Mouhalabiyeh" },
+          "descripcion": { "es": "Panna cotta libanesa de leche con agua de rosas, pistachos y canela. Ligero y aromático.", "en": "Lebanese milk panna cotta with rose water, pistachios and cinnamon. Light and aromatic." },
+          "precio": 5.50,
+          "emoji": "🌹",
+          "imagen_url": null,
+          "alergenos": ["lacteos", "frutos_secos"],
+          "disponible": true
+        },
+        {
+          "id": "helado-pistacho",
+          "nombre": { "es": "Helado de pistacho con mastic", "en": "Pistachio & Mastic Ice Cream" },
+          "descripcion": { "es": "Helado artesano de pistacho con resina de mastic, receta siria tradicional. Textura elástica y sabor único.", "en": "Artisan pistachio ice cream with mastic resin, traditional Syrian recipe. Elastic texture and unique flavor." },
+          "precio": 5.00,
+          "emoji": "🍦",
+          "imagen_url": null,
+          "alergenos": ["lacteos", "frutos_secos"],
+          "disponible": false
+        }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "nombre": { "es": "Bebidas", "en": "Drinks" },
+      "platos": [
+        {
+          "id": "ayran",
+          "nombre": { "es": "Ayran (yogur salado)", "en": "Ayran (Salted Yogurt Drink)" },
+          "descripcion": { "es": "Bebida tradicional de yogur batido con agua y sal. Refrescante y digestiva, perfecta con los mezzes.", "en": "Traditional drink of whipped yogurt with water and salt. Refreshing and digestive, perfect with mezzes." },
+          "precio": 3.00,
+          "emoji": "🥛",
+          "imagen_url": null,
+          "alergenos": ["lacteos"],
+          "disponible": true
+        },
+        {
+          "id": "jallab",
+          "nombre": { "es": "Jallab (uva y rosas)", "en": "Jallab (Grape & Rose)" },
+          "descripcion": { "es": "Bebida siria de jugo de uva, agua de rosas y sirope de tamarindo. Con uvas pasas y piñones.", "en": "Syrian drink of grape juice, rose water and tamarind syrup. With raisins and pine nuts." },
+          "precio": 4.50,
+          "emoji": "🍇",
+          "imagen_url": null,
+          "alergenos": ["frutos_secos"],
+          "disponible": true
+        },
+        {
+          "id": "limonada-menta",
+          "nombre": { "es": "Limonada fresca de menta", "en": "Fresh Mint Lemonade" },
+          "descripcion": { "es": "Limonada natural con menta fresca machacada, azúcar y un toque de agua de azahar.", "en": "Natural lemonade with crushed fresh mint, sugar and a hint of orange blossom water." },
+          "precio": 4.00,
+          "emoji": "🍋",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "cafe-turco",
+          "nombre": { "es": "Café turco", "en": "Turkish Coffee" },
+          "descripcion": { "es": "Café preparado en cezve con cardamomo molido. Servido en taza pequeña con lokum de pistacho.", "en": "Coffee brewed in cezve with ground cardamom. Served in small cup with pistachio Turkish delight." },
+          "precio": 3.50,
+          "emoji": "☕",
+          "imagen_url": null,
+          "alergenos": ["frutos_secos"],
+          "disponible": true
+        },
+        {
+          "id": "te-menta",
+          "nombre": { "es": "Té de menta marroquí", "en": "Moroccan Mint Tea" },
+          "descripcion": { "es": "Té verde con menta fresca servido en tetera tradicional. Dulce y refrescante. Por persona.", "en": "Green tea with fresh mint served in a traditional teapot. Sweet and refreshing. Per person." },
+          "precio": 3.00,
+          "emoji": "🫖",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        }
+      ]
+    }
+  ]
+}

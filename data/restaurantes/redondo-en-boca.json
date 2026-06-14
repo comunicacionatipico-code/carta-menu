@@ -1,0 +1,499 @@
+{
+  "nombre": "Redondo en Boca",
+  "subtitulo": "Bocadillos & montaditos · Madrid",
+  "color_primario": "#0f2744",
+  "color_acento": "#c9a24e",
+  "logo_url": null,
+  "wifi": "redondo2024",
+  "idiomas": ["es"],
+  "categorias": [
+    {
+      "id": "para-picar",
+      "nombre": { "es": "Para picar" },
+      "platos": [
+        {
+          "id": "gilda-boqueron",
+          "nombre": { "es": "Gilda de Boquerón" },
+          "descripcion": { "es": "Boquerón en vinagre, piparra y aceituna: el equilibrio perfecto entre acidez, sal y frescura." },
+          "precio": 3.5,
+          "emoji": "🫒",
+          "imagen_url": null,
+          "alergenos": ["pescado", "mostaza"],
+          "disponible": true
+        },
+        {
+          "id": "gilda-anchoa",
+          "nombre": { "es": "Gilda de Anchoa" },
+          "descripcion": { "es": "La versión clásica con anchoa del Cantábrico, un bocado intenso que despierta el paladar." },
+          "precio": 3.5,
+          "emoji": "🐟",
+          "imagen_url": null,
+          "alergenos": ["pescado"],
+          "disponible": true
+        },
+        {
+          "id": "gilda-dali",
+          "nombre": { "es": "Gilda de Dalí" },
+          "descripcion": { "es": "Nuestra versión creativa con ingredientes inesperados. Surrealismo gastronómico en miniatura." },
+          "precio": 3.8,
+          "emoji": "🎨",
+          "imagen_url": null,
+          "alergenos": ["mostaza"],
+          "disponible": true
+        },
+        {
+          "id": "gilda-cecina",
+          "nombre": { "es": "Gilda de cecina y queso manchego" },
+          "descripcion": { "es": "Fusión de tierra adentro: la potencia ahumada de la cecina y la untuosidad del manchego." },
+          "precio": 3.9,
+          "emoji": "🧀",
+          "imagen_url": null,
+          "alergenos": ["lacteos"],
+          "disponible": true
+        },
+        {
+          "id": "aceitunas",
+          "nombre": { "es": "Aceitunas hechizos del sur" },
+          "descripcion": { "es": "Selección gourmet con aliños del sur. Puro vicio en cada bocado." },
+          "precio": 2.5,
+          "emoji": "🫒",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "sardina-ahumada",
+          "nombre": { "es": "Sardina ahumada" },
+          "descripcion": { "es": "Filete de sardina con mantequilla ahumada sobre un lingote de hojaldre caramelizado." },
+          "precio": 4.8,
+          "emoji": "🐟",
+          "imagen_url": null,
+          "alergenos": ["pescado", "lacteos", "gluten"],
+          "disponible": true
+        },
+        {
+          "id": "pan-masa-madre",
+          "nombre": { "es": "Pan de masa madre" },
+          "descripcion": { "es": "Pan crujiente por fuera y suave por dentro." },
+          "precio": 3.9,
+          "emoji": "🍞",
+          "imagen_url": null,
+          "alergenos": ["gluten"],
+          "disponible": true
+        },
+        {
+          "id": "pan-tomate-alioli",
+          "nombre": { "es": "Pan de masa madre con tomate y alioli" },
+          "descripcion": { "es": "Pan crujiente, tomate rallado y un suave toque de ajo. El mediterráneo en tu mesa." },
+          "precio": 4.5,
+          "emoji": "🍅",
+          "imagen_url": null,
+          "alergenos": ["gluten", "huevo"],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "tablas",
+      "nombre": { "es": "Tablas" },
+      "platos": [
+        {
+          "id": "jamon-iberico",
+          "nombre": { "es": "Jamón ibérico" },
+          "descripcion": { "es": "Aroma, textura y sabor en su máxima expresión. Media ración 9,80 € · Ración 19,50 €." },
+          "precio": 19.5,
+          "emoji": "🥩",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tabla-quesos",
+          "nombre": { "es": "Tabla de quesos" },
+          "descripcion": { "es": "Selección nacional e internacional. Suaves, curados y azules que conquistan. Media ración 7,80 € · Ración 15,50 €." },
+          "precio": 15.5,
+          "emoji": "🧀",
+          "imagen_url": null,
+          "alergenos": ["lacteos"],
+          "disponible": true
+        },
+        {
+          "id": "surtido-iberico",
+          "nombre": { "es": "Surtido Ibérico" },
+          "descripcion": { "es": "Lomo, chorizo y salchichón ibéricos. El festín del buen paladar. Media ración 7,80 € · Ración 15,50 €." },
+          "precio": 15.5,
+          "emoji": "🍖",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lomo-iberico",
+          "nombre": { "es": "Lomo ibérico" },
+          "descripcion": { "es": "Sabor intenso y textura delicada, un clásico de nuestras dehesas." },
+          "precio": 15.5,
+          "emoji": "🥓",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "salchichon-iberico",
+          "nombre": { "es": "Salchichón Ibérico" },
+          "descripcion": { "es": "Selección de salchichón curado de calidad, cortado fino y perfecto para compartir." },
+          "precio": 15.5,
+          "emoji": "🌭",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "chorizo-iberico",
+          "nombre": { "es": "Chorizo Ibérico" },
+          "descripcion": { "es": "Picante, jugoso, con el punto justo de curación." },
+          "precio": 15.5,
+          "emoji": "🌶️",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "tapas",
+      "nombre": { "es": "Tapas" },
+      "platos": [
+        {
+          "id": "ensaladilla-redondo",
+          "nombre": { "es": "Ensaladilla Redondo" },
+          "descripcion": { "es": "Ensaladilla rusa con ventresca, encurtidos y aceituna negra deshidratada." },
+          "precio": 9.9,
+          "emoji": "🥗",
+          "imagen_url": null,
+          "alergenos": ["pescado", "huevo", "mostaza"],
+          "disponible": true
+        },
+        {
+          "id": "huevos-rotos-jamon",
+          "nombre": { "es": "Huevos rotos con Jamón" },
+          "descripcion": { "es": "Huevos camperos sobre patatas coronados con jamón ibérico." },
+          "precio": 12.5,
+          "emoji": "🍳",
+          "imagen_url": null,
+          "alergenos": ["huevo"],
+          "disponible": true
+        },
+        {
+          "id": "boquerones-limon",
+          "nombre": { "es": "Boquerones Fritos al Limón" },
+          "descripcion": { "es": "Crujientes, con un toque cítrico que los hace adictivos." },
+          "precio": 9.8,
+          "emoji": "🍋",
+          "imagen_url": null,
+          "alergenos": ["pescado", "gluten"],
+          "disponible": true
+        },
+        {
+          "id": "alcachofas-jamon",
+          "nombre": { "es": "Alcachofas con Jamón" },
+          "descripcion": { "es": "Tiernas alcachofas confitadas con el toque salado del jamón ibérico." },
+          "precio": 12.5,
+          "emoji": "🌿",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tiras-pollo",
+          "nombre": { "es": "Tiras de Pollo" },
+          "descripcion": { "es": "Crujientes, sabrosas y acompañadas con salsa de mostaza y miel." },
+          "precio": 10.5,
+          "emoji": "🍗",
+          "imagen_url": null,
+          "alergenos": ["gluten", "mostaza"],
+          "disponible": true
+        },
+        {
+          "id": "hummus-casero",
+          "nombre": { "es": "Hummus Casero" },
+          "descripcion": { "es": "Cremoso, especiado y acompañado con picos de pan." },
+          "precio": 9.8,
+          "emoji": "🫘",
+          "imagen_url": null,
+          "alergenos": ["gluten", "sesamo"],
+          "disponible": true
+        },
+        {
+          "id": "pimientos-padron",
+          "nombre": { "es": "Pimientos del Padrón" },
+          "descripcion": { "es": "Tradicionales pimientos fritos, servidos calientes y con su característico toque de sabor. Un clásico para compartir." },
+          "precio": 8.5,
+          "emoji": "🫑",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "gambas-ajillo",
+          "nombre": { "es": "Gambas al Ajillo" },
+          "descripcion": { "es": "Gambas fritas al ajillo sobre una cama de puré de papa." },
+          "precio": 19.0,
+          "emoji": "🦐",
+          "imagen_url": null,
+          "alergenos": ["marisco"],
+          "disponible": true
+        },
+        {
+          "id": "patatas-bravas",
+          "nombre": { "es": "Patatas Bravas" },
+          "descripcion": { "es": "Crujientes por fuera, tiernas por dentro. Con nuestra salsa brava y alioli suave." },
+          "precio": 8.5,
+          "emoji": "🥔",
+          "imagen_url": null,
+          "alergenos": ["huevo"],
+          "disponible": true
+        },
+        {
+          "id": "croquetas-gambas",
+          "nombre": { "es": "Croquetas de Gambas" },
+          "descripcion": { "es": "Cremosas por dentro, crujientes por fuera. Acompañadas de alioli negro." },
+          "precio": 10.5,
+          "emoji": "🍤",
+          "imagen_url": null,
+          "alergenos": ["gluten", "marisco", "lacteos", "huevo"],
+          "disponible": true
+        },
+        {
+          "id": "croquetas-jamon",
+          "nombre": { "es": "Croquetas de Jamón Ibérico" },
+          "descripcion": { "es": "Cremosas por dentro, crujientes por fuera." },
+          "precio": 10.5,
+          "emoji": "🍘",
+          "imagen_url": null,
+          "alergenos": ["gluten", "lacteos", "huevo"],
+          "disponible": true
+        },
+        {
+          "id": "calamar-andaluza",
+          "nombre": { "es": "Calamar Fresco a la Andaluza" },
+          "descripcion": { "es": "Calamares frescos rebozados al estilo andaluz, ligeros y sabrosos, con un toque de limón." },
+          "precio": 22.0,
+          "emoji": "🦑",
+          "imagen_url": null,
+          "alergenos": ["gluten", "moluscos"],
+          "disponible": true
+        },
+        {
+          "id": "kibbe",
+          "nombre": { "es": "Kibbe" },
+          "descripcion": { "es": "Delicioso bocado de carne molida y trigo bulgur, crujiente por fuera y jugoso por dentro, con especias orientales." },
+          "precio": 15.0,
+          "emoji": "🫓",
+          "imagen_url": null,
+          "alergenos": ["gluten"],
+          "disponible": true
+        },
+        {
+          "id": "falafel",
+          "nombre": { "es": "Falafel" },
+          "descripcion": { "es": "Croquetas de garbanzo y hierbas frescas, doradas y aromáticas. Un clásico vegetariano lleno de sabor." },
+          "precio": 12.5,
+          "emoji": "🧆",
+          "imagen_url": null,
+          "alergenos": ["gluten", "sesamo"],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "arroces",
+      "nombre": { "es": "Arroces" },
+      "platos": [
+        {
+          "id": "paella-valenciana",
+          "nombre": { "es": "Paella valenciana" },
+          "descripcion": { "es": "Tradición al fuego: pollo, conejo, judía verde y garrofó. Sólo por encargo, mínimo 2 personas." },
+          "precio": 18.0,
+          "emoji": "🥘",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "arroz-senyoret",
+          "nombre": { "es": "Arroz al senyoret" },
+          "descripcion": { "es": "Marisco limpio, arroz suelto, sabor profundo. Sin trabajo, solo disfrute. Mínimo 2 personas." },
+          "precio": 22.5,
+          "emoji": "🦐",
+          "imagen_url": null,
+          "alergenos": ["marisco", "moluscos"],
+          "disponible": true
+        },
+        {
+          "id": "arroz-negro",
+          "nombre": { "es": "Arroz negro" },
+          "descripcion": { "es": "Con calamar y su tinta. Fondo intenso, sabor profundo. Mínimo 2 personas." },
+          "precio": 21.5,
+          "emoji": "🖤",
+          "imagen_url": null,
+          "alergenos": ["moluscos"],
+          "disponible": true
+        },
+        {
+          "id": "paella-verduras",
+          "nombre": { "es": "Paella de verduras" },
+          "descripcion": { "es": "Colores de la huerta, sobre fondo de sofrito casero. Mínimo 2 personas." },
+          "precio": 18.0,
+          "emoji": "🥦",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "carnes",
+      "nombre": { "es": "Carnes" },
+      "platos": [
+        {
+          "id": "entrecotte",
+          "nombre": { "es": "Entrecotte" },
+          "descripcion": { "es": "350g de carne jugosa y suave, acompañado de patatas fritas y pimientos del padrón." },
+          "precio": 27.5,
+          "emoji": "🥩",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "secreto-iberico",
+          "nombre": { "es": "Secreto Ibérico" },
+          "descripcion": { "es": "Marinado con cerveza, naranja y especias, con parmentier de patata y pimientos padrón." },
+          "precio": 19.5,
+          "emoji": "🍖",
+          "imagen_url": null,
+          "alergenos": ["sulfitos"],
+          "disponible": true
+        },
+        {
+          "id": "hamburguesa",
+          "nombre": { "es": "Hamburguesa de carne" },
+          "descripcion": { "es": "Con cheddar ahumado, bacon crujiente y pan artesano. Un bocado contundente." },
+          "precio": 15.5,
+          "emoji": "🍔",
+          "imagen_url": null,
+          "alergenos": ["gluten", "lacteos"],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "pescados",
+      "nombre": { "es": "Pescados" },
+      "platos": [
+        {
+          "id": "bacalao",
+          "nombre": { "es": "Bacalao" },
+          "descripcion": { "es": "Bacalao al horno con mayonesa de ajo rostizado, salsa de pimientos rojos y patatas panaderas." },
+          "precio": 24.5,
+          "emoji": "🐟",
+          "imagen_url": null,
+          "alergenos": ["pescado", "huevo"],
+          "disponible": true
+        },
+        {
+          "id": "lubina",
+          "nombre": { "es": "Lubina" },
+          "descripcion": { "es": "Al horno, con verduras salteadas y un toque de romero. Ligera y sabrosa." },
+          "precio": 24.5,
+          "emoji": "🐠",
+          "imagen_url": null,
+          "alergenos": ["pescado"],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "ensaladas",
+      "nombre": { "es": "Ensaladas" },
+      "platos": [
+        {
+          "id": "tomate-ventresca",
+          "nombre": { "es": "Tomate valenciano con ventresca" },
+          "descripcion": { "es": "Tomate valenciano con piparras, cebolla encurtida casera y ventresca." },
+          "precio": 15.9,
+          "emoji": "🍅",
+          "imagen_url": null,
+          "alergenos": ["pescado"],
+          "disponible": true
+        },
+        {
+          "id": "ensalada-caprese",
+          "nombre": { "es": "Ensalada caprese" },
+          "descripcion": { "es": "Tomate, mozzarella, albahaca y AOVE. Un clásico que nunca falla." },
+          "precio": 13.8,
+          "emoji": "🥗",
+          "imagen_url": null,
+          "alergenos": ["lacteos"],
+          "disponible": true
+        },
+        {
+          "id": "ensalada-burrata",
+          "nombre": { "es": "Ensalada de burrata" },
+          "descripcion": { "es": "Burrata cremosa sobre rúcula, cherry y pesto de albahaca. Frescura italiana." },
+          "precio": 16.0,
+          "emoji": "🧀",
+          "imagen_url": null,
+          "alergenos": ["lacteos"],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "postres",
+      "nombre": { "es": "Postres" },
+      "platos": [
+        {
+          "id": "tarta-queso",
+          "nombre": { "es": "Tarta de queso casera" },
+          "descripcion": { "es": "Horneada lentamente, cremosa por dentro, coronada con pistacho o nutella." },
+          "precio": 9.0,
+          "emoji": "🍰",
+          "imagen_url": null,
+          "alergenos": ["lacteos", "huevo", "frutos_secos"],
+          "disponible": true
+        },
+        {
+          "id": "brownie-helado",
+          "nombre": { "es": "Brownie con helado" },
+          "descripcion": { "es": "Chocolate fondant, nueces y helado que se derrite al contacto." },
+          "precio": 7.9,
+          "emoji": "🍫",
+          "imagen_url": null,
+          "alergenos": ["gluten", "lacteos", "huevo", "frutos_secos"],
+          "disponible": true
+        },
+        {
+          "id": "helados",
+          "nombre": { "es": "Helados" },
+          "descripcion": { "es": "Consulta los sabores del día, artesanos y refrescantes." },
+          "precio": 5.9,
+          "emoji": "🍦",
+          "imagen_url": null,
+          "alergenos": ["lacteos", "huevo"],
+          "disponible": true
+        },
+        {
+          "id": "fruta-dia",
+          "nombre": { "es": "Fruta del día" },
+          "descripcion": { "es": "Pregunta por nuestra fruta fresca del día." },
+          "precio": 5.9,
+          "emoji": "🍓",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        }
+      ]
+    }
+  ]
+}
