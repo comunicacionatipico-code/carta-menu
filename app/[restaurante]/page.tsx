@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import { getRestaurante, getAllSlugs } from '@/lib/restaurante'
-import CartaCliente from '@/components/CartaCliente'
+import RestauranteSplash from '@/components/RestauranteSplash'
 
 interface Props {
   params: { restaurante: string }
@@ -27,7 +27,7 @@ export default function CartaPage({ params }: Props) {
   return (
     <div className="flex justify-center min-h-screen bg-gray-200">
       <div className="w-full max-w-[480px] shadow-2xl min-h-screen">
-        <CartaCliente restaurante={data} slug={params.restaurante} />
+        <RestauranteSplash restaurante={data} slug={params.restaurante} />
       </div>
     </div>
   )

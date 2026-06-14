@@ -1,238 +1,987 @@
 {
   "nombre": "El Socarrat",
-  "subtitulo": "Arroces y cocina valenciana · Valencia",
-  "color_primario": "#0d2b1a",
-  "color_acento": "#4caf7d",
-  "logo_url": null,
+  "subtitulo": "Paellas y Tapas · Madrid",
+  "color_primario": "#31442c",
+  "color_acento": "#c9b87a",
+  "logo_url": "/uploads/el-socarrat/1781473181721-hji8yij735w.png",
   "wifi": "socarrat2024",
-  "idiomas": ["es", "en"],
+  "idiomas": ["es", "en", "it", "fr", "de", "ru"],
   "categorias": [
     {
-      "id": "para-empezar",
-      "nombre": { "es": "Para empezar", "en": "To Start" },
+      "id": "para-picar",
+      "nombre": {
+        "es": "Para picar",
+        "en": "Starters",
+        "it": "Antipasti",
+        "fr": "Pour grignoter",
+        "de": "Zum Knabbern",
+        "ru": "Закуски"
+      },
       "platos": [
         {
-          "id": "esgarraet",
-          "nombre": { "es": "Esgarraet valenciano", "en": "Valencian Esgarraet" },
-          "descripcion": { "es": "Bacalao desalado desmigado con pimientos rojos asados, ajo y aceite de oliva. Receta tradicional de la huerta valenciana.", "en": "Shredded desalted cod with roasted red peppers, garlic and olive oil. Traditional Valencian recipe." },
-          "precio": 8.50,
-          "emoji": "🫑",
+          "id": "gilda-boqueron",
+          "nombre": {
+            "es": "Gilda de boquerones",
+            "en": "Anchovy Gilda",
+            "it": "Gilda di Alice",
+            "fr": "Gilda d'Anchois",
+            "de": "Sardellen-Gilda",
+            "ru": "Гильда с анчоусами"
+          },
+          "descripcion": {
+            "es": "Boquerón en vinagre, piparra y aceituna: el equilibrio perfecto entre acidez, sal y frescura.",
+            "en": "Pickled anchovy, piparra pepper and olive: the perfect balance of acidity, salt and freshness.",
+            "it": "Alice marinata, piparra e oliva: l'equilibrio perfetto tra acidità, sale e freschezza.",
+            "fr": "Anchois mariné, piparra et olive : l'équilibre parfait entre acidité, sel et fraîcheur.",
+            "de": "Eingelegte Sardelle, Piparra und Olive: die perfekte Balance aus Säure, Salz und Frische.",
+            "ru": "Маринованный анчоус, перец пипарра и оливка: идеальный баланс кислоты, соли и свежести."
+          },
+          "precio": 3.5,
+          "emoji": "🫒",
           "imagen_url": null,
-          "alergenos": ["pescado"],
+          "alergenos": ["pescado", "mostaza"],
           "disponible": true
         },
         {
-          "id": "croquetas-arroz",
-          "nombre": { "es": "Croquetas de arroz negro", "en": "Black Rice Croquettes" },
-          "descripcion": { "es": "Croquetas cremosas de arroz negro con sepia y alioli de ajo asado. 6 unidades.", "en": "Creamy black rice and cuttlefish croquettes with roasted garlic aioli. 6 pieces." },
-          "precio": 9.00,
-          "emoji": "🖤",
-          "imagen_url": null,
-          "alergenos": ["gluten", "lacteos", "huevo", "moluscos"],
-          "disponible": true
-        },
-        {
-          "id": "buñuelos-bacalao",
-          "nombre": { "es": "Buñuelos de bacalao", "en": "Salt Cod Fritters" },
-          "descripcion": { "es": "Buñuelos crujientes de bacalao desalado con perejil y limón. Receta de la abuela. 6 unidades.", "en": "Crispy desalted salt cod fritters with parsley and lemon. Grandma's recipe. 6 pieces." },
-          "precio": 7.50,
+          "id": "gilda-anchoa",
+          "nombre": {
+            "es": "Gilda de anchoa",
+            "en": "Cantabrian Anchovy Gilda",
+            "it": "Gilda di Acciuga del Cantabrico",
+            "fr": "Gilda d'Anchois Cantabriques",
+            "de": "Kantabrische Anchovis-Gilda",
+            "ru": "Гильда с кантабрийским анчоусом"
+          },
+          "descripcion": {
+            "es": "La versión clásica con anchoa del Cantábrico, un bocado intenso que despierta el paladar.",
+            "en": "The classic version with Cantabrian anchovy, an intense bite that awakens the palate.",
+            "it": "La versione classica con acciuga del Cantabrico, un boccone intenso che risveglia il palato.",
+            "fr": "La version classique avec l'anchois cantabrique, une bouchée intense qui éveille le palais.",
+            "de": "Die klassische Version mit kantabrischer Anchovis, ein intensiver Bissen, der den Gaumen weckt.",
+            "ru": "Классическая версия с кантабрийским анчоусом — насыщенный вкус, пробуждающий рецепторы."
+          },
+          "precio": 3.5,
           "emoji": "🐟",
           "imagen_url": null,
-          "alergenos": ["gluten", "pescado", "huevo"],
+          "alergenos": ["pescado"],
           "disponible": true
         },
         {
-          "id": "ensalada-naranja",
-          "nombre": { "es": "Ensalada de naranja y bacalao", "en": "Orange & Cod Salad" },
-          "descripcion": { "es": "Ensalada valenciana de naranja de la huerta, bacalao en salazón, aceitunas negras y cebolla morada.", "en": "Valencian salad with garden orange, salt cod, black olives and red onion." },
-          "precio": 9.50,
-          "emoji": "🍊",
+          "id": "gilda-cecina-queso",
+          "nombre": {
+            "es": "Gilda de cecina y queso",
+            "en": "Dried Beef and Cheese Gilda",
+            "it": "Gilda di Cecina e Formaggio",
+            "fr": "Gilda de Cecina et Fromage",
+            "de": "Gilda mit Trockenfleisch und Käse",
+            "ru": "Гильда с вяленой говядиной и сыром"
+          },
+          "descripcion": {
+            "es": "La potencia ahumada de la cecina y la untuosidad del queso, juntos en un solo bocado.",
+            "en": "The smoky power of dried beef and the creaminess of cheese, together in one bite.",
+            "it": "La potenza affumicata della cecina e l'untuosità del formaggio, insieme in un solo boccone.",
+            "fr": "La puissance fumée de la cecina et l'onctuosité du fromage, réunis en une seule bouchée.",
+            "de": "Die rauchige Kraft des Trockenfleischs und die Cremigkeit des Käses in einem Bissen.",
+            "ru": "Копчёная мощь вяленой говядины и нежность сыра — в одном кусочке."
+          },
+          "precio": 3.5,
+          "emoji": "🧀",
+          "imagen_url": null,
+          "alergenos": ["lacteos"],
+          "disponible": true
+        },
+        {
+          "id": "gilda-dali",
+          "nombre": {
+            "es": "Gilda de Dalí",
+            "en": "Dalí Gilda",
+            "it": "Gilda di Dalí",
+            "fr": "Gilda de Dalí",
+            "de": "Dalí-Gilda",
+            "ru": "Гильда Дали"
+          },
+          "descripcion": {
+            "es": "Nuestra versión creativa con ingredientes inesperados. Surrealismo gastronómico en miniatura.",
+            "en": "Our creative version with unexpected ingredients. Gastronomic surrealism in miniature.",
+            "it": "La nostra versione creativa con ingredienti inaspettati. Surrealismo gastronomico in miniatura.",
+            "fr": "Notre version créative avec des ingrédients inattendus. Surréalisme gastronomique en miniature.",
+            "de": "Unsere kreative Version mit unerwarteten Zutaten. Gastronomischer Surrealismus im Miniaturformat.",
+            "ru": "Наша творческая версия с неожиданными ингредиентами. Гастрономический сюрреализм в миниатюре."
+          },
+          "precio": 3.8,
+          "emoji": "🎨",
+          "imagen_url": null,
+          "alergenos": ["pescado", "mostaza"],
+          "disponible": true
+        },
+        {
+          "id": "gilda-cecina-manchego",
+          "nombre": {
+            "es": "Gilda de cecina y queso manchego",
+            "en": "Dried Beef and Manchego Gilda",
+            "it": "Gilda di Cecina e Manchego",
+            "fr": "Gilda de Cecina et Manchego",
+            "de": "Gilda mit Trockenfleisch und Manchego",
+            "ru": "Гильда с вяленой говядиной и манчего"
+          },
+          "descripcion": {
+            "es": "Fusión de tierra adentro: la potencia ahumada de la cecina y la untuosidad del manchego.",
+            "en": "Inland fusion: the smoky power of dried beef and the creaminess of Manchego.",
+            "it": "Fusione di terra: la potenza affumicata della cecina e l'untuosità del manchego.",
+            "fr": "Fusion de l'intérieur : la puissance fumée de la cecina et l'onctuosité du manchego.",
+            "de": "Fusion aus dem Inland: die rauchige Kraft des Trockenfleischs und die Cremigkeit des Manchegos.",
+            "ru": "Фьюжн «из глубины страны»: копчёная мощь вяленой говядины и нежность сыра манчего."
+          },
+          "precio": 3.9,
+          "emoji": "🥩",
+          "imagen_url": null,
+          "alergenos": ["lacteos"],
+          "disponible": true
+        },
+        {
+          "id": "tosta-sardina",
+          "nombre": {
+            "es": "Tosta de sardina ahumada",
+            "en": "Smoked Sardine Toast",
+            "it": "Tosta di Sardina Affumicata",
+            "fr": "Toast de Sardine Fumée",
+            "de": "Geräucherte Sardinen-Toast",
+            "ru": "Тост с копчёной сардиной"
+          },
+          "descripcion": {
+            "es": "Filete de sardina con mantequilla ahumada sobre un lingote de hojaldre caramelizado.",
+            "en": "Sardine fillet with smoked butter on a caramelized puff pastry slab.",
+            "it": "Filetto di sardina con burro affumicato su un lingotto di pasta sfoglia caramellata.",
+            "fr": "Filet de sardine au beurre fumé sur un lingot de pâte feuilletée caramélisée.",
+            "de": "Sardinenfilet mit geräucherter Butter auf einem karamellisierten Blätterteig-Riegel.",
+            "ru": "Филе сардины со сливочным копчёным маслом на карамелизованном слоёном тесте."
+          },
+          "precio": 4.8,
+          "emoji": "🐟",
+          "imagen_url": null,
+          "alergenos": ["gluten", "lacteos", "pescado"],
+          "disponible": true
+        },
+        {
+          "id": "pan-tomate-alioli",
+          "nombre": {
+            "es": "Pan de masa madre con tomate y aliolí",
+            "en": "Sourdough with Tomato and Aioli",
+            "it": "Pane al Levain con Pomodoro e Aioli",
+            "fr": "Pain au Levain, Tomate et Aïoli",
+            "de": "Sauerteigbrot mit Tomate und Aioli",
+            "ru": "Хлеб на закваске с томатом и айоли"
+          },
+          "descripcion": {
+            "es": "Pan crujiente, tomate rallado y un suave toque de ajo. El mediterráneo en tu mesa.",
+            "en": "Crispy bread, grated tomato and a gentle touch of garlic. The Mediterranean at your table.",
+            "it": "Pane croccante, pomodoro grattugiato e un delicato tocco d'aglio. Il Mediterraneo in tavola.",
+            "fr": "Pain croustillant, tomate râpée et une douce touche d'ail. La Méditerranée à votre table.",
+            "de": "Knuspriges Brot, geriebene Tomate und ein sanfter Hauch Knoblauch. Das Mittelmeer auf Ihrem Tisch.",
+            "ru": "Хрустящий хлеб, тёртый томат и лёгкая нотка чеснока. Средиземноморье на вашем столе."
+          },
+          "precio": 4.5,
+          "emoji": "🍅",
+          "imagen_url": null,
+          "alergenos": ["gluten", "huevo"],
+          "disponible": true
+        },
+        {
+          "id": "aceitunas",
+          "nombre": {
+            "es": "Aceituna hechizo del sur",
+            "en": "Southern Spiced Olives",
+            "it": "Olive Incantesimo del Sud",
+            "fr": "Olives Ensorcelées du Sud",
+            "de": "Verzauberte Südoliven",
+            "ru": "Оливки «Чары юга»"
+          },
+          "descripcion": {
+            "es": "Selección gourmet con aliños del sur. Puro vicio en cada bocado.",
+            "en": "Gourmet selection with southern marinades. Pure indulgence in every bite.",
+            "it": "Selezione gourmet con condimenti del sud. Puro vizio in ogni boccone.",
+            "fr": "Sélection gourmet avec des assaisonnements du sud. Pur vice à chaque bouchée.",
+            "de": "Gourmet-Auswahl mit südlichen Marinaden. Reines Vergnügen bei jedem Bissen.",
+            "ru": "Гурмэ-подборка с южными маринадами. Чистое удовольствие в каждом кусочке."
+          },
+          "precio": 2.5,
+          "emoji": "🫒",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "tablas",
+      "nombre": {
+        "es": "Tablas",
+        "en": "Boards",
+        "it": "Taglieri",
+        "fr": "Planches",
+        "de": "Bretter",
+        "ru": "Доски"
+      },
+      "platos": [
+        {
+          "id": "tabla-quesos",
+          "nombre": {
+            "es": "Tabla de quesos",
+            "en": "Cheese Board",
+            "it": "Tagliere di Formaggi",
+            "fr": "Plateau de Fromages",
+            "de": "Käsebrett",
+            "ru": "Сырная доска"
+          },
+          "descripcion": {
+            "es": "Selección de quesos nacionales e internacionales. Media ración 7,80 € · Ración 15,50 €.",
+            "en": "National and international cheese selection. Half portion 7.80 € · Full portion 15.50 €.",
+            "it": "Selezione di formaggi nazionali e internazionali. Mezza porzione 7,80 € · Porzione 15,50 €.",
+            "fr": "Sélection de fromages nationaux et internationaux. Demi-portion 7,80 € · Portion 15,50 €.",
+            "de": "Auswahl nationaler und internationaler Käse. Halbe Portion 7,80 € · Portion 15,50 €.",
+            "ru": "Подборка отечественных и зарубежных сыров. Полпорции 7,80 € · Порция 15,50 €."
+          },
+          "precio": 15.5,
+          "emoji": "🧀",
+          "imagen_url": null,
+          "alergenos": ["lacteos"],
+          "disponible": true
+        },
+        {
+          "id": "tabla-jamon",
+          "nombre": {
+            "es": "Tabla de Jamón Ibérico",
+            "en": "Iberian Ham Board",
+            "it": "Tagliere di Prosciutto Iberico",
+            "fr": "Planche de Jambon Ibérique",
+            "de": "Iberisches Schinkenbrett",
+            "ru": "Доска иберийского хамона"
+          },
+          "descripcion": {
+            "es": "Aroma, textura y sabor en su máxima expresión. Media ración 9,80 € · Ración 19,50 €.",
+            "en": "Aroma, texture and flavour at their finest. Half portion 9.80 € · Full portion 19.50 €.",
+            "it": "Aroma, consistenza e sapore nella loro massima espressione. Mezza porzione 9,80 € · Porzione 19,50 €.",
+            "fr": "Arôme, texture et saveur dans leur plus belle expression. Demi-portion 9,80 € · Portion 19,50 €.",
+            "de": "Aroma, Textur und Geschmack in reinster Form. Halbe Portion 9,80 € · Portion 19,50 €.",
+            "ru": "Аромат, текстура и вкус в высшем проявлении. Полпорции 9,80 € · Порция 19,50 €."
+          },
+          "precio": 19.5,
+          "emoji": "🥩",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tabla-surtido",
+          "nombre": {
+            "es": "Tabla de surtido Ibérico",
+            "en": "Iberian Assortment Board",
+            "it": "Tagliere di Assortimento Iberico",
+            "fr": "Planche d'Assortiment Ibérique",
+            "de": "Iberisches Sortimentsbrett",
+            "ru": "Доска иберийского ассорти"
+          },
+          "descripcion": {
+            "es": "Selección de embutidos ibéricos curados. El festín del buen paladar. Media ración 8,50 € · Ración 16,50 €.",
+            "en": "Selection of cured Iberian charcuterie. A feast for the discerning palate. Half portion 8.50 € · Full portion 16.50 €.",
+            "it": "Selezione di salumi iberici stagionati. Il banchetto del buon palato. Mezza porzione 8,50 € · Porzione 16,50 €.",
+            "fr": "Sélection de charcuterie ibérique affinée. Le festin des fins palais. Demi-portion 8,50 € · Portion 16,50 €.",
+            "de": "Auswahl gereifter iberischer Wurstwaren. Das Fest für den feinen Gaumen. Halbe Portion 8,50 € · Portion 16,50 €.",
+            "ru": "Подборка выдержанных иберийских мясных деликатесов. Пир для гурманов. Полпорции 8,50 € · Порция 16,50 €."
+          },
+          "precio": 16.5,
+          "emoji": "🍖",
+          "imagen_url": null,
+          "alergenos": ["lacteos"],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "tapas",
+      "nombre": {
+        "es": "Tapas",
+        "en": "Tapas",
+        "it": "Tapas",
+        "fr": "Tapas",
+        "de": "Tapas",
+        "ru": "Тапас"
+      },
+      "platos": [
+        {
+          "id": "patatas-bravas",
+          "nombre": {
+            "es": "Patatas Bravas",
+            "en": "Spicy Potatoes",
+            "it": "Patatas Bravas",
+            "fr": "Patatas Bravas",
+            "de": "Scharfe Kartoffeln",
+            "ru": "Пататас Бравас"
+          },
+          "descripcion": {
+            "es": "Crujientes por fuera, tiernas por dentro. Con nuestra salsa brava y alioli suave.",
+            "en": "Crispy on the outside, tender on the inside. With our spicy sauce and mild aioli.",
+            "it": "Croccanti fuori, morbide dentro. Con la nostra salsa brava e aioli delicato.",
+            "fr": "Croustillantes à l'extérieur, moelleuses à l'intérieur. Avec notre sauce brava et aïoli doux.",
+            "de": "Außen knusprig, innen zart. Mit unserer scharfen Sauce und mildem Aioli.",
+            "ru": "Хрустящие снаружи и нежные внутри. С нашим острым соусом и лёгким айоли."
+          },
+          "precio": 8.5,
+          "emoji": "🥔",
+          "imagen_url": null,
+          "alergenos": ["gluten", "huevo"],
+          "disponible": true
+        },
+        {
+          "id": "ensaladilla-rusa",
+          "nombre": {
+            "es": "Ensaladilla rusa",
+            "en": "Russian Potato Salad",
+            "it": "Insalata Russa",
+            "fr": "Salade Russe",
+            "de": "Russischer Kartoffelsalat",
+            "ru": "Оливье"
+          },
+          "descripcion": {
+            "es": "Nuestra versión de la clásica ensaladilla, cremosa y generosa, con ventresca y encurtidos.",
+            "en": "Our take on the classic potato salad, creamy and generous, with ventresca tuna and pickles.",
+            "it": "La nostra versione della classica insalata russa, cremosa e generosa, con ventresca e sottaceti.",
+            "fr": "Notre version de la classique salade russe, crémeuse et généreuse, avec ventresca et condiments.",
+            "de": "Unsere Version des klassischen Kartoffelsalats, cremig und großzügig, mit Ventresca und Pickles.",
+            "ru": "Наша версия классического оливье — кремовый и щедрый, с тунцом вентреска и маринадами."
+          },
+          "precio": 9.5,
+          "emoji": "🥗",
+          "imagen_url": null,
+          "alergenos": ["huevo", "pescado", "gluten"],
+          "disponible": true
+        },
+        {
+          "id": "alcachofas-jamon",
+          "nombre": {
+            "es": "Alcachofas a la plancha con virutas de jamón",
+            "en": "Grilled Artichokes with Ham Shavings",
+            "it": "Carciofi alla Griglia con Scaglie di Prosciutto",
+            "fr": "Artichauts à la Plancha aux Copeaux de Jambon",
+            "de": "Gegrillte Artischocken mit Schinkensplittern",
+            "ru": "Артишоки на гриле со стружкой хамона"
+          },
+          "descripcion": {
+            "es": "Tiernas alcachofas a la plancha coronadas con finas virutas de jamón ibérico.",
+            "en": "Tender grilled artichokes topped with fine shavings of Iberian ham.",
+            "it": "Teneri carciofi alla griglia coronati con fini scaglie di prosciutto iberico.",
+            "fr": "Tendres artichauts à la plancha couronnés de fines copeaux de jambon ibérique.",
+            "de": "Zarte gegrillte Artischocken, gekrönt mit feinen iberischen Schinkensplittern.",
+            "ru": "Нежные артишоки на гриле, украшенные тонкой стружкой иберийского хамона."
+          },
+          "precio": 14.5,
+          "emoji": "🌿",
+          "imagen_url": null,
+          "alergenos": ["lacteos", "mostaza"],
+          "disponible": true
+        },
+        {
+          "id": "trio-hummus",
+          "nombre": {
+            "es": "Trío de Hummus",
+            "en": "Hummus Trio",
+            "it": "Trio di Hummus",
+            "fr": "Trio de Houmous",
+            "de": "Hummus-Trio",
+            "ru": "Трио хумуса"
+          },
+          "descripcion": {
+            "es": "Tres variedades: garbanzos clásico, berenjena y pimientos asados. Con pan de pita.",
+            "en": "Three varieties: classic chickpea, aubergine and roasted peppers. Served with pita bread.",
+            "it": "Tre varietà: ceci classico, melanzana e peperoni arrostiti. Con pane pita.",
+            "fr": "Trois variétés : pois chiches classique, aubergine et poivrons rôtis. Avec pain pita.",
+            "de": "Drei Sorten: klassische Kichererbse, Aubergine und geröstete Paprika. Mit Pitabrot.",
+            "ru": "Три вида: классический из нута, из баклажана и из печёных перцев. С питой."
+          },
+          "precio": 9.8,
+          "emoji": "🫘",
+          "imagen_url": null,
+          "alergenos": ["sesamo"],
+          "disponible": true
+        },
+        {
+          "id": "gambas-ajillo",
+          "nombre": {
+            "es": "Gambas al ajillo",
+            "en": "Garlic Prawns",
+            "it": "Gamberi all'Aglio",
+            "fr": "Crevettes à l'Ail",
+            "de": "Knoblauchgarnelen",
+            "ru": "Креветки с чесноком"
+          },
+          "descripcion": {
+            "es": "Gambas salteadas en aceite de oliva con ajo, guindilla y perejil fresco.",
+            "en": "Prawns sautéed in olive oil with garlic, chilli and fresh parsley.",
+            "it": "Gamberi saltati in olio d'oliva con aglio, peperoncino e prezzemolo fresco.",
+            "fr": "Crevettes sautées dans l'huile d'olive avec ail, piment et persil frais.",
+            "de": "In Olivenöl gebratene Garnelen mit Knoblauch, Chili und frischer Petersilie.",
+            "ru": "Креветки, обжаренные в оливковом масле с чесноком, чили и свежей петрушкой."
+          },
+          "precio": 19,
+          "emoji": "🦐",
+          "imagen_url": null,
+          "alergenos": ["marisco"],
+          "disponible": true
+        },
+        {
+          "id": "pimientos-padron",
+          "nombre": {
+            "es": "Pimientos al padrón",
+            "en": "Padrón Peppers",
+            "it": "Peperoni del Padrón",
+            "fr": "Poivrons du Padrón",
+            "de": "Padrón-Paprika",
+            "ru": "Перцы падрон"
+          },
+          "descripcion": {
+            "es": "Fritos en aceite de oliva y acabados con escamas de sal. Unos pican, otros no. ¿A que no adivinas?",
+            "en": "Fried in olive oil and finished with salt flakes. Some are hot, some are not. Can you guess?",
+            "it": "Fritti in olio d'oliva e finiti con fiocchi di sale. Alcuni piccano, altri no. Ci provi?",
+            "fr": "Frits dans l'huile d'olive et finis avec des flocons de sel. Certains piquent, d'autres non. Devinez!",
+            "de": "In Olivenöl gebraten und mit Salzflocken abgerundet. Manche sind scharf, manche nicht. Raten Sie!",
+            "ru": "Обжаренные в оливковом масле и посыпанные хлопьями соли. Одни жгучие, другие нет. Угадайте!"
+          },
+          "precio": 8,
+          "emoji": "🫑",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "mejillones-vapor",
+          "nombre": {
+            "es": "Mejillones al vapor",
+            "en": "Steamed Mussels",
+            "it": "Cozze al Vapore",
+            "fr": "Moules à la Vapeur",
+            "de": "Gedämpfte Muscheln",
+            "ru": "Мидии на пару"
+          },
+          "descripcion": {
+            "es": "Mejillones frescos al vapor con vino blanco, ajo y hierbas aromáticas.",
+            "en": "Fresh mussels steamed with white wine, garlic and aromatic herbs.",
+            "it": "Cozze fresche al vapore con vino bianco, aglio ed erbe aromatiche.",
+            "fr": "Moules fraîches à la vapeur avec vin blanc, ail et herbes aromatiques.",
+            "de": "Frische Muscheln mit Weißwein, Knoblauch und aromatischen Kräutern gedämpft.",
+            "ru": "Свежие мидии на пару с белым вином, чесноком и ароматными травами."
+          },
+          "precio": 12.5,
+          "emoji": "🐚",
+          "imagen_url": null,
+          "alergenos": ["moluscos", "sulfitos"],
+          "disponible": true
+        },
+        {
+          "id": "tomate-ventresca",
+          "nombre": {
+            "es": "Tomate con ventresca y cebolla encurtida",
+            "en": "Tomato with Ventresca and Pickled Onion",
+            "it": "Pomodoro con Ventresca e Cipolla Marinata",
+            "fr": "Tomate avec Ventresca et Oignon Mariné",
+            "de": "Tomate mit Ventresca und eingelegter Zwiebel",
+            "ru": "Томат с вентреской и маринованным луком"
+          },
+          "descripcion": {
+            "es": "Tomate valenciano con cebolla encurtida casera y ventresca de atún. Sencillo y delicioso.",
+            "en": "Valencian tomato with homemade pickled onion and tuna ventresca. Simple and delicious.",
+            "it": "Pomodoro valenciano con cipolla marinata casalinga e ventresca di tonno. Semplice e delizioso.",
+            "fr": "Tomate valencienne avec oignon mariné maison et ventresca de thon. Simple et délicieux.",
+            "de": "Valencianische Tomate mit hausgemachter eingelegter Zwiebel und Thunfisch-Ventresca. Einfach und köstlich.",
+            "ru": "Валенсийский томат с домашним маринованным луком и тунцом вентреска. Просто и вкусно."
+          },
+          "precio": 14.5,
+          "emoji": "🍅",
           "imagen_url": null,
           "alergenos": ["pescado"],
           "disponible": true
         },
         {
-          "id": "alcachofas-plancha",
-          "nombre": { "es": "Alcachofas a la plancha", "en": "Grilled Artichokes" },
-          "descripcion": { "es": "Alcachofas frescas de la Vega Baja a la plancha con vinagreta de mostaza antigua y hierbas.", "en": "Fresh Vega Baja artichokes on the grill with whole-grain mustard vinaigrette and herbs." },
-          "precio": 8.00,
-          "emoji": "🌿",
+          "id": "kibbe",
+          "nombre": {
+            "es": "Kibbe",
+            "en": "Kibbeh",
+            "it": "Kibbe",
+            "fr": "Kibbé",
+            "de": "Kibbeh",
+            "ru": "Кеббе"
+          },
+          "descripcion": {
+            "es": "Bocado de carne molida y trigo bulgur, crujiente por fuera y jugoso por dentro con especias orientales.",
+            "en": "Minced meat and bulgur wheat, crispy outside and juicy inside with oriental spices.",
+            "it": "Carne macinata e grano bulgur, croccante fuori e succoso dentro con spezie orientali.",
+            "fr": "Viande hachée et blé bulgur, croustillant dehors et juteux dedans avec des épices orientales.",
+            "de": "Hackfleisch und Bulgurweizen, außen knusprig und innen saftig mit orientalischen Gewürzen.",
+            "ru": "Молотое мясо и булгур — хрустящие снаружи и сочные внутри с восточными специями."
+          },
+          "precio": 15,
+          "emoji": "🫓",
           "imagen_url": null,
-          "alergenos": ["mostaza"],
+          "alergenos": ["gluten", "sesamo"],
+          "disponible": true
+        },
+        {
+          "id": "falafel",
+          "nombre": {
+            "es": "Falafel",
+            "en": "Falafel",
+            "it": "Falafel",
+            "fr": "Falafels",
+            "de": "Falafel",
+            "ru": "Фалафель"
+          },
+          "descripcion": {
+            "es": "Croquetas de garbanzo y hierbas frescas, doradas y aromáticas. Clásico vegetariano lleno de sabor.",
+            "en": "Chickpea and fresh herb croquettes, golden and aromatic. A classic vegetarian dish full of flavour.",
+            "it": "Crocchette di ceci ed erbe fresche, dorate e aromatiche. Classico vegetariano pieno di sapore.",
+            "fr": "Croquettes de pois chiches et herbes fraîches, dorées et aromatiques. Classique végétarien plein de saveur.",
+            "de": "Kichererbsen- und Frischkräuterkroketten, goldbraun und aromatisch. Vegetarischer Klassiker voller Geschmack.",
+            "ru": "Котлетки из нута и свежих трав, золотистые и ароматные. Вегетарианская классика, полная вкуса."
+          },
+          "precio": 12,
+          "emoji": "🧆",
+          "imagen_url": null,
+          "alergenos": ["sesamo"],
+          "disponible": true
+        },
+        {
+          "id": "croquetas-jamon",
+          "nombre": {
+            "es": "Croquetas de Jamón",
+            "en": "Ham Croquettes",
+            "it": "Crocchette di Prosciutto",
+            "fr": "Croquettes de Jambon",
+            "de": "Schinkenkroketten",
+            "ru": "Крокеты с хамоном"
+          },
+          "descripcion": {
+            "es": "Cremosas por dentro, crujientes por fuera. Con jamón ibérico.",
+            "en": "Creamy inside, crispy outside. Made with Iberian ham.",
+            "it": "Cremose dentro, croccanti fuori. Con prosciutto iberico.",
+            "fr": "Crémeuses à l'intérieur, croustillantes à l'extérieur. Au jambon ibérique.",
+            "de": "Innen cremig, außen knusprig. Mit iberischem Schinken.",
+            "ru": "Кремовые внутри, хрустящие снаружи. С иберийским хамоном."
+          },
+          "precio": 9,
+          "emoji": "🍘",
+          "imagen_url": null,
+          "alergenos": ["gluten", "lacteos", "huevo"],
+          "disponible": true
+        },
+        {
+          "id": "croquetas-gambas",
+          "nombre": {
+            "es": "Croquetas de gambas",
+            "en": "Prawn Croquettes",
+            "it": "Crocchette di Gamberi",
+            "fr": "Croquettes de Crevettes",
+            "de": "Garnelenkroketten",
+            "ru": "Крокеты с креветками"
+          },
+          "descripcion": {
+            "es": "Cremosas por dentro, crujientes por fuera. Con gambas del Mediterráneo.",
+            "en": "Creamy inside, crispy outside. With Mediterranean prawns.",
+            "it": "Cremose dentro, croccanti fuori. Con gamberi del Mediterraneo.",
+            "fr": "Crémeuses à l'intérieur, croustillantes à l'extérieur. Aux crevettes méditerranéennes.",
+            "de": "Innen cremig, außen knusprig. Mit Mittelmeer-Garnelen.",
+            "ru": "Кремовые внутри, хрустящие снаружи. С средиземноморскими креветками."
+          },
+          "precio": 9,
+          "emoji": "🍤",
+          "imagen_url": null,
+          "alergenos": ["gluten", "lacteos", "huevo", "marisco"],
+          "disponible": true
+        },
+        {
+          "id": "croquetas-chipirones",
+          "nombre": {
+            "es": "Croquetas de chipirones",
+            "en": "Squid Croquettes",
+            "it": "Crocchette di Calamaretti",
+            "fr": "Croquettes de Chipirons",
+            "de": "Tintenfischkroketten",
+            "ru": "Крокеты с кальмарами"
+          },
+          "descripcion": {
+            "es": "Cremosas croquetas de chipirón con su tinta. Un bocado intenso de mar.",
+            "en": "Creamy squid croquettes with their ink. An intense taste of the sea.",
+            "it": "Cremose crocchette di calamaretti con il loro nero. Un boccone intenso di mare.",
+            "fr": "Crémeuses croquettes de chipirons avec leur encre. Une saveur intense de la mer.",
+            "de": "Cremige Tintenfischkroketten mit ihrer Tinte. Ein intensiver Meeresgeschmack.",
+            "ru": "Кремовые крокеты с кальмарами в их чернилах. Насыщенный морской вкус."
+          },
+          "precio": 9,
+          "emoji": "🦑",
+          "imagen_url": null,
+          "alergenos": ["gluten", "lacteos", "huevo", "moluscos"],
           "disponible": true
         }
       ]
     },
     {
       "id": "arroces",
-      "nombre": { "es": "Arroces", "en": "Rice Dishes" },
+      "nombre": {
+        "es": "Arroces",
+        "en": "Rice Dishes",
+        "it": "Risi",
+        "fr": "Riz",
+        "de": "Reisgerichte",
+        "ru": "Рисовые блюда"
+      },
       "platos": [
         {
           "id": "paella-valenciana",
-          "nombre": { "es": "Paella valenciana D.O.", "en": "Valencian Paella D.O." },
-          "descripcion": { "es": "Paella tradicional con pollo de corral, conejo, judía verde, garrofó, tomate, azafrán y romero. La auténtica. Mínimo 2 personas.", "en": "Traditional paella with free-range chicken, rabbit, green beans, garrofó beans, tomato, saffron and rosemary. Authentic. Minimum 2 people." },
-          "precio": 16.00,
+          "nombre": {
+            "es": "Paella Valenciana",
+            "en": "Valencian Paella",
+            "it": "Paella Valenciana",
+            "fr": "Paella Valencienne",
+            "de": "Valencianische Paella",
+            "ru": "Валенсийская паэлья"
+          },
+          "descripcion": {
+            "es": "Pollo de corral, conejo, judía verde, garrofó, tomate y azafrán. La auténtica. Precio por persona, mínimo 2.",
+            "en": "Free-range chicken, rabbit, green beans, garrofó, tomato and saffron. The authentic one. Per person, min. 2.",
+            "it": "Pollo ruspante, coniglio, fagiolini, garrofó, pomodoro e zafferano. L'autentica. A persona, min. 2.",
+            "fr": "Poulet fermier, lapin, haricots verts, garrofó, tomate et safran. L'authentique. Par personne, min. 2.",
+            "de": "Freilandhuhn, Kaninchen, grüne Bohnen, Garrofó, Tomate und Safran. Die Authentische. Pro Person, mind. 2.",
+            "ru": "Деревенская курица, кролик, стручковая фасоль, гаррофо, томат и шафран. Подлинная. На персону, мин. 2."
+          },
+          "precio": 18,
           "emoji": "🥘",
           "imagen_url": null,
           "alergenos": [],
           "disponible": true
         },
         {
-          "id": "arroz-negro",
-          "nombre": { "es": "Arroz negro con sepia", "en": "Black Rice with Cuttlefish" },
-          "descripcion": { "es": "Arroz meloso negro con tinta de sepia, sepia a la plancha y alioli casero. Sabor intenso de mar. Mínimo 2 personas.", "en": "Creamy black rice with cuttlefish ink, grilled cuttlefish and homemade aioli. Intense sea flavor. Minimum 2 people." },
-          "precio": 17.00,
-          "emoji": "🦑",
-          "imagen_url": null,
-          "alergenos": ["huevo", "moluscos"],
-          "disponible": true
-        },
-        {
-          "id": "arroz-bogavante",
-          "nombre": { "es": "Arroz caldoso de bogavante", "en": "Lobster Rice Stew" },
-          "descripcion": { "es": "Arroz caldoso con bogavante gallego, tomate frito casero, ñora y azafrán. El rey de los arroces. Mínimo 2 personas.", "en": "Brothy rice with Galician lobster, homemade fried tomato, ñora peppers and saffron. Minimum 2 people." },
-          "precio": 28.00,
-          "emoji": "🦞",
-          "imagen_url": null,
-          "alergenos": ["marisco"],
-          "disponible": true
-        },
-        {
-          "id": "arroz-verduras",
-          "nombre": { "es": "Arroz de verduras de temporada", "en": "Seasonal Vegetable Rice" },
-          "descripcion": { "es": "Paella vegana con verduras de la huerta valenciana, garrofó, tomate rallado, pimentón y azafrán. Mínimo 2 personas.", "en": "Vegan paella with Valencian garden vegetables, garrofó beans, grated tomato, paprika and saffron. Minimum 2 people." },
-          "precio": 13.00,
-          "emoji": "🥦",
+          "id": "paella-costilla",
+          "nombre": {
+            "es": "Paella de costilla, alcachofas y tirabeques",
+            "en": "Rib, Artichoke and Mangetout Paella",
+            "it": "Paella di Costine, Carciofi e Taccole",
+            "fr": "Paella de Côtes, Artichauts et Pois Mange-tout",
+            "de": "Rippchen-, Artischocken- und Zuckerbohnen-Paella",
+            "ru": "Паэлья с рёбрами, артишоками и сахарным горохом"
+          },
+          "descripcion": {
+            "es": "Sabrosa paella de costilla de cerdo ibérico, alcachofas frescas y tirabeques. Precio por persona, mínimo 2.",
+            "en": "Tasty paella with Iberian pork ribs, fresh artichokes and mangetout. Per person, minimum 2.",
+            "it": "Saporita paella di costine di maiale iberico, carciofi freschi e taccole. A persona, minimo 2.",
+            "fr": "Savoureuse paella de côtes de porc ibérique, artichauts frais et pois mange-tout. Par personne, minimum 2.",
+            "de": "Leckere Paella mit iberischen Schweinsrippchen, frischen Artischocken und Zuckerbohnen. Pro Person, mind. 2.",
+            "ru": "Вкусная паэлья со свиными рёбрами по-иберийски, свежими артишоками и сахарным горохом. На персону, мин. 2."
+          },
+          "precio": 23,
+          "emoji": "🍖",
           "imagen_url": null,
           "alergenos": [],
           "disponible": true
         },
         {
-          "id": "fideos-marineros",
-          "nombre": { "es": "Fideuà marinera", "en": "Seafood Fideuà" },
-          "descripcion": { "es": "Fideos finos con gambas, cigalas, mejillones y caldo de pescado de roca. Con alioli de ajo negro. Mínimo 2 personas.", "en": "Fine noodles with prawns, langoustines, mussels and rock fish broth. With black garlic aioli. Minimum 2 people." },
-          "precio": 18.00,
+          "id": "arroz-senyoret",
+          "nombre": {
+            "es": "Arroz del señoret",
+            "en": "Senyoret Rice",
+            "it": "Riso al Senyoret",
+            "fr": "Riz au Senyoret",
+            "de": "Senyoret-Reis",
+            "ru": "Рис «Сеньорет»"
+          },
+          "descripcion": {
+            "es": "Marisco limpio y sin cáscara, arroz suelto, sabor profundo. Sin trabajo, solo disfrute. Mínimo 2 personas.",
+            "en": "Cleaned shell-off seafood, loose rice, deep flavour. No work, just enjoyment. Minimum 2 people.",
+            "it": "Frutti di mare puliti e sgusciati, riso sgranato, sapore profondo. Senza fatica, solo piacere. Minimo 2.",
+            "fr": "Fruits de mer décortiqués, riz moelleux, saveur profonde. Sans effort, que du plaisir. Minimum 2 personnes.",
+            "de": "Gesäuberte und geschälte Meeresfrüchte, lockerer Reis, tiefer Geschmack. Ohne Arbeit, nur Genuss. Mind. 2.",
+            "ru": "Очищенные морепродукты, рассыпчатый рис, насыщенный вкус. Без хлопот — только удовольствие. Мин. 2 чел."
+          },
+          "precio": 22.5,
+          "emoji": "🦐",
+          "imagen_url": null,
+          "alergenos": ["moluscos", "marisco", "pescado"],
+          "disponible": true
+        },
+        {
+          "id": "arroz-negro",
+          "nombre": {
+            "es": "Arroz negro",
+            "en": "Black Rice",
+            "it": "Riso Nero",
+            "fr": "Riz Noir",
+            "de": "Schwarzer Reis",
+            "ru": "Чёрный рис"
+          },
+          "descripcion": {
+            "es": "Con calamar y su tinta, alioli casero. Fondo intenso, sabor profundo. Mínimo 2 personas.",
+            "en": "With squid and its ink, homemade aioli. Intense base, deep flavour. Minimum 2 people.",
+            "it": "Con calamaro e il suo nero, aioli casalingo. Fondo intenso, sapore profondo. Minimo 2 persone.",
+            "fr": "Avec calmar et son encre, aïoli maison. Base intense, saveur profonde. Minimum 2 personnes.",
+            "de": "Mit Tintenfisch und seiner Tinte, hausgemachtem Aioli. Intensive Basis, tiefer Geschmack. Mind. 2 Personen.",
+            "ru": "С кальмаром и его чернилами, домашним айоли. Насыщенная основа, глубокий вкус. Мин. 2 человека."
+          },
+          "precio": 21.5,
+          "emoji": "🖤",
+          "imagen_url": null,
+          "alergenos": ["moluscos", "marisco", "pescado"],
+          "disponible": true
+        },
+        {
+          "id": "fideua-calamar",
+          "nombre": {
+            "es": "Fideuà de calamar, gabitas y ajitos tiernos",
+            "en": "Squid, Baby Prawns and Spring Garlic Fideuà",
+            "it": "Fideuà di Calamaro, Gamberetti e Aglio Tenero",
+            "fr": "Fideuà de Calamar, Petites Crevettes et Ail Nouveau",
+            "de": "Tintenfisch-, Garnelen- und Knoblauch-Fideuà",
+            "ru": "Фидеуà с кальмаром, мелкими креветками и молодым чесноком"
+          },
+          "descripcion": {
+            "es": "Fideos finos con calamar fresco, gabitas y ajitos tiernos sobre fondo de marisco. Mínimo 2 personas.",
+            "en": "Fine noodles with fresh squid, baby prawns and spring garlic on a seafood base. Minimum 2 people.",
+            "it": "Spaghettini con calamaro fresco, gamberetti e aglio tenero su fondo di frutti di mare. Minimo 2.",
+            "fr": "Fines nouilles avec calmar frais, petites crevettes et ail nouveau sur fond de fruits de mer. Minimum 2.",
+            "de": "Feine Nudeln mit frischem Tintenfisch, Garnelen und Frühlingsknoblauch auf Meeresfrüchtebasis. Mind. 2.",
+            "ru": "Тонкая лапша со свежим кальмаром, мелкими креветками и молодым чесноком на морском бульоне. Мин. 2."
+          },
+          "precio": 23,
           "emoji": "🍝",
           "imagen_url": null,
-          "alergenos": ["gluten", "marisco", "pescado", "moluscos", "huevo"],
+          "alergenos": ["gluten", "moluscos", "marisco", "pescado"],
+          "disponible": true
+        },
+        {
+          "id": "paella-pato",
+          "nombre": {
+            "es": "Paella de Pato, alcachofas, setas y foie",
+            "en": "Duck, Artichoke, Mushroom and Foie Paella",
+            "it": "Paella di Anatra, Carciofi, Funghi e Foie",
+            "fr": "Paella de Canard, Artichauts, Champignons et Foie",
+            "de": "Enten-, Artischocken-, Pilz- und Foie-Paella",
+            "ru": "Паэлья с уткой, артишоками, грибами и фуа-гра"
+          },
+          "descripcion": {
+            "es": "Arroz meloso de pato confitado, alcachofas frescas, setas de temporada y foie mi-cuit. Mínimo 2 personas.",
+            "en": "Creamy rice with confit duck, fresh artichokes, seasonal mushrooms and foie mi-cuit. Minimum 2 people.",
+            "it": "Riso cremoso con anatra confit, carciofi freschi, funghi di stagione e foie mi-cuit. Minimo 2 persone.",
+            "fr": "Riz crémeux au confit de canard, artichauts frais, champignons de saison et foie mi-cuit. Minimum 2.",
+            "de": "Cremiger Reis mit Confit-Ente, frischen Artischocken, Saisonschwammerl und Foie mi-cuit. Mind. 2 Personen.",
+            "ru": "Кремовый рис с конфи из утки, свежими артишоками, сезонными грибами и фуа-гра ми-кюи. Мин. 2 чел."
+          },
+          "precio": 23,
+          "emoji": "🦆",
+          "imagen_url": null,
+          "alergenos": ["lacteos"],
           "disponible": true
         }
       ]
     },
     {
-      "id": "carnes-pescados",
-      "nombre": { "es": "Carnes y pescados", "en": "Meat & Fish" },
+      "id": "carnes",
+      "nombre": {
+        "es": "Carnes",
+        "en": "Meat",
+        "it": "Carne",
+        "fr": "Viande",
+        "de": "Fleisch",
+        "ru": "Мясо"
+      },
       "platos": [
         {
-          "id": "lubina-sal",
-          "nombre": { "es": "Lubina a la sal", "en": "Salt-baked Sea Bass" },
-          "descripcion": { "es": "Lubina mediterránea entera cocinada en costra de sal marina con hierbas aromáticas. Se desespina en mesa.", "en": "Whole Mediterranean sea bass baked in sea salt crust with aromatic herbs. Deboned at the table." },
-          "precio": 24.00,
-          "emoji": "🐠",
+          "id": "entrecot",
+          "nombre": {
+            "es": "Entrecot con patatas fritas y pimientos de piquillo",
+            "en": "Entrecôte with Chips and Piquillo Peppers",
+            "it": "Entrecôte con Patatine Fritte e Peperoni Piquillo",
+            "fr": "Entrecôte avec Frites et Poivrons Piquillo",
+            "de": "Entrecôte mit Pommes frites und Piquillo-Paprika",
+            "ru": "Антрекот с картофелем фри и перцами пикильо"
+          },
+          "descripcion": {
+            "es": "Jugoso entrecot a la plancha acompañado de patatas fritas crujientes y pimientos de piquillo asados.",
+            "en": "Juicy grilled entrecôte served with crispy chips and roasted piquillo peppers.",
+            "it": "Succoso entrecôte alla griglia accompagnato da patatine fritte croccanti e peperoni piquillo arrostiti.",
+            "fr": "Succulent entrecôte grillé servi avec des frites croustillantes et des poivrons piquillo rôtis.",
+            "de": "Saftiges gegrilltes Entrecôte mit knusprigen Pommes frites und gerösteten Piquillo-Paprika.",
+            "ru": "Сочный гриль-антрекот с хрустящим картофелем фри и жареными перцами пикильо."
+          },
+          "precio": 27.5,
+          "emoji": "🥩",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "solomillo",
+          "nombre": {
+            "es": "Solomillo con puré de boniato y demi glace",
+            "en": "Sirloin with Sweet Potato Purée and Demi Glace",
+            "it": "Filetto con Purè di Patata Dolce e Demi Glace",
+            "fr": "Filet avec Purée de Patate Douce et Demi-Glace",
+            "de": "Lende mit Süßkartoffelpüree und Demi Glace",
+            "ru": "Вырезка с пюре из батата и деми-глас"
+          },
+          "descripcion": {
+            "es": "Tierno solomillo con cremoso puré de boniato y reducción de fondo oscuro. Un plato de altura.",
+            "en": "Tender sirloin with creamy sweet potato purée and dark sauce reduction. A dish of excellence.",
+            "it": "Tenero filetto con cremoso purè di patata dolce e riduzione di fondo scuro. Un piatto d'eccellenza.",
+            "fr": "Tendre filet avec une crémeuse purée de patate douce et réduction de fond brun. Un plat d'excellence.",
+            "de": "Zartes Lendenstück mit cremigem Süßkartoffelpüree und Dunkelsauce-Reduktion. Ein Gericht der Extraklasse.",
+            "ru": "Нежная вырезка с кремовым пюре из батата и редукцией тёмного соуса. Блюдо высокой кухни."
+          },
+          "precio": 32,
+          "emoji": "🥩",
+          "imagen_url": null,
+          "alergenos": ["lacteos"],
+          "disponible": true
+        },
+        {
+          "id": "carrillera",
+          "nombre": {
+            "es": "Carrillera con cremoso de zanahoria y patatas paja",
+            "en": "Cheek with Carrot Cream and Straw Potatoes",
+            "it": "Guancia con Cremoso di Carota e Patate Paglia",
+            "fr": "Joue avec Crémeux de Carotte et Pommes Paille",
+            "de": "Backe mit Karottencrème und Strohkartoffeln",
+            "ru": "Щёчки с кремом из моркови и картофелем-соломкой"
+          },
+          "descripcion": {
+            "es": "Carrillera ibérica guisada a baja temperatura, cremoso de zanahoria y crujientes patatas paja.",
+            "en": "Iberian cheek slow-cooked at low temperature, carrot cream and crispy straw potatoes.",
+            "it": "Guancia iberica cotta a bassa temperatura, cremoso di carota e croccanti patate paglia.",
+            "fr": "Joue ibérique mijotée à basse température, crémeux de carotte et pommes paille croustillantes.",
+            "de": "Iberische Backe bei niedriger Temperatur geschmort, Karottencrème und knusprige Strohkartoffeln.",
+            "ru": "Иберийские щёчки, томлённые при низкой температуре, с кремом из моркови и хрустящей картофельной соломкой."
+          },
+          "precio": 19,
+          "emoji": "🍖",
+          "imagen_url": null,
+          "alergenos": ["lacteos"],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "pescados",
+      "nombre": {
+        "es": "Pescados",
+        "en": "Fish",
+        "it": "Pesce",
+        "fr": "Poisson",
+        "de": "Fisch",
+        "ru": "Рыба"
+      },
+      "platos": [
+        {
+          "id": "bacalao-pil-pil",
+          "nombre": {
+            "es": "Bacalao al pil pil y verduritas crujientes",
+            "en": "Pil Pil Cod with Crispy Vegetables",
+            "it": "Baccalà al Pil Pil e Verdurette Croccanti",
+            "fr": "Cabillaud Pil Pil et Légumes Croustillants",
+            "de": "Pil Pil Kabeljau mit knusprigem Gemüse",
+            "ru": "Треска пиль-пиль с хрустящими овощами"
+          },
+          "descripcion": {
+            "es": "Bacalao desalado cocinado en su propia gelatina, con salsa pil pil y verduritas crujientes de temporada.",
+            "en": "Desalted cod cooked in its own gelatin, with pil pil sauce and crispy seasonal vegetables.",
+            "it": "Baccalà dissalato cotto nella sua gelatina, con salsa pil pil e verdurette croccanti di stagione.",
+            "fr": "Morue dessalée cuite dans sa propre gélatine, avec sauce pil pil et légumes croustillants de saison.",
+            "de": "Entsalzener Kabeljau in seiner eigenen Gelatine gekocht, mit Pil-Pil-Sauce und knusprigem Saisongemüse.",
+            "ru": "Вымоченная треска, приготовленная в собственном желатине, с соусом пиль-пиль и хрустящими сезонными овощами."
+          },
+          "precio": 24.5,
+          "emoji": "🐟",
           "imagen_url": null,
           "alergenos": ["pescado"],
           "disponible": true
         },
         {
-          "id": "pato-naranja",
-          "nombre": { "es": "Magret de pato a la naranja", "en": "Duck Magret with Orange" },
-          "descripcion": { "es": "Magret de pato con salsa de naranja valenciana, boniato caramelizado y crujiente de piel.", "en": "Duck magret with Valencian orange sauce, caramelized sweet potato and crispy skin." },
-          "precio": 21.00,
-          "emoji": "🦆",
+          "id": "lubina-panadera",
+          "nombre": {
+            "es": "Lubina con patata panadera y verduras bajo aceite",
+            "en": "Sea Bass with Baker's Potatoes and Oil-Poached Vegetables",
+            "it": "Spigola con Patata Panadera e Verdure sott'Olio",
+            "fr": "Bar avec Pomme de Terre Boulangère et Légumes à l'Huile",
+            "de": "Wolfsbarsch mit Bäckerkartoffeln und ölpochiertem Gemüse",
+            "ru": "Окунь с картофелем по-пекарски и овощами в масле"
+          },
+          "descripcion": {
+            "es": "Lubina entera al horno sobre cama de patata panadera y verduras confitadas en aceite de oliva.",
+            "en": "Whole sea bass baked on a bed of baker's potatoes and vegetables confit in olive oil.",
+            "it": "Spigola intera al forno su letto di patata panadera e verdure confit in olio d'oliva.",
+            "fr": "Bar entier au four sur un lit de pommes de terre boulangères et légumes confits à l'huile d'olive.",
+            "de": "Ganzer Wolfsbarsch im Ofen auf Bäckerkartoffeln und in Olivenöl konfitiertem Gemüse.",
+            "ru": "Целый окунь, запечённый на подушке из картофеля по-пекарски и овощей конфи в оливковом масле."
+          },
+          "precio": 28,
+          "emoji": "🐠",
           "imagen_url": null,
-          "alergenos": [],
+          "alergenos": ["pescado"],
           "disponible": true
-        },
-        {
-          "id": "pulpo-brasa",
-          "nombre": { "es": "Pulpo a la brasa", "en": "Grilled Octopus" },
-          "descripcion": { "es": "Pulpo de roca a la brasa con puré de coliflor ahumado, aceite de pimentón y sal maldon.", "en": "Rock octopus on the grill with smoked cauliflower purée, paprika oil and maldon salt." },
-          "precio": 19.00,
-          "emoji": "🐙",
-          "imagen_url": null,
-          "alergenos": ["moluscos"],
-          "disponible": false
         }
       ]
     },
     {
       "id": "postres",
-      "nombre": { "es": "Postres", "en": "Desserts" },
+      "nombre": {
+        "es": "Postres",
+        "en": "Desserts",
+        "it": "Dolci",
+        "fr": "Desserts",
+        "de": "Desserts",
+        "ru": "Десерты"
+      },
       "platos": [
         {
-          "id": "crema-horchata",
-          "nombre": { "es": "Crema quemada de horchata", "en": "Horchata Crème Brûlée" },
-          "descripcion": { "es": "Crema quemada elaborada con horchata de chufa valenciana D.O. Textura sedosa y sabor único.", "en": "Crème brûlée made with Valencian chufa horchata D.O. Silky texture and unique flavor." },
-          "precio": 6.50,
+          "id": "tarta-queso",
+          "nombre": {
+            "es": "Tarta de queso casera",
+            "en": "Homemade Cheesecake",
+            "it": "Torta di Formaggio Fatta in Casa",
+            "fr": "Cheesecake Maison",
+            "de": "Hausgemachter Käsekuchen",
+            "ru": "Домашний чизкейк"
+          },
+          "descripcion": {
+            "es": "Horneada lentamente, cremosa por dentro. A elegir: pistacho o chocolate.",
+            "en": "Slowly baked, creamy inside. Choose from: pistachio or chocolate.",
+            "it": "Cotta lentamente, cremosa all'interno. A scelta: pistacchio o cioccolato.",
+            "fr": "Cuit lentement, crémeux à l'intérieur. Au choix : pistache ou chocolat.",
+            "de": "Langsam gebacken, innen cremig. Zur Auswahl: Pistazie oder Schokolade.",
+            "ru": "Медленно запечённый, кремовый внутри. На выбор: фисташки или шоколад."
+          },
+          "precio": 8.5,
+          "emoji": "🍰",
+          "imagen_url": null,
+          "alergenos": ["lacteos", "huevo", "frutos_secos"],
+          "disponible": true
+        },
+        {
+          "id": "torrija-socarrat",
+          "nombre": {
+            "es": "Torrija El Socarrat",
+            "en": "El Socarrat French Toast",
+            "it": "Torrija El Socarrat",
+            "fr": "Pain Perdu El Socarrat",
+            "de": "El Socarrat Armer Ritter",
+            "ru": "Торриха «Эль Сокаррат»"
+          },
+          "descripcion": {
+            "es": "Nuestra torrija de brioche con leche infusionada, caramelizada y servida con helado de vainilla.",
+            "en": "Our brioche French toast with infused milk, caramelized and served with vanilla ice cream.",
+            "it": "La nostra torrija di brioche con latte infuso, caramellata e servita con gelato alla vaniglia.",
+            "fr": "Notre pain perdu de brioche au lait infusé, caramélisé et servi avec de la glace à la vanille.",
+            "de": "Unser Brioche-Armer-Ritter mit infundierter Milch, karamellisiert und mit Vanilleeis serviert.",
+            "ru": "Наша торриха из бриоши с настоянным молоком, карамелизованная и поданная с ванильным мороженым."
+          },
+          "precio": 7.5,
           "emoji": "🍮",
           "imagen_url": null,
-          "alergenos": ["lacteos", "huevo"],
-          "disponible": true
-        },
-        {
-          "id": "tarta-almendra",
-          "nombre": { "es": "Tarta de almendra valenciana", "en": "Valencian Almond Tart" },
-          "descripcion": { "es": "Tarta sin harina de almendra marcona, naranja y azahar. Sin gluten. Con helado de canela.", "en": "Flour-free tart with Marcona almond, orange and orange blossom. Gluten-free. With cinnamon ice cream." },
-          "precio": 7.00,
-          "emoji": "🎂",
-          "imagen_url": null,
-          "alergenos": ["frutos_secos", "lacteos", "huevo"],
-          "disponible": true
-        },
-        {
-          "id": "helado-turron",
-          "nombre": { "es": "Helado artesano de turrón", "en": "Artisan Nougat Ice Cream" },
-          "descripcion": { "es": "Helado elaborado con turrón de Jijona D.O. Almendras tostadas y miel de romero.", "en": "Ice cream made with Jijona D.O. nougat. Toasted almonds and rosemary honey." },
-          "precio": 5.50,
-          "emoji": "🍦",
-          "imagen_url": null,
-          "alergenos": ["frutos_secos", "lacteos"],
-          "disponible": true
-        },
-        {
-          "id": "agua-valencia",
-          "nombre": { "es": "Agua de Valencia (postre líquido)", "en": "Agua de Valencia (Liquid Dessert)" },
-          "descripcion": { "es": "El cóctel valenciano por excelencia: cava, vodka, ginebra y zumo de naranja natural. El broche perfecto.", "en": "The quintessential Valencian cocktail: cava, vodka, gin and fresh orange juice. The perfect ending." },
-          "precio": 8.00,
-          "emoji": "🍹",
-          "imagen_url": null,
-          "alergenos": ["sulfitos"],
-          "disponible": true
-        }
-      ]
-    },
-    {
-      "id": "bebidas",
-      "nombre": { "es": "Bebidas", "en": "Drinks" },
-      "platos": [
-        {
-          "id": "vino-tinto",
-          "nombre": { "es": "Vino tinto Bobal D.O. Utiel-Requena", "en": "Bobal Red Wine D.O." },
-          "descripcion": { "es": "Copa de Bobal de la D.O. Utiel-Requena. Uva autóctona valenciana con notas de frutos rojos y especias.", "en": "Glass of Bobal from D.O. Utiel-Requena. Native Valencian grape with red fruit and spice notes." },
-          "precio": 4.50,
-          "emoji": "🍷",
-          "imagen_url": null,
-          "alergenos": ["sulfitos"],
-          "disponible": true
-        },
-        {
-          "id": "horchata",
-          "nombre": { "es": "Horchata de chufa D.O.", "en": "Chufa Horchata D.O." },
-          "descripcion": { "es": "Horchata artesana de chufa valenciana D.O. Elaborada cada día. Servida bien fría.", "en": "Artisan chufa horchata D.O. Made daily. Served very cold." },
-          "precio": 3.50,
-          "emoji": "🥛",
-          "imagen_url": null,
-          "alergenos": [],
-          "disponible": true
-        },
-        {
-          "id": "limonada-valenciana",
-          "nombre": { "es": "Limonada de naranja y jengibre", "en": "Orange & Ginger Lemonade" },
-          "descripcion": { "es": "Limonada casera con zumo de naranja de la huerta valenciana, jengibre fresco y menta.", "en": "Homemade lemonade with Valencian garden orange juice, fresh ginger and mint." },
-          "precio": 3.50,
-          "emoji": "🍊",
-          "imagen_url": null,
-          "alergenos": [],
+          "alergenos": ["lacteos", "gluten", "huevo"],
           "disponible": true
         }
       ]

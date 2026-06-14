@@ -3,157 +3,394 @@
   "subtitulo": "Bocadillos & montaditos · Madrid",
   "color_primario": "#0f2744",
   "color_acento": "#c9a24e",
-  "logo_url": null,
+  "logo_url": "/uploads/redondo-en-boca/1781468435447-6nvkx7vhr3l.png",
   "wifi": "redondo2024",
-  "idiomas": ["es"],
+  "idiomas": [
+    "es",
+    "en",
+    "it",
+    "fr",
+    "de",
+    "ru"
+  ],
   "categorias": [
     {
       "id": "para-picar",
-      "nombre": { "es": "Para picar" },
+      "nombre": {
+        "es": "Para picar",
+        "en": "Starters",
+        "it": "Antipasti",
+        "fr": "Pour grignoter",
+        "de": "Zum Knabbern",
+        "ru": "Закуски"
+      },
       "platos": [
         {
           "id": "gilda-boqueron",
-          "nombre": { "es": "Gilda de Boquerón" },
-          "descripcion": { "es": "Boquerón en vinagre, piparra y aceituna: el equilibrio perfecto entre acidez, sal y frescura." },
+          "nombre": {
+            "es": "Gilda de Boquerón",
+            "en": "Anchovy Gilda",
+            "it": "Gilda di Alice",
+            "fr": "Gilda d'Anchois",
+            "de": "Sardellen-Gilda",
+            "ru": "Гильда с анчоусами"
+          },
+          "descripcion": {
+            "es": "Boquerón en vinagre, piparra y aceituna: el equilibrio perfecto entre acidez, sal y frescura.",
+            "en": "Pickled anchovy, piparra pepper and olive: the perfect balance of acidity, salt and freshness.",
+            "it": "Alice marinata, piparra e oliva: l'equilibrio perfetto tra acidità, sale e freschezza.",
+            "fr": "Anchois mariné, piparra et olive : l'équilibre parfait entre acidité, sel et fraîcheur.",
+            "de": "Eingelegte Sardelle, Piparra und Olive: die perfekte Balance aus Säure, Salz und Frische.",
+            "ru": "Маринованный анчоус, перец пипарра и оливка: идеальный баланс кислоты, соли и свежести."
+          },
           "precio": 3.5,
           "emoji": "🫒",
-          "imagen_url": null,
-          "alergenos": ["pescado", "mostaza"],
+          "imagen_url": "/uploads/redondo-en-boca/1781468996005-3j4ahk4l9yn.png",
+          "alergenos": [
+            "pescado",
+            "mostaza"
+          ],
           "disponible": true
         },
         {
           "id": "gilda-anchoa",
-          "nombre": { "es": "Gilda de Anchoa" },
-          "descripcion": { "es": "La versión clásica con anchoa del Cantábrico, un bocado intenso que despierta el paladar." },
+          "nombre": {
+            "es": "Gilda de Anchoa",
+            "en": "Cantabrian Anchovy Gilda",
+            "it": "Gilda di Acciuga del Cantabrico",
+            "fr": "Gilda d'Anchois Cantabriques",
+            "de": "Kantabrische Anchovis-Gilda",
+            "ru": "Гильда с кантабрийским анчоусом"
+          },
+          "descripcion": {
+            "es": "La versión clásica con anchoa del Cantábrico, un bocado intenso que despierta el paladar.",
+            "en": "The classic version with Cantabrian anchovy, an intense bite that awakens the palate.",
+            "it": "La versione classica con acciuga del Cantabrico, un boccone intenso che risveglia il palato.",
+            "fr": "La version classique avec l'anchois cantabrique, une bouchée intense qui éveille le palais.",
+            "de": "Die klassische Version mit kantabrischer Anchovis, ein intensiver Bissen, der den Gaumen weckt.",
+            "ru": "Классическая версия с кантабрийским анчоусом — насыщенный вкус, пробуждающий вкусовые рецепторы."
+          },
           "precio": 3.5,
           "emoji": "🐟",
-          "imagen_url": null,
-          "alergenos": ["pescado"],
+          "imagen_url": "/uploads/redondo-en-boca/1781468644428-471sxs3okqn.png",
+          "alergenos": [
+            "pescado"
+          ],
           "disponible": true
         },
         {
           "id": "gilda-dali",
-          "nombre": { "es": "Gilda de Dalí" },
-          "descripcion": { "es": "Nuestra versión creativa con ingredientes inesperados. Surrealismo gastronómico en miniatura." },
+          "nombre": {
+            "es": "Gilda de Dalí",
+            "en": "Dalí Gilda",
+            "it": "Gilda di Dalí",
+            "fr": "Gilda de Dalí",
+            "de": "Dalí-Gilda",
+            "ru": "Гильда Дали"
+          },
+          "descripcion": {
+            "es": "Nuestra versión creativa con ingredientes inesperados. Surrealismo gastronómico en miniatura.",
+            "en": "Our creative version with unexpected ingredients. Gastronomic surrealism in miniature.",
+            "it": "La nostra versione creativa con ingredienti inaspettati. Surrealismo gastronomico in miniatura.",
+            "fr": "Notre version créative avec des ingrédients inattendus. Surréalisme gastronomique en miniature.",
+            "de": "Unsere kreative Version mit unerwarteten Zutaten. Gastronomischer Surrealismus im Miniaturformat.",
+            "ru": "Наша творческая версия с неожиданными ингредиентами. Гастрономический сюрреализм в миниатюре."
+          },
           "precio": 3.8,
           "emoji": "🎨",
-          "imagen_url": null,
-          "alergenos": ["mostaza"],
+          "imagen_url": "/uploads/redondo-en-boca/1781469015009-t2qdiqgxgsm.png",
+          "alergenos": [
+            "mostaza"
+          ],
           "disponible": true
         },
         {
           "id": "gilda-cecina",
-          "nombre": { "es": "Gilda de cecina y queso manchego" },
-          "descripcion": { "es": "Fusión de tierra adentro: la potencia ahumada de la cecina y la untuosidad del manchego." },
+          "nombre": {
+            "es": "Gilda de cecina y queso manchego",
+            "en": "Dried Beef and Manchego Gilda",
+            "it": "Gilda di Cecina e Manchego",
+            "fr": "Gilda de Cecina et Manchego",
+            "de": "Gilda mit Trockenfleisch und Manchego",
+            "ru": "Гильда с вяленой говядиной и манчего"
+          },
+          "descripcion": {
+            "es": "Fusión de tierra adentro: la potencia ahumada de la cecina y la untuosidad del manchego.",
+            "en": "Inland fusion: the smoky power of dried beef and the creaminess of Manchego.",
+            "it": "Fusione di terra: la potenza affumicata della cecina e l'untuosità del manchego.",
+            "fr": "Fusion de l'intérieur : la puissance fumée de la cecina et l'onctuosité du manchego.",
+            "de": "Fusion aus dem Inland: die rauchige Kraft des Trockenfleischs und die Cremigkeit des Manchegos.",
+            "ru": "Фьюжн «из глубины страны»: копчёная мощь вяленой говядины и нежность сыра манчего."
+          },
           "precio": 3.9,
           "emoji": "🧀",
-          "imagen_url": null,
-          "alergenos": ["lacteos"],
+          "imagen_url": "/uploads/redondo-en-boca/1781469322510-scab1mbcp99.png",
+          "alergenos": [
+            "lacteos"
+          ],
           "disponible": true
         },
         {
           "id": "aceitunas",
-          "nombre": { "es": "Aceitunas hechizos del sur" },
-          "descripcion": { "es": "Selección gourmet con aliños del sur. Puro vicio en cada bocado." },
+          "nombre": {
+            "es": "Aceitunas hechizos del sur",
+            "en": "Southern Spiced Olives",
+            "it": "Olive Incantesimo del Sud",
+            "fr": "Olives Ensorcelées du Sud",
+            "de": "Verzauberte Südoliven",
+            "ru": "Оливки «Чары юга»"
+          },
+          "descripcion": {
+            "es": "Selección gourmet con aliños del sur. Puro vicio en cada bocado.",
+            "en": "Gourmet selection with southern marinades. Pure indulgence in every bite.",
+            "it": "Selezione gourmet con condimenti del sud. Puro vizio in ogni boccone.",
+            "fr": "Sélection gourmet avec des assaisonnements du sud. Pur vice à chaque bouchée.",
+            "de": "Gourmet-Auswahl mit südlichen Marinaden. Reines Vergnügen bei jedem Bissen.",
+            "ru": "Гурмэ-подборка с южными маринадами. Чистое удовольствие в каждом кусочке."
+          },
           "precio": 2.5,
           "emoji": "🫒",
-          "imagen_url": null,
+          "imagen_url": "/uploads/redondo-en-boca/1781469482064-vizkz9t7wo.png",
           "alergenos": [],
           "disponible": true
         },
         {
           "id": "sardina-ahumada",
-          "nombre": { "es": "Sardina ahumada" },
-          "descripcion": { "es": "Filete de sardina con mantequilla ahumada sobre un lingote de hojaldre caramelizado." },
+          "nombre": {
+            "es": "Sardina ahumada",
+            "en": "Smoked Sardine",
+            "it": "Sardina Affumicata",
+            "fr": "Sardine Fumée",
+            "de": "Geräucherte Sardine",
+            "ru": "Копчёная сардина"
+          },
+          "descripcion": {
+            "es": "Filete de sardina con mantequilla ahumada sobre un lingote de hojaldre caramelizado.",
+            "en": "Sardine fillet with smoked butter on a caramelized puff pastry slab.",
+            "it": "Filetto di sardina con burro affumicato su un lingotto di pasta sfoglia caramellata.",
+            "fr": "Filet de sardine au beurre fumé sur un lingot de pâte feuilletée caramélisée.",
+            "de": "Sardinenfilet mit geräucherter Butter auf einem karamellisierten Blätterteig-Riegel.",
+            "ru": "Филе сардины со сливочным копчёным маслом на карамелизованном слоёном тесте."
+          },
           "precio": 4.8,
           "emoji": "🐟",
-          "imagen_url": null,
-          "alergenos": ["pescado", "lacteos", "gluten"],
+          "imagen_url": "/uploads/redondo-en-boca/1781469034202-kwakf4331qs.png",
+          "alergenos": [
+            "pescado",
+            "lacteos",
+            "gluten"
+          ],
           "disponible": true
         },
         {
           "id": "pan-masa-madre",
-          "nombre": { "es": "Pan de masa madre" },
-          "descripcion": { "es": "Pan crujiente por fuera y suave por dentro." },
+          "nombre": {
+            "es": "Pan de masa madre",
+            "en": "Sourdough Bread",
+            "it": "Pane a Lievitazione Naturale",
+            "fr": "Pain au Levain",
+            "de": "Sauerteigbrot",
+            "ru": "Хлеб на закваске"
+          },
+          "descripcion": {
+            "es": "Pan crujiente por fuera y suave por dentro.",
+            "en": "Crispy on the outside and soft on the inside.",
+            "it": "Croccante fuori e morbido dentro.",
+            "fr": "Croustillant à l'extérieur et moelleux à l'intérieur.",
+            "de": "Außen knusprig und innen weich.",
+            "ru": "Хрустящий снаружи и мягкий внутри."
+          },
           "precio": 3.9,
           "emoji": "🍞",
-          "imagen_url": null,
-          "alergenos": ["gluten"],
+          "imagen_url": "/uploads/redondo-en-boca/1781469100253-467m83a7o4.png",
+          "alergenos": [
+            "gluten"
+          ],
           "disponible": true
         },
         {
           "id": "pan-tomate-alioli",
-          "nombre": { "es": "Pan de masa madre con tomate y alioli" },
-          "descripcion": { "es": "Pan crujiente, tomate rallado y un suave toque de ajo. El mediterráneo en tu mesa." },
+          "nombre": {
+            "es": "Pan de masa madre con tomate y alioli",
+            "en": "Sourdough with Tomato and Aioli",
+            "it": "Pane al Levain con Pomodoro e Aioli",
+            "fr": "Pain au Levain, Tomate et Aïoli",
+            "de": "Sauerteigbrot mit Tomate und Aioli",
+            "ru": "Хлеб на закваске с томатом и айоли"
+          },
+          "descripcion": {
+            "es": "Pan crujiente, tomate rallado y un suave toque de ajo. El mediterráneo en tu mesa.",
+            "en": "Crispy bread, grated tomato and a gentle touch of garlic. The Mediterranean at your table.",
+            "it": "Pane croccante, pomodoro grattugiato e un delicato tocco d'aglio. Il Mediterraneo in tavola.",
+            "fr": "Pain croustillant, tomate râpée et une douce touche d'ail. La Méditerranée à votre table.",
+            "de": "Knuspriges Brot, geriebene Tomate und ein sanfter Hauch Knoblauch. Das Mittelmeer auf Ihrem Tisch.",
+            "ru": "Хрустящий хлеб, тёртый томат и лёгкая нотка чеснока. Средиземноморье на вашем столе."
+          },
           "precio": 4.5,
           "emoji": "🍅",
-          "imagen_url": null,
-          "alergenos": ["gluten", "huevo"],
+          "imagen_url": "/uploads/redondo-en-boca/1781469106175-irny1qwhth.png",
+          "alergenos": [
+            "gluten",
+            "huevo"
+          ],
           "disponible": true
         }
       ]
     },
     {
       "id": "tablas",
-      "nombre": { "es": "Tablas" },
+      "nombre": {
+        "es": "Tablas",
+        "en": "Boards",
+        "it": "Taglieri",
+        "fr": "Planches",
+        "de": "Bretter",
+        "ru": "Доски"
+      },
       "platos": [
         {
           "id": "jamon-iberico",
-          "nombre": { "es": "Jamón ibérico" },
-          "descripcion": { "es": "Aroma, textura y sabor en su máxima expresión. Media ración 9,80 € · Ración 19,50 €." },
+          "nombre": {
+            "es": "Jamón ibérico",
+            "en": "Iberian Ham",
+            "it": "Prosciutto Iberico",
+            "fr": "Jambon Ibérique",
+            "de": "Iberischer Schinken",
+            "ru": "Иберийский хамон"
+          },
+          "descripcion": {
+            "es": "Aroma, textura y sabor en su máxima expresión. Media ración 9,80 € · Ración 19,50 €.",
+            "en": "Aroma, texture and flavour at their finest. Half portion 9.80 € · Full portion 19.50 €.",
+            "it": "Aroma, consistenza e sapore nella loro massima espressione. Mezza porzione 9,80 € · Porzione 19,50 €.",
+            "fr": "Arôme, texture et saveur dans leur plus belle expression. Demi-portion 9,80 € · Portion 19,50 €.",
+            "de": "Aroma, Textur und Geschmack in reinster Form. Halbe Portion 9,80 € · Portion 19,50 €.",
+            "ru": "Аромат, текстура и вкус в высшем проявлении. Полпорции 9,80 € · Порция 19,50 €."
+          },
           "precio": 19.5,
           "emoji": "🥩",
-          "imagen_url": null,
+          "imagen_url": "/uploads/redondo-en-boca/1781469601831-3vzcnkmepb.png",
           "alergenos": [],
           "disponible": true
         },
         {
           "id": "tabla-quesos",
-          "nombre": { "es": "Tabla de quesos" },
-          "descripcion": { "es": "Selección nacional e internacional. Suaves, curados y azules que conquistan. Media ración 7,80 € · Ración 15,50 €." },
+          "nombre": {
+            "es": "Tabla de quesos",
+            "en": "Cheese Board",
+            "it": "Tagliere di Formaggi",
+            "fr": "Plateau de Fromages",
+            "de": "Käsebrett",
+            "ru": "Сырная доска"
+          },
+          "descripcion": {
+            "es": "Selección nacional e internacional. Suaves, curados y azules que conquistan. Media ración 7,80 € · Ración 15,50 €.",
+            "en": "National and international selection. Mild, aged and blue cheeses to win you over. Half portion 7.80 € · Full portion 15.50 €.",
+            "it": "Selezione nazionale e internazionale. Freschi, stagionati e erborinati che conquistano. Mezza porzione 7,80 € · Porzione 15,50 €.",
+            "fr": "Sélection nationale et internationale. Doux, affinés et bleus qui séduisent. Demi-portion 7,80 € · Portion 15,50 €.",
+            "de": "Nationale und internationale Auswahl. Milde, gereifte und Blauschimmelkäse. Halbe Portion 7,80 € · Portion 15,50 €.",
+            "ru": "Отечественная и зарубежная подборка. Мягкие, выдержанные и голубые сыры. Полпорции 7,80 € · Порция 15,50 €."
+          },
           "precio": 15.5,
           "emoji": "🧀",
-          "imagen_url": null,
-          "alergenos": ["lacteos"],
+          "imagen_url": "/uploads/redondo-en-boca/1781469611296-guqostovmw.png",
+          "alergenos": [
+            "lacteos"
+          ],
           "disponible": true
         },
         {
           "id": "surtido-iberico",
-          "nombre": { "es": "Surtido Ibérico" },
-          "descripcion": { "es": "Lomo, chorizo y salchichón ibéricos. El festín del buen paladar. Media ración 7,80 € · Ración 15,50 €." },
+          "nombre": {
+            "es": "Surtido Ibérico",
+            "en": "Iberian Assortment",
+            "it": "Assortimento Iberico",
+            "fr": "Assortiment Ibérique",
+            "de": "Iberisches Sortiment",
+            "ru": "Иберийское ассорти"
+          },
+          "descripcion": {
+            "es": "Lomo, chorizo y salchichón ibéricos. El festín del buen paladar. Media ración 7,80 € · Ración 15,50 €.",
+            "en": "Iberian lomo, chorizo and salchichón. A feast for the discerning palate. Half portion 7.80 € · Full portion 15.50 €.",
+            "it": "Lomo, chorizo e salchichón iberici. Il banchetto del buon palato. Mezza porzione 7,80 € · Porzione 15,50 €.",
+            "fr": "Lomo, chorizo et salchichón ibériques. Le festin des fins palais. Demi-portion 7,80 € · Portion 15,50 €.",
+            "de": "Iberisches Lomo, Chorizo und Salchichón. Das Fest für den feinen Gaumen. Halbe Portion 7,80 € · Portion 15,50 €.",
+            "ru": "Иберийское ломо, чоризо и сальчичон. Пир для настоящих гурманов. Полпорции 7,80 € · Порция 15,50 €."
+          },
           "precio": 15.5,
           "emoji": "🍖",
-          "imagen_url": null,
+          "imagen_url": "/uploads/redondo-en-boca/1781469620992-dnp9y18dew4.png",
           "alergenos": [],
           "disponible": true
         },
         {
           "id": "lomo-iberico",
-          "nombre": { "es": "Lomo ibérico" },
-          "descripcion": { "es": "Sabor intenso y textura delicada, un clásico de nuestras dehesas." },
+          "nombre": {
+            "es": "Lomo ibérico",
+            "en": "Iberian Lomo",
+            "it": "Lomo Iberico",
+            "fr": "Lomo Ibérique",
+            "de": "Iberischer Lomo",
+            "ru": "Иберийское ломо"
+          },
+          "descripcion": {
+            "es": "Sabor intenso y textura delicada, un clásico de nuestras dehesas.",
+            "en": "Intense flavour and delicate texture, a classic from our dehesas.",
+            "it": "Sapore intenso e consistenza delicata, un classico delle nostre dehesas.",
+            "fr": "Saveur intense et texture délicate, un classique de nos dehesas.",
+            "de": "Intensiver Geschmack und zarte Textur, ein Klassiker aus unseren Dehesas.",
+            "ru": "Насыщенный вкус и нежная текстура — классика испанских пастбищ."
+          },
           "precio": 15.5,
           "emoji": "🥓",
-          "imagen_url": null,
+          "imagen_url": "/uploads/redondo-en-boca/1781469628570-4kisq978xbp.png",
           "alergenos": [],
           "disponible": true
         },
         {
           "id": "salchichon-iberico",
-          "nombre": { "es": "Salchichón Ibérico" },
-          "descripcion": { "es": "Selección de salchichón curado de calidad, cortado fino y perfecto para compartir." },
+          "nombre": {
+            "es": "Salchichón Ibérico",
+            "en": "Iberian Salchichón",
+            "it": "Salchichón Iberico",
+            "fr": "Salchichón Ibérique",
+            "de": "Iberischer Salchichón",
+            "ru": "Иберийский сальчичон"
+          },
+          "descripcion": {
+            "es": "Selección de salchichón curado de calidad, cortado fino y perfecto para compartir.",
+            "en": "Quality cured salchichón, thinly sliced and perfect for sharing.",
+            "it": "Salchichón stagionato di qualità, tagliato sottile e perfetto da condividere.",
+            "fr": "Salchichón affiné de qualité, finement tranché et parfait à partager.",
+            "de": "Hochwertiger gereifter Salchichón, dünn aufgeschnitten, perfekt zum Teilen.",
+            "ru": "Качественный выдержанный сальчичон, нарезанный тонко — идеально для компании."
+          },
           "precio": 15.5,
           "emoji": "🌭",
-          "imagen_url": null,
+          "imagen_url": "/uploads/redondo-en-boca/1781469766386-pdp70ff222f.png",
           "alergenos": [],
           "disponible": true
         },
         {
           "id": "chorizo-iberico",
-          "nombre": { "es": "Chorizo Ibérico" },
-          "descripcion": { "es": "Picante, jugoso, con el punto justo de curación." },
+          "nombre": {
+            "es": "Chorizo Ibérico",
+            "en": "Iberian Chorizo",
+            "it": "Chorizo Iberico",
+            "fr": "Chorizo Ibérique",
+            "de": "Iberischer Chorizo",
+            "ru": "Иберийский чоризо"
+          },
+          "descripcion": {
+            "es": "Picante, jugoso, con el punto justo de curación.",
+            "en": "Spicy, juicy, with just the right cure.",
+            "it": "Piccante, succoso, con il giusto grado di stagionatura.",
+            "fr": "Épicé, juteux, avec le juste degré d'affinage.",
+            "de": "Scharf, saftig und genau richtig gereift.",
+            "ru": "Острый, сочный, идеально выдержанный."
+          },
           "precio": 15.5,
           "emoji": "🌶️",
-          "imagen_url": null,
+          "imagen_url": "/uploads/redondo-en-boca/1781469761283-7dy32wajewv.png",
           "alergenos": [],
           "disponible": true
         }
@@ -161,335 +398,867 @@
     },
     {
       "id": "tapas",
-      "nombre": { "es": "Tapas" },
+      "nombre": {
+        "es": "Tapas",
+        "en": "Tapas",
+        "it": "Tapas",
+        "fr": "Tapas",
+        "de": "Tapas",
+        "ru": "Тапас"
+      },
       "platos": [
         {
           "id": "ensaladilla-redondo",
-          "nombre": { "es": "Ensaladilla Redondo" },
-          "descripcion": { "es": "Ensaladilla rusa con ventresca, encurtidos y aceituna negra deshidratada." },
+          "nombre": {
+            "es": "Ensaladilla Redondo",
+            "en": "Redondo Potato Salad",
+            "it": "Insalata Russa Redondo",
+            "fr": "Salade Russe Redondo",
+            "de": "Redondo Kartoffelsalat",
+            "ru": "Салат «Редондо»"
+          },
+          "descripcion": {
+            "es": "Ensaladilla rusa con ventresca, encurtidos y aceituna negra deshidratada.",
+            "en": "Russian-style potato salad with ventresca tuna, pickles and dehydrated black olive.",
+            "it": "Insalata russa con ventresca, sottaceti e oliva nera disidratata.",
+            "fr": "Salade russe avec ventresca, condiments et olive noire déshydratée.",
+            "de": "Russischer Kartoffelsalat mit Ventresca-Thunfisch, Pickles und dehydrierter schwarzer Olive.",
+            "ru": "Русский салат с тунцом вентреска, маринованными огурчиками и сушёными чёрными оливками."
+          },
           "precio": 9.9,
           "emoji": "🥗",
-          "imagen_url": null,
-          "alergenos": ["pescado", "huevo", "mostaza"],
+          "imagen_url": "/uploads/redondo-en-boca/1781475020751-nphpuiza9t.png",
+          "alergenos": [
+            "pescado",
+            "huevo",
+            "mostaza"
+          ],
           "disponible": true
         },
         {
           "id": "huevos-rotos-jamon",
-          "nombre": { "es": "Huevos rotos con Jamón" },
-          "descripcion": { "es": "Huevos camperos sobre patatas coronados con jamón ibérico." },
+          "nombre": {
+            "es": "Huevos rotos con Jamón",
+            "en": "Broken Eggs with Ham",
+            "it": "Uova Rotte con Prosciutto",
+            "fr": "Œufs Cassés au Jambon",
+            "de": "Rühreier mit Schinken",
+            "ru": "«Разбитые яйца» с хамоном"
+          },
+          "descripcion": {
+            "es": "Huevos camperos sobre patatas coronados con jamón ibérico.",
+            "en": "Free-range eggs over potatoes, topped with Iberian ham.",
+            "it": "Uova di campagna su patate, coronate con prosciutto iberico.",
+            "fr": "Œufs fermiers sur pommes de terre, couronnés de jambon ibérique.",
+            "de": "Freilandeier auf Kartoffeln, gekrönt mit iberischem Schinken.",
+            "ru": "Деревенские яйца на картошке, увенчанные иберийским хамоном."
+          },
           "precio": 12.5,
           "emoji": "🍳",
-          "imagen_url": null,
-          "alergenos": ["huevo"],
+          "imagen_url": "/uploads/redondo-en-boca/1781475028950-5w7qjugd5hc.png",
+          "alergenos": [
+            "huevo"
+          ],
           "disponible": true
         },
         {
           "id": "boquerones-limon",
-          "nombre": { "es": "Boquerones Fritos al Limón" },
-          "descripcion": { "es": "Crujientes, con un toque cítrico que los hace adictivos." },
+          "nombre": {
+            "es": "Boquerones Fritos al Limón",
+            "en": "Lemon Fried Anchovies",
+            "it": "Alice Fritte al Limone",
+            "fr": "Anchois Frits au Citron",
+            "de": "Gebratene Sardellen mit Zitrone",
+            "ru": "Жареные анчоусы с лимоном"
+          },
+          "descripcion": {
+            "es": "Crujientes, con un toque cítrico que los hace adictivos.",
+            "en": "Crispy, with a citrus touch that makes them addictive.",
+            "it": "Croccanti, con un tocco di agrumi che li rende irresistibili.",
+            "fr": "Croustillants, avec une touche d'agrumes qui les rend addictifs.",
+            "de": "Knusprig, mit einem Hauch Zitrus, der sie unwiderstehlich macht.",
+            "ru": "Хрустящие, с цитрусовой ноткой, от которой невозможно оторваться."
+          },
           "precio": 9.8,
           "emoji": "🍋",
-          "imagen_url": null,
-          "alergenos": ["pescado", "gluten"],
+          "imagen_url": "/uploads/redondo-en-boca/1781475037550-k4r90boiecq.png",
+          "alergenos": [
+            "pescado",
+            "gluten"
+          ],
           "disponible": true
         },
         {
           "id": "alcachofas-jamon",
-          "nombre": { "es": "Alcachofas con Jamón" },
-          "descripcion": { "es": "Tiernas alcachofas confitadas con el toque salado del jamón ibérico." },
+          "nombre": {
+            "es": "Alcachofas con Jamón",
+            "en": "Artichokes with Ham",
+            "it": "Carciofi con Prosciutto",
+            "fr": "Artichauts au Jambon",
+            "de": "Artischocken mit Schinken",
+            "ru": "Артишоки с хамоном"
+          },
+          "descripcion": {
+            "es": "Tiernas alcachofas confitadas con el toque salado del jamón ibérico.",
+            "en": "Tender confit artichokes with the salty touch of Iberian ham.",
+            "it": "Teneri carciofi confit con il tocco salato del prosciutto iberico.",
+            "fr": "Tendres artichauts confits avec la touche salée du jambon ibérique.",
+            "de": "Zarte konfierte Artischocken mit dem salzigen Touch des iberischen Schinkens.",
+            "ru": "Нежные конфи-артишоки с солёным акцентом иберийского хамона."
+          },
           "precio": 12.5,
           "emoji": "🌿",
-          "imagen_url": null,
+          "imagen_url": "/uploads/redondo-en-boca/1781475056543-2k88r6lhuvl.png",
           "alergenos": [],
           "disponible": true
         },
         {
           "id": "tiras-pollo",
-          "nombre": { "es": "Tiras de Pollo" },
-          "descripcion": { "es": "Crujientes, sabrosas y acompañadas con salsa de mostaza y miel." },
+          "nombre": {
+            "es": "Tiras de Pollo",
+            "en": "Chicken Strips",
+            "it": "Strisce di Pollo",
+            "fr": "Lanières de Poulet",
+            "de": "Hähnchenstreifen",
+            "ru": "Куриные полоски"
+          },
+          "descripcion": {
+            "es": "Crujientes, sabrosas y acompañadas con salsa de mostaza y miel.",
+            "en": "Crispy and tasty, served with honey mustard sauce.",
+            "it": "Croccanti e saporite, accompagnate con salsa di senape e miele.",
+            "fr": "Croustillantes et savoureuses, accompagnées de sauce moutarde-miel.",
+            "de": "Knusprig und lecker, serviert mit Honig-Senf-Sauce.",
+            "ru": "Хрустящие и вкусные, подаются с медово-горчичным соусом."
+          },
           "precio": 10.5,
           "emoji": "🍗",
-          "imagen_url": null,
-          "alergenos": ["gluten", "mostaza"],
+          "imagen_url": "/uploads/redondo-en-boca/1781475084701-kp5qmqsxgn.png",
+          "alergenos": [
+            "gluten",
+            "mostaza"
+          ],
           "disponible": true
         },
         {
           "id": "hummus-casero",
-          "nombre": { "es": "Hummus Casero" },
-          "descripcion": { "es": "Cremoso, especiado y acompañado con picos de pan." },
+          "nombre": {
+            "es": "Hummus Casero",
+            "en": "Homemade Hummus",
+            "it": "Hummus Fatto in Casa",
+            "fr": "Houmous Maison",
+            "de": "Hausgemachtes Hummus",
+            "ru": "Домашний хумус"
+          },
+          "descripcion": {
+            "es": "Cremoso, especiado y acompañado con picos de pan.",
+            "en": "Creamy, spiced and served with bread sticks.",
+            "it": "Cremoso, speziato e accompagnato con grissini.",
+            "fr": "Crémeux, épicé et accompagné de gressins.",
+            "de": "Cremig, gewürzt und mit Brotgrissini serviert.",
+            "ru": "Кремовый, пряный, подаётся с хлебными палочками."
+          },
           "precio": 9.8,
           "emoji": "🫘",
-          "imagen_url": null,
-          "alergenos": ["gluten", "sesamo"],
+          "imagen_url": "/uploads/redondo-en-boca/1781476380293-elp90gtyp1n.png",
+          "alergenos": [
+            "gluten",
+            "sesamo"
+          ],
           "disponible": true
         },
         {
           "id": "pimientos-padron",
-          "nombre": { "es": "Pimientos del Padrón" },
-          "descripcion": { "es": "Tradicionales pimientos fritos, servidos calientes y con su característico toque de sabor. Un clásico para compartir." },
+          "nombre": {
+            "es": "Pimientos del Padrón",
+            "en": "Padrón Peppers",
+            "it": "Peperoni del Padrón",
+            "fr": "Poivrons du Padrón",
+            "de": "Padrón-Paprika",
+            "ru": "Перцы падрон"
+          },
+          "descripcion": {
+            "es": "Tradicionales pimientos fritos, servidos calientes y con su característico toque de sabor. Un clásico para compartir.",
+            "en": "Traditional fried peppers, served hot with their characteristic flavour. A classic to share.",
+            "it": "Tradizionali peperoni fritti, serviti caldi con il loro caratteristico sapore. Un classico da condividere.",
+            "fr": "Traditionnels poivrons frits, servis chauds avec leur saveur caractéristique. Un classique à partager.",
+            "de": "Traditionelle gebratene Paprika, heiß serviert. Ein Klassiker zum Teilen.",
+            "ru": "Традиционные жареные перчики, поданные горячими. Классика для совместного угощения."
+          },
           "precio": 8.5,
           "emoji": "🫑",
-          "imagen_url": null,
+          "imagen_url": "/uploads/redondo-en-boca/1781476408375-ed4jt9naxdn.png",
           "alergenos": [],
           "disponible": true
         },
         {
           "id": "gambas-ajillo",
-          "nombre": { "es": "Gambas al Ajillo" },
-          "descripcion": { "es": "Gambas fritas al ajillo sobre una cama de puré de papa." },
-          "precio": 19.0,
+          "nombre": {
+            "es": "Gambas al Ajillo",
+            "en": "Garlic Prawns",
+            "it": "Gamberi all'Aglio",
+            "fr": "Crevettes à l'Ail",
+            "de": "Knoblauchgarnelen",
+            "ru": "Креветки с чесноком"
+          },
+          "descripcion": {
+            "es": "Gambas fritas al ajillo sobre una cama de puré de papa.",
+            "en": "Fried prawns in garlic oil on a bed of potato purée.",
+            "it": "Gamberi fritti all'aglio su un letto di purè di patate.",
+            "fr": "Crevettes frites à l'ail sur un lit de purée de pommes de terre.",
+            "de": "In Knoblauchöl gebratene Garnelen auf Kartoffelpüree.",
+            "ru": "Жареные креветки в чесночном масле на пюре из картофеля."
+          },
+          "precio": 19,
           "emoji": "🦐",
-          "imagen_url": null,
-          "alergenos": ["marisco"],
+          "imagen_url": "/uploads/redondo-en-boca/1781476424113-n6jv7thmdol.png",
+          "alergenos": [
+            "marisco"
+          ],
           "disponible": true
         },
         {
           "id": "patatas-bravas",
-          "nombre": { "es": "Patatas Bravas" },
-          "descripcion": { "es": "Crujientes por fuera, tiernas por dentro. Con nuestra salsa brava y alioli suave." },
+          "nombre": {
+            "es": "Patatas Bravas",
+            "en": "Spicy Potatoes",
+            "it": "Patatas Bravas",
+            "fr": "Patatas Bravas",
+            "de": "Scharfe Kartoffeln",
+            "ru": "Пататас Бравас"
+          },
+          "descripcion": {
+            "es": "Crujientes por fuera, tiernas por dentro. Con nuestra salsa brava y alioli suave.",
+            "en": "Crispy on the outside, tender on the inside. With our spicy sauce and mild aioli.",
+            "it": "Croccanti fuori, morbide dentro. Con la nostra salsa brava e aioli delicato.",
+            "fr": "Croustillantes à l'extérieur, moelleuses à l'intérieur. Avec notre sauce brava et aïoli doux.",
+            "de": "Außen knusprig, innen zart. Mit unserer scharfen Sauce und mildem Aioli.",
+            "ru": "Хрустящие снаружи и нежные внутри. С нашим острым соусом и лёгким айоли."
+          },
           "precio": 8.5,
           "emoji": "🥔",
-          "imagen_url": null,
-          "alergenos": ["huevo"],
+          "imagen_url": "/uploads/redondo-en-boca/1781476442817-846vp7pflbn.png",
+          "alergenos": [
+            "huevo"
+          ],
           "disponible": true
         },
         {
           "id": "croquetas-gambas",
-          "nombre": { "es": "Croquetas de Gambas" },
-          "descripcion": { "es": "Cremosas por dentro, crujientes por fuera. Acompañadas de alioli negro." },
+          "nombre": {
+            "es": "Croquetas de Gambas",
+            "en": "Prawn Croquettes",
+            "it": "Crocchette di Gamberi",
+            "fr": "Croquettes de Crevettes",
+            "de": "Garnelenkroketten",
+            "ru": "Крокеты с креветками"
+          },
+          "descripcion": {
+            "es": "Cremosas por dentro, crujientes por fuera. Acompañadas de alioli negro.",
+            "en": "Creamy inside, crispy outside. Served with black aioli.",
+            "it": "Cremose dentro, croccanti fuori. Accompagnate con aioli nero.",
+            "fr": "Crémeuses à l'intérieur, croustillantes à l'extérieur. Accompagnées d'aïoli noir.",
+            "de": "Innen cremig, außen knusprig. Serviert mit schwarzem Aioli.",
+            "ru": "Кремовые внутри, хрустящие снаружи. Подаются с чёрным айоли."
+          },
           "precio": 10.5,
           "emoji": "🍤",
-          "imagen_url": null,
-          "alergenos": ["gluten", "marisco", "lacteos", "huevo"],
+          "imagen_url": "/uploads/redondo-en-boca/1781476870116-dbqt4q9m5s.png",
+          "alergenos": [
+            "gluten",
+            "marisco",
+            "lacteos",
+            "huevo"
+          ],
           "disponible": true
         },
         {
           "id": "croquetas-jamon",
-          "nombre": { "es": "Croquetas de Jamón Ibérico" },
-          "descripcion": { "es": "Cremosas por dentro, crujientes por fuera." },
+          "nombre": {
+            "es": "Croquetas de Jamón Ibérico",
+            "en": "Iberian Ham Croquettes",
+            "it": "Crocchette di Prosciutto Iberico",
+            "fr": "Croquettes de Jambon Ibérique",
+            "de": "Iberische Schinkenkroketten",
+            "ru": "Крокеты с иберийским хамоном"
+          },
+          "descripcion": {
+            "es": "Cremosas por dentro, crujientes por fuera.",
+            "en": "Creamy inside, crispy outside.",
+            "it": "Cremose dentro, croccanti fuori.",
+            "fr": "Crémeuses à l'intérieur, croustillantes à l'extérieur.",
+            "de": "Innen cremig, außen knusprig.",
+            "ru": "Кремовые внутри, хрустящие снаружи."
+          },
           "precio": 10.5,
           "emoji": "🍘",
-          "imagen_url": null,
-          "alergenos": ["gluten", "lacteos", "huevo"],
+          "imagen_url": "/uploads/redondo-en-boca/1781476887279-jpaos61jtzr.png",
+          "alergenos": [
+            "gluten",
+            "lacteos",
+            "huevo"
+          ],
           "disponible": true
         },
         {
           "id": "calamar-andaluza",
-          "nombre": { "es": "Calamar Fresco a la Andaluza" },
-          "descripcion": { "es": "Calamares frescos rebozados al estilo andaluz, ligeros y sabrosos, con un toque de limón." },
-          "precio": 22.0,
+          "nombre": {
+            "es": "Calamar Fresco a la Andaluza",
+            "en": "Fresh Andalusian Squid",
+            "it": "Calamaro Fresco all'Andalusa",
+            "fr": "Calamars Frais à l'Andalouse",
+            "de": "Frischer Andalusischer Tintenfisch",
+            "ru": "Свежий кальмар по-андалузски"
+          },
+          "descripcion": {
+            "es": "Calamares frescos rebozados al estilo andaluz, ligeros y sabrosos, con un toque de limón.",
+            "en": "Fresh squids in Andalusian batter, light and tasty, with a touch of lemon.",
+            "it": "Calamari freschi pastellati all'andalusa, leggeri e saporiti, con un tocco di limone.",
+            "fr": "Calamars frais en pâte à l'andalouse, légers et savoureux, avec une touche de citron.",
+            "de": "Frische Tintenfische im andalusischen Teig, leicht und lecker, mit einem Hauch Zitrone.",
+            "ru": "Свежие кальмары в андалузском кляре, лёгкие и вкусные, с нотой лимона."
+          },
+          "precio": 22,
           "emoji": "🦑",
-          "imagen_url": null,
-          "alergenos": ["gluten", "moluscos"],
+          "imagen_url": "/uploads/redondo-en-boca/1781476596452-7ylancnlfup.png",
+          "alergenos": [
+            "gluten",
+            "moluscos"
+          ],
           "disponible": true
         },
         {
           "id": "kibbe",
-          "nombre": { "es": "Kibbe" },
-          "descripcion": { "es": "Delicioso bocado de carne molida y trigo bulgur, crujiente por fuera y jugoso por dentro, con especias orientales." },
-          "precio": 15.0,
+          "nombre": {
+            "es": "Kibbe",
+            "en": "Kibbeh",
+            "it": "Kibbe",
+            "fr": "Kibbé",
+            "de": "Kibbeh",
+            "ru": "Кеббе"
+          },
+          "descripcion": {
+            "es": "Delicioso bocado de carne molida y trigo bulgur, crujiente por fuera y jugoso por dentro, con especias orientales.",
+            "en": "Delicious minced meat and bulgur wheat bite, crispy outside and juicy inside with oriental spices.",
+            "it": "Delizioso boccone di carne macinata e grano bulgur, croccante fuori e succoso dentro con spezie orientali.",
+            "fr": "Délicieuse bouchée de viande hachée et blé bulgur, croustillante dehors et juteuse dedans avec des épices orientales.",
+            "de": "Köstlicher Bissen aus Hackfleisch und Bulgurweizen, außen knusprig und innen saftig mit orientalischen Gewürzen.",
+            "ru": "Вкусный шарик из молотого мяса и булгура — хрустящий снаружи и сочный внутри с восточными специями."
+          },
+          "precio": 15,
           "emoji": "🫓",
-          "imagen_url": null,
-          "alergenos": ["gluten"],
+          "imagen_url": "/uploads/redondo-en-boca/1781474921948-plgc4006lns.png",
+          "alergenos": [
+            "gluten"
+          ],
           "disponible": true
         },
         {
           "id": "falafel",
-          "nombre": { "es": "Falafel" },
-          "descripcion": { "es": "Croquetas de garbanzo y hierbas frescas, doradas y aromáticas. Un clásico vegetariano lleno de sabor." },
+          "nombre": {
+            "es": "Falafel",
+            "en": "Falafel",
+            "it": "Falafel",
+            "fr": "Falafels",
+            "de": "Falafel",
+            "ru": "Фалафель"
+          },
+          "descripcion": {
+            "es": "Croquetas de garbanzo y hierbas frescas, doradas y aromáticas. Un clásico vegetariano lleno de sabor.",
+            "en": "Chickpea and fresh herb croquettes, golden and aromatic. A classic vegetarian dish full of flavour.",
+            "it": "Crocchette di ceci ed erbe fresche, dorate e aromatiche. Un classico vegetariano pieno di sapore.",
+            "fr": "Croquettes de pois chiches et herbes fraîches, dorées et aromatiques. Un classique végétarien plein de saveur.",
+            "de": "Kichererbsen- und Frischkräuterkroketten, goldbraun und aromatisch. Ein vegetarischer Klassiker voller Geschmack.",
+            "ru": "Котлетки из нута и свежих трав, золотистые и ароматные. Классика вегетарианской кухни, полная вкуса."
+          },
           "precio": 12.5,
           "emoji": "🧆",
-          "imagen_url": null,
-          "alergenos": ["gluten", "sesamo"],
+          "imagen_url": "/uploads/redondo-en-boca/1781474932431-985yyx8xy6t.png",
+          "alergenos": [
+            "gluten",
+            "sesamo"
+          ],
           "disponible": true
         }
       ]
     },
     {
       "id": "arroces",
-      "nombre": { "es": "Arroces" },
+      "nombre": {
+        "es": "Arroces",
+        "en": "Rice Dishes",
+        "it": "Risi",
+        "fr": "Riz",
+        "de": "Reisgerichte",
+        "ru": "Рисовые блюда"
+      },
       "platos": [
         {
           "id": "paella-valenciana",
-          "nombre": { "es": "Paella valenciana" },
-          "descripcion": { "es": "Tradición al fuego: pollo, conejo, judía verde y garrofó. Sólo por encargo, mínimo 2 personas." },
-          "precio": 18.0,
+          "nombre": {
+            "es": "Paella valenciana",
+            "en": "Valencian Paella",
+            "it": "Paella Valenciana",
+            "fr": "Paella Valencienne",
+            "de": "Valencianische Paella",
+            "ru": "Валенсийская паэлья"
+          },
+          "descripcion": {
+            "es": "Tradición al fuego: pollo, conejo, judía verde y garrofó. Sólo por encargo, mínimo 2 personas.",
+            "en": "Tradition by fire: chicken, rabbit, green beans and garrofó. On order only, minimum 2 people.",
+            "it": "Tradizione sul fuoco: pollo, coniglio, fagiolini e garrofó. Solo su ordinazione, minimo 2 persone.",
+            "fr": "Tradition au feu : poulet, lapin, haricots verts et garrofó. Sur commande uniquement, minimum 2 personnes.",
+            "de": "Tradition am Feuer: Huhn, Kaninchen, grüne Bohnen und Garrofó. Nur auf Bestellung, mindestens 2 Personen.",
+            "ru": "Традиция огня: курица, кролик, стручковая фасоль и гаррофо. Только под заказ, минимум 2 человека."
+          },
+          "precio": 18,
           "emoji": "🥘",
-          "imagen_url": null,
+          "imagen_url": "/uploads/redondo-en-boca/1781470137530-aptfz7p7qqp.png",
           "alergenos": [],
           "disponible": true
         },
         {
           "id": "arroz-senyoret",
-          "nombre": { "es": "Arroz al senyoret" },
-          "descripcion": { "es": "Marisco limpio, arroz suelto, sabor profundo. Sin trabajo, solo disfrute. Mínimo 2 personas." },
+          "nombre": {
+            "es": "Arroz al senyoret",
+            "en": "Senyoret Rice",
+            "it": "Riso al Senyoret",
+            "fr": "Riz au Senyoret",
+            "de": "Senyoret-Reis",
+            "ru": "Рис «Сеньорет»"
+          },
+          "descripcion": {
+            "es": "Marisco limpio, arroz suelto, sabor profundo. Sin trabajo, solo disfrute. Mínimo 2 personas.",
+            "en": "Cleaned seafood, loose rice, deep flavour. No work, just enjoyment. Minimum 2 people.",
+            "it": "Frutti di mare puliti, riso sgranato, sapore profondo. Senza fatica, solo piacere. Minimo 2 persone.",
+            "fr": "Fruits de mer décortiqués, riz moelleux, saveur profonde. Sans effort, que du plaisir. Minimum 2 personnes.",
+            "de": "Gesäuberte Meeresfrüchte, lockerer Reis, tiefer Geschmack. Ohne Arbeit, nur Genuss. Mindestens 2 Personen.",
+            "ru": "Очищенные морепродукты, рассыпчатый рис, насыщенный вкус. Без хлопот — только удовольствие. Минимум 2 человека."
+          },
           "precio": 22.5,
           "emoji": "🦐",
-          "imagen_url": null,
-          "alergenos": ["marisco", "moluscos"],
+          "imagen_url": "/uploads/redondo-en-boca/1781470145749-rifo0uq1cm.png",
+          "alergenos": [
+            "marisco",
+            "moluscos"
+          ],
           "disponible": true
         },
         {
           "id": "arroz-negro",
-          "nombre": { "es": "Arroz negro" },
-          "descripcion": { "es": "Con calamar y su tinta. Fondo intenso, sabor profundo. Mínimo 2 personas." },
+          "nombre": {
+            "es": "Arroz negro",
+            "en": "Black Rice",
+            "it": "Riso Nero",
+            "fr": "Riz Noir",
+            "de": "Schwarzer Reis",
+            "ru": "Чёрный рис"
+          },
+          "descripcion": {
+            "es": "Con calamar y su tinta. Fondo intenso, sabor profundo. Mínimo 2 personas.",
+            "en": "With squid and its ink. Intense base, deep flavour. Minimum 2 people.",
+            "it": "Con calamaro e il suo nero. Fondo intenso, sapore profondo. Minimo 2 persone.",
+            "fr": "Avec calmar et son encre. Base intense, saveur profonde. Minimum 2 personnes.",
+            "de": "Mit Tintenfisch und seiner Tinte. Intensive Basis, tiefer Geschmack. Mindestens 2 Personen.",
+            "ru": "С кальмаром и его чернилами. Насыщенная основа, глубокий вкус. Минимум 2 человека."
+          },
           "precio": 21.5,
           "emoji": "🖤",
-          "imagen_url": null,
-          "alergenos": ["moluscos"],
+          "imagen_url": "/uploads/redondo-en-boca/1781476954433-xurrjf34k2c.png",
+          "alergenos": [
+            "moluscos"
+          ],
           "disponible": true
         },
         {
           "id": "paella-verduras",
-          "nombre": { "es": "Paella de verduras" },
-          "descripcion": { "es": "Colores de la huerta, sobre fondo de sofrito casero. Mínimo 2 personas." },
-          "precio": 18.0,
+          "nombre": {
+            "es": "Paella de verduras",
+            "en": "Vegetable Paella",
+            "it": "Paella di Verdure",
+            "fr": "Paella aux Légumes",
+            "de": "Gemüsepaella",
+            "ru": "Овощная паэлья"
+          },
+          "descripcion": {
+            "es": "Colores de la huerta, sobre fondo de sofrito casero. Mínimo 2 personas.",
+            "en": "Garden colours on a base of homemade sofrito. Minimum 2 people.",
+            "it": "Colori dell'orto, su fondo di sofrito casalingo. Minimo 2 persone.",
+            "fr": "Couleurs du potager, sur fond de sofrito maison. Minimum 2 personnes.",
+            "de": "Gartenfarben auf hausgemachtem Sofrito. Mindestens 2 Personen.",
+            "ru": "Цвета огорода на основе домашнего соуса «Софрито». Минимум 2 человека."
+          },
+          "precio": 18,
           "emoji": "🥦",
           "imagen_url": null,
           "alergenos": [],
-          "disponible": true
+          "disponible": false,
+          "oculto": true
         }
       ]
     },
     {
       "id": "carnes",
-      "nombre": { "es": "Carnes" },
+      "nombre": {
+        "es": "Carnes",
+        "en": "Meat",
+        "it": "Carne",
+        "fr": "Viande",
+        "de": "Fleisch",
+        "ru": "Мясо"
+      },
       "platos": [
         {
           "id": "entrecotte",
-          "nombre": { "es": "Entrecotte" },
-          "descripcion": { "es": "350g de carne jugosa y suave, acompañado de patatas fritas y pimientos del padrón." },
+          "nombre": {
+            "es": "Entrecotte",
+            "en": "Entrecôte",
+            "it": "Entrecôte",
+            "fr": "Entrecôte",
+            "de": "Entrecôte",
+            "ru": "Антрекот"
+          },
+          "descripcion": {
+            "es": "350g de carne jugosa y suave, acompañado de patatas fritas y pimientos del padrón.",
+            "en": "350g of juicy and tender meat, served with chips and Padrón peppers.",
+            "it": "350g di carne succosa e morbida, accompagnata da patatine fritte e pimientos del padrón.",
+            "fr": "350g de viande juteuse et tendre, accompagnée de frites et pimientos del padrón.",
+            "de": "350g saftiges und zartes Fleisch, serviert mit Pommes frites und Padrón-Paprika.",
+            "ru": "350 г сочного и нежного мяса с картофелем фри и перцами падрон."
+          },
           "precio": 27.5,
           "emoji": "🥩",
-          "imagen_url": null,
+          "imagen_url": "/uploads/redondo-en-boca/1781470332488-73sngymktlt.png",
           "alergenos": [],
           "disponible": true
         },
         {
           "id": "secreto-iberico",
-          "nombre": { "es": "Secreto Ibérico" },
-          "descripcion": { "es": "Marinado con cerveza, naranja y especias, con parmentier de patata y pimientos padrón." },
+          "nombre": {
+            "es": "Secreto Ibérico",
+            "en": "Iberian Secreto",
+            "it": "Secreto Iberico",
+            "fr": "Secreto Ibérique",
+            "de": "Iberisches Secreto",
+            "ru": "Иберийское «Секрето»"
+          },
+          "descripcion": {
+            "es": "Marinado con cerveza, naranja y especias, con parmentier de patata y pimientos padrón.",
+            "en": "Marinated with beer, orange and spices, with potato parmentier and Padrón peppers.",
+            "it": "Marinato con birra, arancia e spezie, con parmentier di patate e pimientos del padrón.",
+            "fr": "Mariné à la bière, à l'orange et aux épices, avec parmentier de pommes de terre et pimientos del padrón.",
+            "de": "Mariniert mit Bier, Orange und Gewürzen, mit Kartoffelparmentier und Padrón-Paprika.",
+            "ru": "Маринованное с пивом, апельсином и специями, с картофельным парментье и перцами падрон."
+          },
           "precio": 19.5,
           "emoji": "🍖",
-          "imagen_url": null,
-          "alergenos": ["sulfitos"],
+          "imagen_url": "/uploads/redondo-en-boca/1781470339308-pplahlg1loi.png",
+          "alergenos": [
+            "sulfitos"
+          ],
           "disponible": true
         },
         {
           "id": "hamburguesa",
-          "nombre": { "es": "Hamburguesa de carne" },
-          "descripcion": { "es": "Con cheddar ahumado, bacon crujiente y pan artesano. Un bocado contundente." },
+          "nombre": {
+            "es": "Hamburguesa de carne",
+            "en": "Beef Burger",
+            "it": "Hamburger di Manzo",
+            "fr": "Burger de Bœuf",
+            "de": "Rindfleischburger",
+            "ru": "Говяжий бургер"
+          },
+          "descripcion": {
+            "es": "Con cheddar ahumado, bacon crujiente y pan artesano. Un bocado contundente.",
+            "en": "With smoked cheddar, crispy bacon and artisan bread. A hearty bite.",
+            "it": "Con cheddar affumicato, bacon croccante e pane artigianale. Un boccone sostanzioso.",
+            "fr": "Avec cheddar fumé, bacon croustillant et pain artisanal. Une bouchée consistante.",
+            "de": "Mit geräuchertem Cheddar, knusprigem Speck und handwerklichem Brot. Ein herzhafter Bissen.",
+            "ru": "С копчёным чеддером, хрустящим беконом и ремесленным хлебом. Сытный и насыщенный."
+          },
           "precio": 15.5,
           "emoji": "🍔",
-          "imagen_url": null,
-          "alergenos": ["gluten", "lacteos"],
+          "imagen_url": "/uploads/redondo-en-boca/1781470189003-571048q6b39.png",
+          "alergenos": [
+            "gluten",
+            "lacteos"
+          ],
           "disponible": true
         }
       ]
     },
     {
       "id": "pescados",
-      "nombre": { "es": "Pescados" },
+      "nombre": {
+        "es": "Pescados",
+        "en": "Fish",
+        "it": "Pesce",
+        "fr": "Poisson",
+        "de": "Fisch",
+        "ru": "Рыба"
+      },
       "platos": [
         {
           "id": "bacalao",
-          "nombre": { "es": "Bacalao" },
-          "descripcion": { "es": "Bacalao al horno con mayonesa de ajo rostizado, salsa de pimientos rojos y patatas panaderas." },
+          "nombre": {
+            "es": "Bacalao",
+            "en": "Salt Cod",
+            "it": "Baccalà",
+            "fr": "Cabillaud",
+            "de": "Kabeljau",
+            "ru": "Бакалао"
+          },
+          "descripcion": {
+            "es": "Bacalao al horno con mayonesa de ajo rostizado, salsa de pimientos rojos y patatas panaderas.",
+            "en": "Baked cod with roasted garlic mayonnaise, red pepper sauce and baker's potatoes.",
+            "it": "Baccalà al forno con maionese d'aglio arrostito, salsa di peperoni rossi e patate al forno.",
+            "fr": "Cabillaud au four avec mayonnaise à l'ail rôti, sauce aux poivrons rouges et pommes de terre boulangère.",
+            "de": "Ofengebackener Kabeljau mit Röstknobi-Mayonnaise, roter Paprikasauce und Bäckerkartoffeln.",
+            "ru": "Запечённая треска с майонезом из жареного чеснока, соусом из красного перца и картофелем по-пекарски."
+          },
           "precio": 24.5,
           "emoji": "🐟",
-          "imagen_url": null,
-          "alergenos": ["pescado", "huevo"],
+          "imagen_url": "/uploads/redondo-en-boca/1781470348958-r6m6q3w9g4e.png",
+          "alergenos": [
+            "pescado",
+            "huevo"
+          ],
           "disponible": true
         },
         {
           "id": "lubina",
-          "nombre": { "es": "Lubina" },
-          "descripcion": { "es": "Al horno, con verduras salteadas y un toque de romero. Ligera y sabrosa." },
+          "nombre": {
+            "es": "Lubina",
+            "en": "Sea Bass",
+            "it": "Spigola",
+            "fr": "Bar",
+            "de": "Wolfsbarsch",
+            "ru": "Морской окунь"
+          },
+          "descripcion": {
+            "es": "Al horno, con verduras salteadas y un toque de romero. Ligera y sabrosa.",
+            "en": "Baked, with sautéed vegetables and a touch of rosemary. Light and flavourful.",
+            "it": "Al forno, con verdure saltate e un tocco di rosmarino. Leggera e saporita.",
+            "fr": "Au four, avec légumes sautés et une touche de romarin. Léger et savoureux.",
+            "de": "Im Ofen gebacken, mit sautiertem Gemüse und einem Hauch Rosmarin. Leicht und schmackhaft.",
+            "ru": "Запечённый с обжаренными овощами и ноткой розмарина. Лёгкое и вкусное блюдо."
+          },
           "precio": 24.5,
           "emoji": "🐠",
-          "imagen_url": null,
-          "alergenos": ["pescado"],
+          "imagen_url": "/uploads/redondo-en-boca/1781470360102-xpsecjukz8.png",
+          "alergenos": [
+            "pescado"
+          ],
           "disponible": true
         }
       ]
     },
     {
       "id": "ensaladas",
-      "nombre": { "es": "Ensaladas" },
+      "nombre": {
+        "es": "Ensaladas",
+        "en": "Salads",
+        "it": "Insalate",
+        "fr": "Salades",
+        "de": "Salate",
+        "ru": "Салаты"
+      },
       "platos": [
         {
           "id": "tomate-ventresca",
-          "nombre": { "es": "Tomate valenciano con ventresca" },
-          "descripcion": { "es": "Tomate valenciano con piparras, cebolla encurtida casera y ventresca." },
+          "nombre": {
+            "es": "Tomate valenciano con ventresca",
+            "en": "Valencian Tomato with Ventresca",
+            "it": "Pomodoro Valenciano con Ventresca",
+            "fr": "Tomate Valencienne avec Ventresca",
+            "de": "Valencianische Tomate mit Ventresca",
+            "ru": "Валенсийский томат с вентреской"
+          },
+          "descripcion": {
+            "es": "Tomate valenciano con piparras, cebolla encurtida casera y ventresca.",
+            "en": "Valencian tomato with piparras, homemade pickled onion and ventresca tuna.",
+            "it": "Pomodoro valenciano con piparras, cipolla sottaceto fatta in casa e ventresca.",
+            "fr": "Tomate valencienne avec piparras, oignon mariné maison et ventresca.",
+            "de": "Valencianische Tomate mit Piparras, hausgemachter eingelegter Zwiebel und Ventresca-Thunfisch.",
+            "ru": "Валенсийский томат с пипаррами, домашним маринованным луком и тунцом вентреска."
+          },
           "precio": 15.9,
           "emoji": "🍅",
-          "imagen_url": null,
-          "alergenos": ["pescado"],
+          "imagen_url": "/uploads/redondo-en-boca/1781474566695-bcz9ujf51n.png",
+          "alergenos": [
+            "pescado"
+          ],
           "disponible": true
         },
         {
           "id": "ensalada-caprese",
-          "nombre": { "es": "Ensalada caprese" },
-          "descripcion": { "es": "Tomate, mozzarella, albahaca y AOVE. Un clásico que nunca falla." },
+          "nombre": {
+            "es": "Ensalada caprese",
+            "en": "Caprese Salad",
+            "it": "Insalata Caprese",
+            "fr": "Salade Caprese",
+            "de": "Caprese-Salat",
+            "ru": "Салат «Капрезе»"
+          },
+          "descripcion": {
+            "es": "Tomate, mozzarella, albahaca y AOVE. Un clásico que nunca falla.",
+            "en": "Tomato, mozzarella, basil and extra virgin olive oil. A classic that never fails.",
+            "it": "Pomodoro, mozzarella, basilico e olio extravergine. Un classico che non delude mai.",
+            "fr": "Tomate, mozzarella, basilic et huile d'olive vierge extra. Un classique indémodable.",
+            "de": "Tomate, Mozzarella, Basilikum und natives Olivenöl extra. Ein Klassiker, der nie versagt.",
+            "ru": "Томат, моцарелла, базилик и оливковое масло первого отжима. Классика, которая никогда не подводит."
+          },
           "precio": 13.8,
           "emoji": "🥗",
-          "imagen_url": null,
-          "alergenos": ["lacteos"],
+          "imagen_url": "/uploads/redondo-en-boca/1781474523737-6tiec6it1b8.png",
+          "alergenos": [
+            "lacteos"
+          ],
           "disponible": true
         },
         {
           "id": "ensalada-burrata",
-          "nombre": { "es": "Ensalada de burrata" },
-          "descripcion": { "es": "Burrata cremosa sobre rúcula, cherry y pesto de albahaca. Frescura italiana." },
-          "precio": 16.0,
+          "nombre": {
+            "es": "Ensalada de burrata",
+            "en": "Burrata Salad",
+            "it": "Insalata di Burrata",
+            "fr": "Salade de Burrata",
+            "de": "Burrata-Salat",
+            "ru": "Салат с бурратой"
+          },
+          "descripcion": {
+            "es": "Burrata cremosa sobre rúcula, cherry y pesto de albahaca. Frescura italiana.",
+            "en": "Creamy burrata on rocket, cherry tomatoes and basil pesto. Italian freshness.",
+            "it": "Burrata cremosa su rucola, pomodorini e pesto di basilico. Freschezza italiana.",
+            "fr": "Burrata crémeuse sur roquette, tomates cerises et pesto de basilic. Fraîcheur italienne.",
+            "de": "Cremige Burrata auf Rucola, Kirschtomaten und Basilikumpesto. Italienische Frische.",
+            "ru": "Кремовая буррата на руколе, черри и песто из базилика. Итальянская свежесть."
+          },
+          "precio": 16,
           "emoji": "🧀",
-          "imagen_url": null,
-          "alergenos": ["lacteos"],
+          "imagen_url": "/uploads/redondo-en-boca/1781474527570-a0l22oz7rxi.png",
+          "alergenos": [
+            "lacteos"
+          ],
           "disponible": true
         }
       ]
     },
     {
       "id": "postres",
-      "nombre": { "es": "Postres" },
+      "nombre": {
+        "es": "Postres",
+        "en": "Desserts",
+        "it": "Dolci",
+        "fr": "Desserts",
+        "de": "Desserts",
+        "ru": "Десерты"
+      },
       "platos": [
         {
           "id": "tarta-queso",
-          "nombre": { "es": "Tarta de queso casera" },
-          "descripcion": { "es": "Horneada lentamente, cremosa por dentro, coronada con pistacho o nutella." },
-          "precio": 9.0,
+          "nombre": {
+            "es": "Tarta de queso casera",
+            "en": "Homemade Cheesecake",
+            "it": "Torta di Formaggio Fatta in Casa",
+            "fr": "Cheesecake Maison",
+            "de": "Hausgemachter Käsekuchen",
+            "ru": "Домашний чизкейк"
+          },
+          "descripcion": {
+            "es": "Horneada lentamente, cremosa por dentro, coronada con pistacho o nutella.",
+            "en": "Slowly baked, creamy inside, topped with pistachio or Nutella.",
+            "it": "Cotta lentamente, cremosa all'interno, coronata con pistacchio o nutella.",
+            "fr": "Cuit lentement, crémeux à l'intérieur, couronné de pistache ou de nutella.",
+            "de": "Langsam gebacken, innen cremig, mit Pistazien oder Nutella gekrönt.",
+            "ru": "Медленно запечённый, кремовый внутри, украшенный фисташками или нутеллой."
+          },
+          "precio": 9,
           "emoji": "🍰",
-          "imagen_url": null,
-          "alergenos": ["lacteos", "huevo", "frutos_secos"],
+          "imagen_url": "/uploads/redondo-en-boca/1781474670346-kffniehujr.png",
+          "alergenos": [
+            "lacteos",
+            "huevo",
+            "frutos_secos"
+          ],
           "disponible": true
         },
         {
           "id": "brownie-helado",
-          "nombre": { "es": "Brownie con helado" },
-          "descripcion": { "es": "Chocolate fondant, nueces y helado que se derrite al contacto." },
+          "nombre": {
+            "es": "Brownie con helado",
+            "en": "Brownie with Ice Cream",
+            "it": "Brownie con Gelato",
+            "fr": "Brownie avec Glace",
+            "de": "Brownie mit Eis",
+            "ru": "Брауни с мороженым"
+          },
+          "descripcion": {
+            "es": "Chocolate fondant, nueces y helado que se derrite al contacto.",
+            "en": "Chocolate fondant, walnuts and ice cream that melts on contact.",
+            "it": "Fondente al cioccolato, noci e gelato che si scioglie al contatto.",
+            "fr": "Fondant au chocolat, noix et glace qui fond au contact.",
+            "de": "Schokoladenfondant, Walnüsse und Eis, das beim Kontakt schmilzt.",
+            "ru": "Шоколадный фондан, грецкие орехи и мороженое, тающее при прикосновении."
+          },
           "precio": 7.9,
           "emoji": "🍫",
-          "imagen_url": null,
-          "alergenos": ["gluten", "lacteos", "huevo", "frutos_secos"],
+          "imagen_url": "/uploads/redondo-en-boca/1781474676624-qskmn5cgwb.png",
+          "alergenos": [
+            "gluten",
+            "lacteos",
+            "huevo",
+            "frutos_secos"
+          ],
           "disponible": true
         },
         {
           "id": "helados",
-          "nombre": { "es": "Helados" },
-          "descripcion": { "es": "Consulta los sabores del día, artesanos y refrescantes." },
+          "nombre": {
+            "es": "Helados",
+            "en": "Ice Creams",
+            "it": "Gelati",
+            "fr": "Glaces",
+            "de": "Eiskugeln",
+            "ru": "Мороженое"
+          },
+          "descripcion": {
+            "es": "Consulta los sabores del día, artesanos y refrescantes.",
+            "en": "Ask about today's flavours, artisan and refreshing.",
+            "it": "Chiedi i gusti del giorno, artigianali e rinfrescanti.",
+            "fr": "Demandez les saveurs du jour, artisanales et rafraîchissantes.",
+            "de": "Fragen Sie nach den heutigen Geschmacksrichtungen, handwerklich und erfrischend.",
+            "ru": "Спросите о вкусах дня — ремесленных и освежающих."
+          },
           "precio": 5.9,
           "emoji": "🍦",
-          "imagen_url": null,
-          "alergenos": ["lacteos", "huevo"],
+          "imagen_url": "/uploads/redondo-en-boca/1781474688897-k9euybel14.png",
+          "alergenos": [
+            "lacteos",
+            "huevo"
+          ],
           "disponible": true
         },
         {
           "id": "fruta-dia",
-          "nombre": { "es": "Fruta del día" },
-          "descripcion": { "es": "Pregunta por nuestra fruta fresca del día." },
+          "nombre": {
+            "es": "Fruta del día",
+            "en": "Fruit of the Day",
+            "it": "Frutta del Giorno",
+            "fr": "Fruit du Jour",
+            "de": "Tagesfrucht",
+            "ru": "Фрукты дня"
+          },
+          "descripcion": {
+            "es": "Pregunta por nuestra fruta fresca del día.",
+            "en": "Ask about our fresh fruit of the day.",
+            "it": "Chiedi la nostra frutta fresca del giorno.",
+            "fr": "Demandez notre fruit frais du jour.",
+            "de": "Fragen Sie nach unserem frischen Tagesfrüchten.",
+            "ru": "Спросите о нашем свежем фрукте дня."
+          },
           "precio": 5.9,
           "emoji": "🍓",
-          "imagen_url": null,
+          "imagen_url": "/uploads/redondo-en-boca/1781474695641-v219gaxm9sk.png",
           "alergenos": [],
           "disponible": true
         }

@@ -206,7 +206,10 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
                       </div>
 
                       <div className="flex-shrink-0 flex flex-col items-end gap-1">
-                        {!plato.disponible && (
+                        {plato.oculto && (
+                          <span className="text-[10px] bg-gray-800 text-white px-1.5 py-0.5 rounded-full">Oculto</span>
+                        )}
+                        {!plato.disponible && !plato.oculto && (
                           <span className="text-[10px] bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded-full">No disp.</span>
                         )}
                         <span className={`text-xs ${isEdit ? 'text-blue-500' : 'text-gray-300'}`}>
@@ -402,20 +405,33 @@ function EditorPlato({
           </div>
         </div>
 
-        {/* DISPONIBILIDAD */}
+        {/* DISPONIBILIDAD + VISIBILIDAD */}
         <div>
-          <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Disponibilidad</label>
-          <button
-            onClick={() => onChange({ disponible: !plato.disponible })}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all border ${
-              plato.disponible
-                ? 'bg-green-50 border-green-200 text-green-700'
-                : 'bg-gray-100 border-gray-200 text-gray-500'
-            }`}
-          >
-            <span className={`w-2 h-2 rounded-full ${plato.disponible ? 'bg-green-500' : 'bg-gray-400'}`} />
-            {plato.disponible ? 'Disponible' : 'No disponible'}
-          </button>
+          <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Disponibilidad y visibilidad</label>
+          <div className="flex flex-col gap-2">
+            <button
+              onClick={() => onChange({ disponible: !plato.disponible })}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all border ${
+                plato.disponible
+                  ? 'bg-green-50 border-green-200 text-green-700'
+                  : 'bg-gray-100 border-gray-200 text-gray-500'
+              }`}
+            >
+              <span className={`w-2 h-2 rounded-full ${plato.disponible ? 'bg-green-500' : 'bg-gray-400'}`} />
+              {plato.disponible ? 'Disponible' : 'No disponible'}
+            </button>
+            <button
+              onClick={() => onChange({ oculto: !plato.oculto })}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all border ${
+                plato.oculto
+                  ? 'bg-gray-800 border-gray-800 text-white'
+                  : 'bg-white border-gray-200 text-gray-500'
+              }`}
+            >
+              <span className="text-base leading-none">{plato.oculto ? '👁️‍🗨️' : '👁️'}</span>
+              {plato.oculto ? 'Oculto en carta' : 'Visible en carta'}
+            </button>
+          </div>
         </div>
 
         {/* ALÉRGENOS */}

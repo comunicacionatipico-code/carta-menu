@@ -13,6 +13,7 @@ export interface Plato {
   imagen_url: string | null
   alergenos: string[]
   disponible: boolean
+  oculto?: boolean
 }
 
 export interface Categoria {

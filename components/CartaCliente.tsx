@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from 'react'
 import { Restaurante } from '@/types/restaurante'
 import { ALERGENOS } from '@/lib/alergenos'
 
-export default function CartaCliente({ restaurante, slug }: { restaurante: Restaurante; slug: string }) {
-  const [idiomaActivo, setIdiomaActivo] = useState(restaurante.idiomas[0])
+export default function CartaCliente({ restaurante, slug, idiomaInicial }: { restaurante: Restaurante; slug: string; idiomaInicial?: string }) {
+  const [idiomaActivo, setIdiomaActivo] = useState(idiomaInicial ?? restaurante.idiomas[0])
   const [categoriaActiva, setCategoriaActiva] = useState(restaurante.categorias[0]?.id)
   const chipsRef = useRef<HTMLDivElement>(null)
   const categoriasRef = useRef<Record<string, HTMLElement | null>>({})
@@ -54,7 +54,7 @@ export default function CartaCliente({ restaurante, slug }: { restaurante: Resta
     <div className="relative min-h-screen bg-[#f5f1ea]">
       {/* HERO */}
       <div
-        className="relative px-5 pt-12 pb-6"
+        className="relative flex flex-col items-center justify-center px-5 pt-6 pb-2"
         style={{ backgroundColor: restaurante.color_primario }}
       >
         {restaurante.idiomas.length > 1 && (
@@ -79,14 +79,16 @@ export default function CartaCliente({ restaurante, slug }: { restaurante: Resta
           <img
             src={restaurante.logo_url}
             alt={restaurante.nombre}
-            className="h-14 w-auto object-contain mb-3 mt-2"
+            className="w-72 max-h-48 object-contain"
           />
         ) : (
-          <h1 className="text-2xl font-bold text-white mt-2">{restaurante.nombre}</h1>
+          <>
+            <h1 className="text-2xl font-bold text-white text-center">{restaurante.nombre}</h1>
+            <p className="text-sm mt-1 text-center" style={{ color: restaurante.color_acento }}>
+              {restaurante.subtitulo}
+            </p>
+          </>
         )}
-        <p className="text-sm mt-1" style={{ color: restaurante.color_acento }}>
-          {restaurante.subtitulo}
-        </p>
       </div>
 
       {/* CHIPS sticky */}
@@ -120,80 +122,82 @@ export default function CartaCliente({ restaurante, slug }: { restaurante: Resta
             ref={(el) => { categoriasRef.current[cat.id] = el }}
           >
             <h2
-              className="px-4 pt-6 pb-3 text-xs font-bold uppercase tracking-widest"
+              className="px-4 pt-8 pb-3 text-xl font-bold uppercase tracking-widest"
               style={{ color: restaurante.color_primario }}
             >
               {txt(cat.nombre)}
             </h2>
 
             <div>
-              {cat.platos.map((plato, idx) => (
+              {cat.platos.filter(p => !p.oculto).map((plato, idx) => (
                 <div key={plato.id}>
-                  <div className={`relative bg-white ${!plato.disponible ? 'opacity-60' : ''}`}>
-                    {/* FOTO */}
-                    <div className="relative w-full h-[180px] overflow-hidden">
+                  <div className={`relative ${!plato.disponible ? 'opacity-60' : ''}`}>
+                    {/* FOTO 9:16 con overlay de info */}
+                    <div className="relative w-full overflow-hidden" style={{ aspectRatio: '9/16' }}>
+                      {/* Fondo: imagen o emoji */}
                       {plato.imagen_url ? (
                         <div
-                          className="w-full h-full bg-cover bg-center"
+                          className="absolute inset-0 bg-cover bg-center"
                           style={{ backgroundImage: `url(${plato.imagen_url})` }}
                         />
                       ) : (
                         <div
-                          className="w-full h-full flex items-center justify-center"
+                          className="absolute inset-0 flex items-center justify-center"
                           style={{ backgroundColor: '#f0ece4' }}
                         >
-                          <span style={{ fontSize: 56 }}>{plato.emoji}</span>
+                          <span style={{ fontSize: 80 }}>{plato.emoji}</span>
                         </div>
                       )}
 
-                      {/* PRECIO badge */}
-                      <div
-                        className="absolute bottom-2.5 right-2.5 text-xs font-semibold px-2.5 py-1 rounded-full"
-                        style={{
-                          backgroundColor: restaurante.color_primario,
-                          color: restaurante.color_acento,
-                        }}
-                      >
-                        {plato.precio.toFixed(2).replace('.', ',')} €
+                      {/* Gradiente inferior para legibilidad del texto */}
+                      {(plato.imagen_url || true) && (
+                        <div
+                          className="absolute inset-x-0 bottom-0"
+                          style={{
+                            height: '55%',
+                            background: 'linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.4) 55%, transparent 100%)',
+                          }}
+                        />
+                      )}
+
+                      {/* INFO superpuesto */}
+                      <div className="absolute inset-x-0 bottom-0 px-5 pb-6">
+                        {/* PRECIO sin fondo */}
+                        <p className="text-white font-light text-[19px] tracking-widest drop-shadow-lg" style={{ fontStyle: 'italic', letterSpacing: '0.12em' }}>
+                          {plato.precio.toFixed(2).replace('.', ',')} €
+                        </p>
+
+                        <p className="text-white font-bold text-[22px] leading-tight drop-shadow-lg mt-1">
+                          {txt(plato.nombre)}
+                        </p>
+                        <p className="text-white/75 text-[14px] mt-2 leading-[1.5] drop-shadow">
+                          {txt(plato.descripcion)}
+                        </p>
+
+                        {/* ALÉRGENOS */}
+                        {plato.alergenos.length > 0 && (
+                          <div className="flex flex-wrap gap-1 mt-3">
+                            {plato.alergenos.map((a) => (
+                              <span
+                                key={a}
+                                className="text-[11px] px-2 py-0.5 rounded-full font-medium"
+                                style={{ backgroundColor: 'rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.9)' }}
+                              >
+                                {ALERGENOS[a]?.emoji} {ALERGENOS[a]?.label ?? a}
+                              </span>
+                            ))}
+                          </div>
+                        )}
                       </div>
 
                       {/* No disponible overlay */}
                       {!plato.disponible && (
-                        <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
                           <span
-                            className="text-xs font-semibold px-3 py-1.5 rounded-full"
-                            style={{
-                              backgroundColor: restaurante.color_primario,
-                              color: 'white',
-                              opacity: 0.9,
-                            }}
+                            className="text-xs font-semibold px-3 py-1.5 rounded-full bg-black/60 text-white"
                           >
                             No disponible
                           </span>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* INFO */}
-                    <div className="px-4 py-3">
-                      <p className="text-[15px] font-medium text-gray-900 leading-snug">
-                        {txt(plato.nombre)}
-                      </p>
-                      <p className="text-[12px] text-gray-500 mt-1 leading-[1.5]">
-                        {txt(plato.descripcion)}
-                      </p>
-
-                      {/* ALÉRGENOS */}
-                      {plato.alergenos.length > 0 && (
-                        <div className="flex flex-wrap gap-1 mt-2">
-                          {plato.alergenos.map((a) => (
-                            <span
-                              key={a}
-                              className="text-[10px] px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 font-medium"
-                            >
-                              {ALERGENOS[a]?.emoji} {ALERGENOS[a]?.label ?? a}
-                            </span>
-                          ))}
                         </div>
                       )}
                     </div>
