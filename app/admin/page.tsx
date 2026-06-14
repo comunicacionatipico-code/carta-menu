@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { getAllSlugs, getRestaurante } from '@/lib/restaurante'
+import LogoutButton from '@/components/LogoutButton'
 
 export default function AdminIndex() {
   const slugs = getAllSlugs()
@@ -7,9 +8,12 @@ export default function AdminIndex() {
   return (
     <div className="min-h-screen bg-gray-50 p-8">
       <div className="max-w-2xl mx-auto">
-        <div className="mb-8">
-          <h1 className="text-2xl font-bold text-gray-900">Panel de administración</h1>
-          <p className="text-sm text-gray-500 mt-1">Selecciona un restaurante para editar su carta</p>
+        <div className="mb-8 flex items-start justify-between">
+          <div>
+            <h1 className="text-2xl font-bold text-gray-900">Panel de administración</h1>
+            <p className="text-sm text-gray-500 mt-1">Selecciona un restaurante para editar su carta</p>
+          </div>
+          <LogoutButton />
         </div>
 
         <div className="space-y-3">
