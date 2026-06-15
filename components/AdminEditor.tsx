@@ -44,7 +44,7 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
       const res = await fetch(`/api/admin/${slug}/save`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify(data, (_, v) => v === undefined ? null : v),
       })
       const json = await res.json()
       if (!res.ok) {
