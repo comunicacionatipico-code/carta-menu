@@ -1,17 +1,19 @@
 import { Restaurante } from '@/types/restaurante'
 import fs from 'fs'
 import path from 'path'
-
-const BLOB_BASE_URL = 'https://public.blob.vercel-storage.com'
+import { list } from '@vercel/blob'
 
 export async function getRestauranteAsync(slug: string): Promise<Restaurante | null> {
-  // Try Vercel Blob first (production overrides)
-  try {
-    const res = await fetch(`${BLOB_BASE_URL}/restaurantes/${slug}.json`, { next: { revalidate: 60 } })
-    if (res.ok) return await res.json() as Restaurante
-  } catch {}
+  if (process.env.BLOB_READ_WRITE_TOKEN) {
+    try {
+      const { blobs } = await list({ prefix: `restaurantes/${slug}.json` })
+      if (blobs.length > 0) {
+        const res = await fetch(blobs[0].url, { next: { revalidate: 30 } })
+        if (res.ok) return await res.json() as Restaurante
+      }
+    } catch {}
+  }
 
-  // Fallback to local JSON
   return getRestaurante(slug)
 }
 
