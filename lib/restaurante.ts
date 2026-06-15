@@ -8,7 +8,7 @@ export async function getRestauranteAsync(slug: string): Promise<Restaurante | n
     try {
       const { blobs } = await list({ prefix: `restaurantes/${slug}.json` })
       if (blobs.length > 0) {
-        const res = await fetch(blobs[0].url, { next: { revalidate: 30 } })
+        const res = await fetch(blobs[0].url, { cache: 'no-store' })
         if (res.ok) return await res.json() as Restaurante
       }
     } catch {}
