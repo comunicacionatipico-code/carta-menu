@@ -41,13 +41,20 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
   const guardar = async () => {
     setGuardando(true)
     try {
-      await fetch(`/api/admin/${slug}/save`, {
+      const res = await fetch(`/api/admin/${slug}/save`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       })
+      const json = await res.json()
+      if (!res.ok) {
+        alert('Error guardando: ' + (json.error ?? res.status))
+        return
+      }
       setGuardadoOk(true)
       setTimeout(() => setGuardadoOk(false), 2500)
+    } catch (e) {
+      alert('Error guardando: ' + String(e))
     } finally {
       setGuardando(false)
     }
