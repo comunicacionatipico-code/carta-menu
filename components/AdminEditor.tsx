@@ -230,6 +230,44 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
             </div>
           </div>
 
+          {/* MENÚS VISIBLES EN PANTALLA DE INICIO */}
+          <div className="bg-white rounded-xl border border-gray-200 p-4 mb-4">
+            <p className="text-sm font-medium text-gray-700 mb-1">Botones en pantalla de inicio</p>
+            <p className="text-xs text-gray-400 mb-3">Activa los menús que quieres mostrar al cliente</p>
+            <div className="flex flex-col gap-2">
+              {[
+                { id: 'carta', label: 'Carta' },
+                { id: 'vinos', label: 'Carta de Vinos' },
+                { id: 'cocktails', label: 'Cocktails' },
+                { id: 'bebidas', label: 'Bebidas' },
+              ].map(m => {
+                const oculto = (data.menus_ocultos ?? []).includes(m.id)
+                return (
+                  <button
+                    key={m.id}
+                    onClick={() => {
+                      const ocultos = data.menus_ocultos ?? []
+                      setData(prev => ({
+                        ...prev,
+                        menus_ocultos: oculto
+                          ? ocultos.filter(x => x !== m.id)
+                          : [...ocultos, m.id],
+                      }))
+                    }}
+                    className={`flex items-center justify-between px-4 py-2 rounded-lg border text-sm transition-all ${
+                      oculto
+                        ? 'border-gray-200 text-gray-400 bg-gray-50'
+                        : 'border-green-200 text-green-700 bg-green-50'
+                    }`}
+                  >
+                    <span>{m.label}</span>
+                    <span className="text-xs font-medium">{oculto ? 'Oculto' : 'Visible'}</span>
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+
           {/* Categorías y platos */}
           {data.categorias.map(cat => (
             <div key={cat.id} className="mb-6">

@@ -118,7 +118,7 @@ export default function RestauranteSplash({ restaurante, slug }: { restaurante: 
             }
           </p>
           <div className="flex flex-col gap-3 w-full">
-            {TIPOS_CARTA.map((tipo) => {
+            {TIPOS_CARTA.filter(t => !(restaurante.menus_ocultos ?? []).includes(t.id)).map((tipo) => {
               const disponible = tipo.id === 'carta'
               return (
                 <button

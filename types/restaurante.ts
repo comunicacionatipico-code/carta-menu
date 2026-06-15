@@ -32,6 +32,7 @@ export interface Restaurante {
   color_acento: string
   logo_url?: string | null
   wifi?: string
+  menus_ocultos?: string[]
   idiomas: string[]
   categorias: Categoria[]
 }
