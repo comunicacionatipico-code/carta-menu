@@ -60,9 +60,28 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
     }
   }
 
+  const comprimirParaSubir = (file: File): Promise<Blob> =>
+    new Promise((resolve) => {
+      const img = new Image()
+      img.onload = () => {
+        const MAX = 1400
+        let w = img.width, h = img.height
+        if (w > MAX) { h = Math.round(h * MAX / w); w = MAX }
+        const canvas = document.createElement('canvas')
+        canvas.width = w; canvas.height = h
+        const ctx = canvas.getContext('2d')
+        if (!ctx) { resolve(file); return }
+        ctx.drawImage(img, 0, 0, w, h)
+        canvas.toBlob(b => resolve(b ?? file), 'image/jpeg', 0.8)
+      }
+      img.onerror = () => resolve(file)
+      img.src = URL.createObjectURL(file)
+    })
+
   const subirACloudinary = async (file: File): Promise<string> => {
+    const blob = await comprimirParaSubir(file)
     const fd = new FormData()
-    fd.append('file', file)
+    fd.append('file', blob, 'foto.jpg')
     fd.append('upload_preset', 'ml_default')
     fd.append('folder', `carta-menu/${slug}`)
     const res = await fetch('https://api.cloudinary.com/v1_1/dxlfyx8tq/image/upload', {
