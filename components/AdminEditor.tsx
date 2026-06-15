@@ -53,11 +53,30 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
     }
   }
 
+  const comprimirImagen = (file: File): Promise<Blob> => {
+    return new Promise((resolve) => {
+      const img = new Image()
+      const url = URL.createObjectURL(file)
+      img.onload = () => {
+        const MAX = 1200
+        let w = img.width, h = img.height
+        if (w > MAX) { h = Math.round(h * MAX / w); w = MAX }
+        const canvas = document.createElement('canvas')
+        canvas.width = w; canvas.height = h
+        canvas.getContext('2d')!.drawImage(img, 0, 0, w, h)
+        URL.revokeObjectURL(url)
+        canvas.toBlob(b => resolve(b!), 'image/jpeg', 0.82)
+      }
+      img.src = url
+    })
+  }
+
   const subirImagen = useCallback(async (file: File, categoriaId: string, platoId: string) => {
     setUploadingId(platoId)
     try {
+      const blob = await comprimirImagen(file)
       const fd = new FormData()
-      fd.append('file', file)
+      fd.append('file', new File([blob], 'foto.jpg', { type: 'image/jpeg' }))
       const res = await fetch(`/api/admin/${slug}/upload`, { method: 'POST', body: fd })
       const json = await res.json()
       if (json.url) {
@@ -71,8 +90,9 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
   const subirLogo = async (file: File) => {
     setLogoUploading(true)
     try {
+      const blob = await comprimirImagen(file)
       const fd = new FormData()
-      fd.append('file', file)
+      fd.append('file', new File([blob], 'logo.jpg', { type: 'image/jpeg' }))
       const res = await fetch(`/api/admin/${slug}/upload`, { method: 'POST', body: fd })
       const json = await res.json()
       if (json.url) setData(prev => ({ ...prev, logo_url: json.url }))
