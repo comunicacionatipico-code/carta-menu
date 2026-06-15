@@ -38,6 +38,38 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
     }))
   }
 
+  const añadirPlato = (categoriaId: string) => {
+    const id = `plato-${Date.now()}`
+    const nuevoPlato: Plato = {
+      id,
+      nombre: Object.fromEntries(data.idiomas.map(l => [l, 'Nuevo plato'])),
+      descripcion: Object.fromEntries(data.idiomas.map(l => [l, ''])),
+      precio: 0,
+      emoji: '🍽️',
+      imagen_url: null,
+      alergenos: [],
+      disponible: true,
+    }
+    setData(prev => ({
+      ...prev,
+      categorias: prev.categorias.map(cat =>
+        cat.id !== categoriaId ? cat : { ...cat, platos: [...cat.platos, nuevoPlato] }
+      )
+    }))
+    setEditando({ categoriaId, platoId: id })
+  }
+
+  const eliminarPlato = (categoriaId: string, platoId: string) => {
+    if (!confirm('¿Eliminar este plato?')) return
+    setData(prev => ({
+      ...prev,
+      categorias: prev.categorias.map(cat =>
+        cat.id !== categoriaId ? cat : { ...cat, platos: cat.platos.filter(p => p.id !== platoId) }
+      )
+    }))
+    if (editando?.platoId === platoId) setEditando(null)
+  }
+
   const guardar = async () => {
     setGuardando(true)
     try {
@@ -209,53 +241,64 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
                   const isEdit = editando?.platoId === plato.id && editando?.categoriaId === cat.id
                   const idioma = data.idiomas[0]
                   return (
-                    <button
-                      key={plato.id}
-                      onClick={() => setEditando(isEdit ? null : { categoriaId: cat.id, platoId: plato.id })}
-                      className={`w-full text-left flex items-center gap-3 p-3 rounded-xl border transition-all ${
-                        isEdit
-                          ? 'border-blue-400 bg-blue-50 shadow-sm'
-                          : 'border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm'
-                      } ${!plato.disponible ? 'opacity-50' : ''}`}
-                    >
-                      {/* Miniatura */}
-                      <div
-                        className="w-12 h-12 rounded-lg flex-shrink-0 flex items-center justify-center overflow-hidden"
-                        style={{ backgroundColor: plato.imagen_url ? undefined : '#f0ece4' }}
+                    <div key={plato.id} className="flex items-center gap-2">
+                      <button
+                        onClick={() => setEditando(isEdit ? null : { categoriaId: cat.id, platoId: plato.id })}
+                        className={`flex-1 text-left flex items-center gap-3 p-3 rounded-xl border transition-all ${
+                          isEdit
+                            ? 'border-blue-400 bg-blue-50 shadow-sm'
+                            : 'border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm'
+                        } ${!plato.disponible ? 'opacity-50' : ''}`}
                       >
-                        {uploadingId === plato.id ? (
-                          <div className="w-4 h-4 border-2 border-gray-400 border-t-transparent rounded-full animate-spin" />
-                        ) : plato.imagen_url ? (
-                          <img src={plato.imagen_url} alt="" className="w-full h-full object-cover" />
-                        ) : (
-                          <span className="text-2xl">{plato.emoji}</span>
-                        )}
-                      </div>
-
-                      <div className="flex-1 min-w-0">
-                        <p className="text-sm font-medium text-gray-900 truncate">
-                          {plato.nombre[idioma] ?? plato.nombre[Object.keys(plato.nombre)[0]]}
-                        </p>
-                        <p className="text-xs text-gray-400">
-                          {plato.precio.toFixed(2)} € · {plato.alergenos.length > 0 ? plato.alergenos.length + ' alérg.' : 'Sin alérgenos'}
-                        </p>
-                      </div>
-
-                      <div className="flex-shrink-0 flex flex-col items-end gap-1">
-                        {plato.oculto && (
-                          <span className="text-[10px] bg-gray-800 text-white px-1.5 py-0.5 rounded-full">Oculto</span>
-                        )}
-                        {!plato.disponible && !plato.oculto && (
-                          <span className="text-[10px] bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded-full">No disp.</span>
-                        )}
-                        <span className={`text-xs ${isEdit ? 'text-blue-500' : 'text-gray-300'}`}>
-                          {isEdit ? '✕' : '✎'}
-                        </span>
-                      </div>
-                    </button>
+                        <div
+                          className="w-12 h-12 rounded-lg flex-shrink-0 flex items-center justify-center overflow-hidden"
+                          style={{ backgroundColor: plato.imagen_url ? undefined : '#f0ece4' }}
+                        >
+                          {uploadingId === plato.id ? (
+                            <div className="w-4 h-4 border-2 border-gray-400 border-t-transparent rounded-full animate-spin" />
+                          ) : plato.imagen_url ? (
+                            <img src={plato.imagen_url} alt="" className="w-full h-full object-cover" />
+                          ) : (
+                            <span className="text-2xl">{plato.emoji}</span>
+                          )}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-medium text-gray-900 truncate">
+                            {plato.nombre[idioma] ?? plato.nombre[Object.keys(plato.nombre)[0]]}
+                          </p>
+                          <p className="text-xs text-gray-400">
+                            {plato.precio.toFixed(2)} € · {plato.alergenos.length > 0 ? plato.alergenos.length + ' alérg.' : 'Sin alérgenos'}
+                          </p>
+                        </div>
+                        <div className="flex-shrink-0 flex flex-col items-end gap-1">
+                          {plato.oculto && (
+                            <span className="text-[10px] bg-gray-800 text-white px-1.5 py-0.5 rounded-full">Oculto</span>
+                          )}
+                          {!plato.disponible && !plato.oculto && (
+                            <span className="text-[10px] bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded-full">No disp.</span>
+                          )}
+                          <span className={`text-xs ${isEdit ? 'text-blue-500' : 'text-gray-300'}`}>
+                            {isEdit ? '✕' : '✎'}
+                          </span>
+                        </div>
+                      </button>
+                      <button
+                        onClick={() => eliminarPlato(cat.id, plato.id)}
+                        className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg text-gray-300 hover:text-red-500 hover:bg-red-50 transition-all"
+                        title="Eliminar plato"
+                      >
+                        ✕
+                      </button>
+                    </div>
                   )
                 })}
               </div>
+              <button
+                onClick={() => añadirPlato(cat.id)}
+                className="mt-2 w-full flex items-center justify-center gap-2 py-2 rounded-xl border border-dashed border-gray-300 text-gray-400 text-sm hover:border-gray-400 hover:text-gray-600 transition-all"
+              >
+                + Añadir plato
+              </button>
             </div>
           ))}
         </div>
