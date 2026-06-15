@@ -53,47 +53,27 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
     }
   }
 
-  const comprimirImagen = (file: File): Promise<Blob> => {
-    return new Promise((resolve) => {
-      const img = new Image()
-      const url = URL.createObjectURL(file)
-      img.onerror = () => { URL.revokeObjectURL(url); resolve(file) }
-      img.onload = () => {
-        try {
-          const MAX = 1200
-          let w = img.width, h = img.height
-          if (w > MAX) { h = Math.round(h * MAX / w); w = MAX }
-          const canvas = document.createElement('canvas')
-          canvas.width = w; canvas.height = h
-          const ctx = canvas.getContext('2d')
-          if (!ctx) { URL.revokeObjectURL(url); resolve(file); return }
-          ctx.drawImage(img, 0, 0, w, h)
-          URL.revokeObjectURL(url)
-          canvas.toBlob(b => resolve(b ?? file), 'image/jpeg', 0.82)
-        } catch {
-          URL.revokeObjectURL(url)
-          resolve(file)
-        }
-      }
-      img.src = url
+  const subirACloudinary = async (file: File): Promise<string> => {
+    const fd = new FormData()
+    fd.append('file', file)
+    fd.append('upload_preset', 'ml_default')
+    fd.append('folder', `carta-menu/${slug}`)
+    const res = await fetch('https://api.cloudinary.com/v1_1/dxlfyx8tq/image/upload', {
+      method: 'POST',
+      body: fd,
     })
+    const json = await res.json()
+    if (!json.secure_url) throw new Error(json.error?.message ?? 'Error Cloudinary')
+    return json.secure_url as string
   }
 
   const subirImagen = useCallback(async (file: File, categoriaId: string, platoId: string) => {
     setUploadingId(platoId)
     try {
-      const blob = await comprimirImagen(file)
-      const fd = new FormData()
-      fd.append('file', new File([blob], 'foto.jpg', { type: 'image/jpeg' }))
-      const res = await fetch(`/api/admin/${slug}/upload`, { method: 'POST', body: fd })
-      const json = await res.json()
-      if (json.url) {
-        actualizarPlato(categoriaId, platoId, { imagen_url: json.url })
-      } else {
-        alert('Error subiendo imagen: ' + (json.error ?? res.status))
-      }
+      const url = await subirACloudinary(file)
+      actualizarPlato(categoriaId, platoId, { imagen_url: url })
     } catch (e) {
-      alert('Error: ' + String(e))
+      alert('Error subiendo imagen: ' + String(e))
     } finally {
       setUploadingId(null)
     }
@@ -102,18 +82,10 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
   const subirLogo = async (file: File) => {
     setLogoUploading(true)
     try {
-      const blob = await comprimirImagen(file)
-      const fd = new FormData()
-      fd.append('file', new File([blob], 'logo.jpg', { type: 'image/jpeg' }))
-      const res = await fetch(`/api/admin/${slug}/upload`, { method: 'POST', body: fd })
-      const json = await res.json()
-      if (json.url) {
-        setData(prev => ({ ...prev, logo_url: json.url }))
-      } else {
-        alert('Error subiendo logo: ' + (json.error ?? res.status))
-      }
+      const url = await subirACloudinary(file)
+      setData(prev => ({ ...prev, logo_url: url }))
     } catch (e) {
-      alert('Error: ' + String(e))
+      alert('Error subiendo logo: ' + String(e))
     } finally {
       setLogoUploading(false)
     }
