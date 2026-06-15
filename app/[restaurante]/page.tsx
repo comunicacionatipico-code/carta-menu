@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
-import { getRestaurante, getAllSlugs } from '@/lib/restaurante'
+import { getRestauranteAsync, getRestaurante, getAllSlugs } from '@/lib/restaurante'
 import RestauranteSplash from '@/components/RestauranteSplash'
 
 interface Props {
@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function CartaPage({ params }: Props) {
-  const data = getRestaurante(params.restaurante)
+export default async function CartaPage({ params }: Props) {
+  const data = await getRestauranteAsync(params.restaurante)
   if (!data) notFound()
 
   return (
