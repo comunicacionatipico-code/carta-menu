@@ -81,7 +81,11 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
       const json = await res.json()
       if (json.url) {
         actualizarPlato(categoriaId, platoId, { imagen_url: json.url })
+      } else {
+        alert('Error subiendo imagen: ' + (json.error ?? res.status))
       }
+    } catch (e) {
+      alert('Error: ' + String(e))
     } finally {
       setUploadingId(null)
     }
@@ -95,7 +99,13 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
       fd.append('file', new File([blob], 'logo.jpg', { type: 'image/jpeg' }))
       const res = await fetch(`/api/admin/${slug}/upload`, { method: 'POST', body: fd })
       const json = await res.json()
-      if (json.url) setData(prev => ({ ...prev, logo_url: json.url }))
+      if (json.url) {
+        setData(prev => ({ ...prev, logo_url: json.url }))
+      } else {
+        alert('Error subiendo logo: ' + (json.error ?? res.status))
+      }
+    } catch (e) {
+      alert('Error: ' + String(e))
     } finally {
       setLogoUploading(false)
     }
