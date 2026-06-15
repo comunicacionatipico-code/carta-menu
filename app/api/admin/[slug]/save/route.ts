@@ -14,6 +14,7 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
         access: 'public',
         contentType: 'application/json',
         addRandomSuffix: false,
+        allowOverwrite: true,
       })
       return NextResponse.json({ ok: true })
     }
