@@ -9,6 +9,9 @@ export interface Plato {
   nombre: TextoMultiidioma
   descripcion: TextoMultiidioma
   precio: number
+  precio_label?: string
+  precio2?: number
+  precio2_label?: string
   emoji: string
   imagen_url: string | null
   alergenos: string[]

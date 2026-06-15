@@ -163,9 +163,18 @@ export default function CartaCliente({ restaurante, slug, idiomaInicial }: { res
                       {/* INFO superpuesto */}
                       <div className="absolute inset-x-0 bottom-0 px-5 pb-6">
                         {/* PRECIO sin fondo */}
-                        <p className="text-white font-light text-[19px] tracking-widest drop-shadow-lg" style={{ fontStyle: 'italic', letterSpacing: '0.12em' }}>
-                          {plato.precio.toFixed(2).replace('.', ',')} €
-                        </p>
+                        <div className="flex items-baseline gap-3">
+                          <p className="text-white font-light text-[19px] drop-shadow-lg" style={{ fontStyle: 'italic', letterSpacing: '0.12em' }}>
+                            {plato.precio_label && <span className="text-[14px] mr-1 opacity-80">{plato.precio_label}</span>}
+                            {plato.precio.toFixed(2).replace('.', ',')} €
+                          </p>
+                          {plato.precio2 && (
+                            <p className="text-white/80 font-light text-[16px] drop-shadow-lg" style={{ fontStyle: 'italic' }}>
+                              {plato.precio2_label && <span className="text-[13px] mr-1 opacity-80">{plato.precio2_label}</span>}
+                              {plato.precio2.toFixed(2).replace('.', ',')} €
+                            </p>
+                          )}
+                        </div>
 
                         <p className="text-white font-bold text-[22px] leading-tight drop-shadow-lg mt-1">
                           {txt(plato.nombre)}

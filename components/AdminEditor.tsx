@@ -427,17 +427,55 @@ function EditorPlato({
 
         {/* PRECIO */}
         <div>
-          <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Precio (€)</label>
-          <div className="relative w-36">
+          <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Precio</label>
+          <div className="flex items-center gap-2">
             <input
-              type="number"
-              step="0.50"
-              min="0"
-              value={plato.precio}
-              onChange={e => onChange({ precio: parseFloat(e.target.value) || 0 })}
-              className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-400"
+              type="text"
+              placeholder="Ej: Ración"
+              value={plato.precio_label ?? ''}
+              onChange={e => onChange({ precio_label: e.target.value || undefined })}
+              className="w-28 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-400"
             />
-            <span className="absolute right-3 top-2.5 text-sm text-gray-400">€</span>
+            <div className="relative w-28">
+              <input
+                type="number"
+                step="0.50"
+                min="0"
+                value={plato.precio}
+                onChange={e => onChange({ precio: parseFloat(e.target.value) || 0 })}
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-400"
+              />
+              <span className="absolute right-3 top-2.5 text-sm text-gray-400">€</span>
+            </div>
+          </div>
+
+          {/* SEGUNDO PRECIO */}
+          <div className="flex items-center gap-2 mt-2">
+            <input
+              type="text"
+              placeholder="Ej: Media ración"
+              value={plato.precio2_label ?? ''}
+              onChange={e => onChange({ precio2_label: e.target.value || undefined })}
+              className="w-28 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-400"
+            />
+            <div className="relative w-28">
+              <input
+                type="number"
+                step="0.50"
+                min="0"
+                value={plato.precio2 ?? ''}
+                placeholder="0.00"
+                onChange={e => onChange({ precio2: parseFloat(e.target.value) || undefined })}
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-400"
+              />
+              <span className="absolute right-3 top-2.5 text-sm text-gray-400">€</span>
+            </div>
+            {plato.precio2 && (
+              <button
+                onClick={() => onChange({ precio2: undefined, precio2_label: undefined })}
+                className="text-xs text-red-400 hover:text-red-600"
+              >✕</button>
+            )}
           </div>
         </div>
 
