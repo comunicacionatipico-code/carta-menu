@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { v2 as cloudinary } from 'cloudinary'
+import sharp from 'sharp'
 
 cloudinary.config({
   cloud_name: 'dxlfyx8tq',
@@ -22,6 +23,12 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
     const bytes = await file.arrayBuffer()
     const buffer = Buffer.from(bytes)
 
+    // Compress to max 1200px wide and convert to webp
+    const compressed = await sharp(buffer)
+      .resize({ width: 1200, withoutEnlargement: true })
+      .webp({ quality: 80 })
+      .toBuffer()
+
     const result = await new Promise<{ secure_url: string }>((resolve, reject) => {
       cloudinary.uploader.upload_stream(
         { folder: `carta-menu/${params.slug}`, resource_type: 'image' },
@@ -29,7 +36,7 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
           if (error || !result) reject(error)
           else resolve(result as { secure_url: string })
         }
-      ).end(buffer)
+      ).end(compressed)
     })
 
     return NextResponse.json({ url: result.secure_url })
