@@ -388,6 +388,7 @@ function EditorPlato({
 }) {
   const fileRef = useRef<HTMLInputElement>(null)
   const isUploading = uploadingId === plato.id
+  const [traduciendo, setTraduciendo] = useState(false)
 
   const setNombre = (lang: string, val: string) =>
     onChange({ nombre: { ...plato.nombre, [lang]: val } })
@@ -399,6 +400,30 @@ function EditorPlato({
     const set = new Set(plato.alergenos)
     if (set.has(a)) { set.delete(a) } else { set.add(a) }
     onChange({ alergenos: Array.from(set) })
+  }
+
+  const traducir = async () => {
+    const nombreES = plato.nombre['es'] ?? plato.nombre[Object.keys(plato.nombre)[0]]
+    const descES = plato.descripcion['es'] ?? plato.descripcion[Object.keys(plato.descripcion)[0]]
+    if (!nombreES) { alert('Escribe primero el nombre en español'); return }
+    setTraduciendo(true)
+    try {
+      const res = await fetch('/api/admin/translate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nombre: nombreES, descripcion: descES, idiomas }),
+      })
+      const json = await res.json()
+      if (json.error) { alert('Error traduciendo: ' + json.error); return }
+      onChange({
+        nombre: { ...plato.nombre, ...json.nombre },
+        descripcion: { ...plato.descripcion, ...json.descripcion },
+      })
+    } catch (e) {
+      alert('Error: ' + String(e))
+    } finally {
+      setTraduciendo(false)
+    }
   }
 
   return (
@@ -469,6 +494,19 @@ function EditorPlato({
             maxLength={4}
           />
         </div>
+
+        {/* TRADUCIR */}
+        <button
+          onClick={traducir}
+          disabled={traduciendo}
+          className="w-full flex items-center justify-center gap-2 py-2 rounded-xl border border-dashed border-blue-300 text-blue-500 text-sm hover:bg-blue-50 transition-all disabled:opacity-50"
+        >
+          {traduciendo ? (
+            <><div className="w-3.5 h-3.5 border-2 border-blue-400 border-t-transparent rounded-full animate-spin" /> Traduciendo…</>
+          ) : (
+            '🌐 Traducir a todos los idiomas'
+          )}
+        </button>
 
         {/* NOMBRES */}
         <div>
