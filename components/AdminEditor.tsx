@@ -92,7 +92,7 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
     }
   }
 
-  const comprimirParaSubir = (file: File): Promise<Blob> =>
+  const comprimirParaSubir = (file: File, mantenerTransparencia = false): Promise<Blob> =>
     new Promise((resolve) => {
       const img = new Image()
       img.onload = () => {
@@ -103,17 +103,23 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
         canvas.width = w; canvas.height = h
         const ctx = canvas.getContext('2d')
         if (!ctx) { resolve(file); return }
+        if (!mantenerTransparencia) {
+          ctx.fillStyle = '#ffffff'
+          ctx.fillRect(0, 0, w, h)
+        }
         ctx.drawImage(img, 0, 0, w, h)
-        canvas.toBlob(b => resolve(b ?? file), 'image/jpeg', 0.8)
+        const mime = mantenerTransparencia ? 'image/png' : 'image/jpeg'
+        canvas.toBlob(b => resolve(b ?? file), mime, mantenerTransparencia ? undefined : 0.8)
       }
       img.onerror = () => resolve(file)
       img.src = URL.createObjectURL(file)
     })
 
-  const subirACloudinary = async (file: File): Promise<string> => {
-    const blob = await comprimirParaSubir(file)
+  const subirACloudinary = async (file: File, esLogo = false): Promise<string> => {
+    const blob = await comprimirParaSubir(file, esLogo)
+    const ext = esLogo ? 'png' : 'jpg'
     const fd = new FormData()
-    fd.append('file', blob, 'foto.jpg')
+    fd.append('file', blob, `foto.${ext}`)
     fd.append('upload_preset', 'ml_default')
     fd.append('folder', `carta-menu/${slug}`)
     const res = await fetch('https://api.cloudinary.com/v1_1/dxlfyx8tq/image/upload', {
@@ -140,7 +146,7 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
   const subirLogo = async (file: File) => {
     setLogoUploading(true)
     try {
-      const url = await subirACloudinary(file)
+      const url = await subirACloudinary(file, true)
       setData(prev => ({ ...prev, logo_url: url }))
     } catch (e) {
       alert('Error subiendo logo: ' + String(e))
