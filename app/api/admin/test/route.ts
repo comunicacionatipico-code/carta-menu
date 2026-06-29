@@ -22,13 +22,25 @@ export async function GET() {
     try {
       const { data, error } = await supabase
         .from('restaurantes')
-        .select('slug, updated_at')
+        .select('slug, updated_at, data')
         .eq('slug', slug)
         .single()
 
-      resultados[slug] = error
-        ? { error: error.message, code: error.code }
-        : { ok: true, updated_at: data?.updated_at }
+      if (error) {
+        resultados[slug] = { error: error.message, code: error.code }
+      } else {
+        const cats = data?.data?.categorias ?? []
+        const primerPlato = cats[0]?.platos?.[0]
+        resultados[slug] = {
+          ok: true,
+          updated_at: data?.updated_at,
+          primer_plato: primerPlato ? {
+            nombre: primerPlato.nombre?.es,
+            precio: primerPlato.precio,
+            imagen_url: primerPlato.imagen_url?.slice(0, 60) ?? null,
+          } : null,
+        }
+      }
     } catch (e) {
       resultados[slug] = { exception: String(e) }
     }
