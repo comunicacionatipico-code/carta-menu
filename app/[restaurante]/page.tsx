@@ -3,6 +3,8 @@ import { Metadata } from 'next'
 import { getRestauranteAsync, getRestaurante, getAllSlugs } from '@/lib/restaurante'
 import RestauranteSplash from '@/components/RestauranteSplash'
 
+export const dynamic = 'force-dynamic'
+
 interface Props {
   params: { restaurante: string }
 }
