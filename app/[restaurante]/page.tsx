@@ -1,9 +1,11 @@
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
+import { unstable_noStore as noStore } from 'next/cache'
 import { getRestauranteAsync, getRestaurante } from '@/lib/restaurante'
 import RestauranteSplash from '@/components/RestauranteSplash'
 
 export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 interface Props {
   params: { restaurante: string }
@@ -19,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function CartaPage({ params }: Props) {
+  noStore()
   const data = await getRestauranteAsync(params.restaurante)
   if (!data) notFound()
 
