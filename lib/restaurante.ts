@@ -1,19 +1,19 @@
 import { Restaurante } from '@/types/restaurante'
 import fs from 'fs'
 import path from 'path'
-import { list } from '@vercel/blob'
+import { supabase } from './supabase'
 
 export async function getRestauranteAsync(slug: string): Promise<Restaurante | null> {
-  if (process.env.BLOB_READ_WRITE_TOKEN) {
+  if (process.env.SUPABASE_URL) {
     try {
-      const { blobs } = await list({ prefix: `restaurantes/${slug}.json` })
-      if (blobs.length > 0) {
-        const res = await fetch(blobs[0].url, { cache: 'no-store' })
-        if (res.ok) return await res.json() as Restaurante
-      }
+      const { data } = await supabase
+        .from('restaurantes')
+        .select('data')
+        .eq('slug', slug)
+        .single()
+      if (data?.data) return data.data as Restaurante
     } catch {}
   }
-
   return getRestaurante(slug)
 }
 
