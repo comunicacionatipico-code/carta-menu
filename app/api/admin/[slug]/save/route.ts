@@ -20,7 +20,16 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
       return NextResponse.json({ error: error.message, code: error.code, details: { status, statusText } }, { status: 500 })
     }
 
-    return NextResponse.json({ ok: true, updated_at: upsertData?.updated_at ?? now })
+    const primerPlato = body.categorias?.[0]?.platos?.[0]
+    return NextResponse.json({
+      ok: true,
+      updated_at: upsertData?.updated_at ?? now,
+      recibido: {
+        primer_plato_nombre: primerPlato?.nombre?.es,
+        primer_plato_precio: primerPlato?.precio,
+        primer_plato_imagen: primerPlato?.imagen_url?.slice(0, 60) ?? null,
+      },
+    })
   } catch (e) {
     return NextResponse.json({ error: String(e) }, { status: 500 })
   }
