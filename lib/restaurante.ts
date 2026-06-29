@@ -1,10 +1,11 @@
 import { Restaurante } from '@/types/restaurante'
 import fs from 'fs'
 import path from 'path'
-import { supabase } from './supabase'
+import { getSupabase } from './supabase'
 
 export async function getRestauranteAsync(slug: string): Promise<Restaurante | null> {
-  if (process.env.SUPABASE_URL) {
+  const supabase = getSupabase()
+  if (supabase) {
     try {
       const { data } = await supabase
         .from('restaurantes')
