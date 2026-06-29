@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
-import { getRestauranteAsync, getRestaurante, getAllSlugs } from '@/lib/restaurante'
+import { getRestauranteAsync, getRestaurante } from '@/lib/restaurante'
 import RestauranteSplash from '@/components/RestauranteSplash'
 
 export const dynamic = 'force-dynamic'
@@ -9,12 +9,8 @@ interface Props {
   params: { restaurante: string }
 }
 
-export async function generateStaticParams() {
-  return getAllSlugs().map((slug) => ({ restaurante: slug }))
-}
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const data = getRestaurante(params.restaurante)
+  const data = await getRestauranteAsync(params.restaurante)
   if (!data) return { title: 'Carta no encontrada' }
   return {
     title: `${data.nombre} — Carta digital`,
