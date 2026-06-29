@@ -8,11 +8,14 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
 
     const supabase = getSupabase()
     if (!supabase) return NextResponse.json({ error: 'Supabase no configurado' }, { status: 500 })
-    const { error } = await supabase
+    const { error, status, statusText } = await supabase
       .from('restaurantes')
       .upsert({ slug: params.slug, data: body, updated_at: new Date().toISOString() })
 
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+    if (error) {
+      console.error('Supabase upsert error:', error, status, statusText)
+      return NextResponse.json({ error: error.message, details: { status, statusText } }, { status: 500 })
+    }
 
     return NextResponse.json({ ok: true })
   } catch (e) {
