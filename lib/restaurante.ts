@@ -5,16 +5,28 @@ import { getSupabase } from './supabase'
 
 export async function getRestauranteAsync(slug: string): Promise<Restaurante | null> {
   const supabase = getSupabase()
-  if (supabase) {
-    try {
-      const { data } = await supabase
-        .from('restaurantes')
-        .select('data')
-        .eq('slug', slug)
-        .single()
-      if (data?.data) return data.data as Restaurante
-    } catch {}
+  if (!supabase) {
+    console.log('[restaurante] No Supabase client, using local JSON')
+    return getRestaurante(slug)
   }
+
+  const { data, error } = await supabase
+    .from('restaurantes')
+    .select('data')
+    .eq('slug', slug)
+    .single()
+
+  if (error) {
+    console.error('[restaurante] Supabase read error for', slug, ':', error.code, error.message)
+    return getRestaurante(slug)
+  }
+
+  if (data?.data) {
+    console.log('[restaurante] Loaded from Supabase:', slug)
+    return data.data as Restaurante
+  }
+
+  console.log('[restaurante] No data in Supabase for', slug, ', using local JSON')
   return getRestaurante(slug)
 }
 
