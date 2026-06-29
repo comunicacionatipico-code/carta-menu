@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation'
 import { getRestauranteAsync } from '@/lib/restaurante'
 import AdminEditor from '@/components/AdminEditor'
 
+export const dynamic = 'force-dynamic'
+
 interface Props { params: { slug: string } }
 
 export default async function AdminPage({ params }: Props) {
