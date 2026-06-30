@@ -1,15 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server'
-import Anthropic from '@anthropic-ai/sdk'
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
+const LANG_CODES: Record<string, string> = {
+  es: 'es', en: 'en', it: 'it', fr: 'fr', de: 'de', ru: 'ru',
+}
 
-const IDIOMAS: Record<string, string> = {
-  es: 'Spanish',
-  en: 'English',
-  it: 'Italian',
-  fr: 'French',
-  de: 'German',
-  ru: 'Russian',
+async function translateText(text: string, from: string, to: string): Promise<string> {
+  if (!text.trim()) return ''
+  const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${from}|${to}&de=comunicacionatipico@gmail.com`
+  const res = await fetch(url)
+  const json = await res.json()
+  return json.responseData?.translatedText ?? text
 }
 
 export async function POST(req: NextRequest) {
@@ -21,29 +21,19 @@ export async function POST(req: NextRequest) {
     }
 
     const targetLangs = idiomas.filter(l => l !== 'es')
-    const langList = targetLangs.map(l => `${l} (${IDIOMAS[l] ?? l})`).join(', ')
 
-    const prompt = `You are a professional restaurant menu translator. Translate the following Spanish dish name and description into these languages: ${langList}.
+    const nombreResult: Record<string, string> = {}
+    const descripcionResult: Record<string, string> = {}
 
-Dish name (ES): ${nombre}
-Description (ES): ${descripcion}
+    await Promise.all(targetLangs.map(async (lang) => {
+      const code = LANG_CODES[lang] ?? lang
+      nombreResult[lang] = await translateText(nombre, 'es', code)
+      if (descripcion) {
+        descripcionResult[lang] = await translateText(descripcion, 'es', code)
+      }
+    }))
 
-Respond ONLY with a valid JSON object in this exact format, no extra text:
-{
-  "nombre": { ${targetLangs.map(l => `"${l}": "translation"`).join(', ')} },
-  "descripcion": { ${targetLangs.map(l => `"${l}": "translation"`).join(', ')} }
-}`
-
-    const message = await client.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 1024,
-      messages: [{ role: 'user', content: prompt }],
-    })
-
-    const text = message.content[0].type === 'text' ? message.content[0].text : ''
-    const json = JSON.parse(text.trim())
-
-    return NextResponse.json(json)
+    return NextResponse.json({ nombre: nombreResult, descripcion: descripcionResult })
   } catch (e) {
     return NextResponse.json({ error: String(e) }, { status: 500 })
   }
