@@ -1,11 +1,18 @@
 {
   "nombre": "El Socarrat",
-  "subtitulo": "Paellas y Tapas · Madrid",
+  "subtitulo": "Paellas y Tapas · Valencia",
   "color_primario": "#31442c",
   "color_acento": "#c9b87a",
   "logo_url": "/uploads/el-socarrat/1781473181721-hji8yij735w.png",
   "wifi": "socarrat2024",
-  "idiomas": ["es", "en", "it", "fr", "de", "ru"],
+  "idiomas": [
+    "es",
+    "en",
+    "it",
+    "fr",
+    "de",
+    "ru"
+  ],
   "categorias": [
     {
       "id": "para-picar",
@@ -39,7 +46,10 @@
           "precio": 3.5,
           "emoji": "🫒",
           "imagen_url": null,
-          "alergenos": ["pescado", "mostaza"],
+          "alergenos": [
+            "pescado",
+            "mostaza"
+          ],
           "disponible": true
         },
         {
@@ -63,7 +73,9 @@
           "precio": 3.5,
           "emoji": "🐟",
           "imagen_url": null,
-          "alergenos": ["pescado"],
+          "alergenos": [
+            "pescado"
+          ],
           "disponible": true
         },
         {
@@ -87,7 +99,9 @@
           "precio": 3.5,
           "emoji": "🧀",
           "imagen_url": null,
-          "alergenos": ["lacteos"],
+          "alergenos": [
+            "lacteos"
+          ],
           "disponible": true
         },
         {
@@ -111,7 +125,10 @@
           "precio": 3.8,
           "emoji": "🎨",
           "imagen_url": null,
-          "alergenos": ["pescado", "mostaza"],
+          "alergenos": [
+            "pescado",
+            "mostaza"
+          ],
           "disponible": true
         },
         {
@@ -135,7 +152,9 @@
           "precio": 3.9,
           "emoji": "🥩",
           "imagen_url": null,
-          "alergenos": ["lacteos"],
+          "alergenos": [
+            "lacteos"
+          ],
           "disponible": true
         },
         {
@@ -159,7 +178,11 @@
           "precio": 4.8,
           "emoji": "🐟",
           "imagen_url": null,
-          "alergenos": ["gluten", "lacteos", "pescado"],
+          "alergenos": [
+            "gluten",
+            "lacteos",
+            "pescado"
+          ],
           "disponible": true
         },
         {
@@ -183,7 +206,10 @@
           "precio": 4.5,
           "emoji": "🍅",
           "imagen_url": null,
-          "alergenos": ["gluten", "huevo"],
+          "alergenos": [
+            "gluten",
+            "huevo"
+          ],
           "disponible": true
         },
         {
@@ -244,7 +270,9 @@
           "precio": 15.5,
           "emoji": "🧀",
           "imagen_url": null,
-          "alergenos": ["lacteos"],
+          "alergenos": [
+            "lacteos"
+          ],
           "disponible": true
         },
         {
@@ -292,7 +320,9 @@
           "precio": 16.5,
           "emoji": "🍖",
           "imagen_url": null,
-          "alergenos": ["lacteos"],
+          "alergenos": [
+            "lacteos"
+          ],
           "disponible": true
         }
       ]
@@ -329,7 +359,10 @@
           "precio": 8.5,
           "emoji": "🥔",
           "imagen_url": null,
-          "alergenos": ["gluten", "huevo"],
+          "alergenos": [
+            "gluten",
+            "huevo"
+          ],
           "disponible": true
         },
         {
@@ -353,7 +386,11 @@
           "precio": 9.5,
           "emoji": "🥗",
           "imagen_url": null,
-          "alergenos": ["huevo", "pescado", "gluten"],
+          "alergenos": [
+            "huevo",
+            "pescado",
+            "gluten"
+          ],
           "disponible": true
         },
         {
@@ -377,7 +414,10 @@
           "precio": 14.5,
           "emoji": "🌿",
           "imagen_url": null,
-          "alergenos": ["lacteos", "mostaza"],
+          "alergenos": [
+            "lacteos",
+            "mostaza"
+          ],
           "disponible": true
         },
         {
@@ -401,7 +441,9 @@
           "precio": 9.8,
           "emoji": "🫘",
           "imagen_url": null,
-          "alergenos": ["sesamo"],
+          "alergenos": [
+            "sesamo"
+          ],
           "disponible": true
         },
         {
@@ -425,7 +467,9 @@
           "precio": 19,
           "emoji": "🦐",
           "imagen_url": null,
-          "alergenos": ["marisco"],
+          "alergenos": [
+            "marisco"
+          ],
           "disponible": true
         },
         {
@@ -473,7 +517,10 @@
           "precio": 12.5,
           "emoji": "🐚",
           "imagen_url": null,
-          "alergenos": ["moluscos", "sulfitos"],
+          "alergenos": [
+            "moluscos",
+            "sulfitos"
+          ],
           "disponible": true
         },
         {
@@ -497,7 +544,9 @@
           "precio": 14.5,
           "emoji": "🍅",
           "imagen_url": null,
-          "alergenos": ["pescado"],
+          "alergenos": [
+            "pescado"
+          ],
           "disponible": true
         },
         {
@@ -521,7 +570,10 @@
           "precio": 15,
           "emoji": "🫓",
           "imagen_url": null,
-          "alergenos": ["gluten", "sesamo"],
+          "alergenos": [
+            "gluten",
+            "sesamo"
+          ],
           "disponible": true
         },
         {
@@ -545,7 +597,9 @@
           "precio": 12,
           "emoji": "🧆",
           "imagen_url": null,
-          "alergenos": ["sesamo"],
+          "alergenos": [
+            "sesamo"
+          ],
           "disponible": true
         },
         {
@@ -569,7 +623,11 @@
           "precio": 9,
           "emoji": "🍘",
           "imagen_url": null,
-          "alergenos": ["gluten", "lacteos", "huevo"],
+          "alergenos": [
+            "gluten",
+            "lacteos",
+            "huevo"
+          ],
           "disponible": true
         },
         {
@@ -593,7 +651,12 @@
           "precio": 9,
           "emoji": "🍤",
           "imagen_url": null,
-          "alergenos": ["gluten", "lacteos", "huevo", "marisco"],
+          "alergenos": [
+            "gluten",
+            "lacteos",
+            "huevo",
+            "marisco"
+          ],
           "disponible": true
         },
         {
@@ -617,7 +680,12 @@
           "precio": 9,
           "emoji": "🦑",
           "imagen_url": null,
-          "alergenos": ["gluten", "lacteos", "huevo", "moluscos"],
+          "alergenos": [
+            "gluten",
+            "lacteos",
+            "huevo",
+            "moluscos"
+          ],
           "disponible": true
         }
       ]
@@ -702,7 +770,11 @@
           "precio": 22.5,
           "emoji": "🦐",
           "imagen_url": null,
-          "alergenos": ["moluscos", "marisco", "pescado"],
+          "alergenos": [
+            "moluscos",
+            "marisco",
+            "pescado"
+          ],
           "disponible": true
         },
         {
@@ -726,7 +798,11 @@
           "precio": 21.5,
           "emoji": "🖤",
           "imagen_url": null,
-          "alergenos": ["moluscos", "marisco", "pescado"],
+          "alergenos": [
+            "moluscos",
+            "marisco",
+            "pescado"
+          ],
           "disponible": true
         },
         {
@@ -750,7 +826,12 @@
           "precio": 23,
           "emoji": "🍝",
           "imagen_url": null,
-          "alergenos": ["gluten", "moluscos", "marisco", "pescado"],
+          "alergenos": [
+            "gluten",
+            "moluscos",
+            "marisco",
+            "pescado"
+          ],
           "disponible": true
         },
         {
@@ -774,7 +855,9 @@
           "precio": 23,
           "emoji": "🦆",
           "imagen_url": null,
-          "alergenos": ["lacteos"],
+          "alergenos": [
+            "lacteos"
+          ],
           "disponible": true
         }
       ]
@@ -835,7 +918,9 @@
           "precio": 32,
           "emoji": "🥩",
           "imagen_url": null,
-          "alergenos": ["lacteos"],
+          "alergenos": [
+            "lacteos"
+          ],
           "disponible": true
         },
         {
@@ -859,7 +944,9 @@
           "precio": 19,
           "emoji": "🍖",
           "imagen_url": null,
-          "alergenos": ["lacteos"],
+          "alergenos": [
+            "lacteos"
+          ],
           "disponible": true
         }
       ]
@@ -896,7 +983,9 @@
           "precio": 24.5,
           "emoji": "🐟",
           "imagen_url": null,
-          "alergenos": ["pescado"],
+          "alergenos": [
+            "pescado"
+          ],
           "disponible": true
         },
         {
@@ -920,7 +1009,9 @@
           "precio": 28,
           "emoji": "🐠",
           "imagen_url": null,
-          "alergenos": ["pescado"],
+          "alergenos": [
+            "pescado"
+          ],
           "disponible": true
         }
       ]
@@ -957,7 +1048,11 @@
           "precio": 8.5,
           "emoji": "🍰",
           "imagen_url": null,
-          "alergenos": ["lacteos", "huevo", "frutos_secos"],
+          "alergenos": [
+            "lacteos",
+            "huevo",
+            "frutos_secos"
+          ],
           "disponible": true
         },
         {
@@ -981,7 +1076,11 @@
           "precio": 7.5,
           "emoji": "🍮",
           "imagen_url": null,
-          "alergenos": ["lacteos", "gluten", "huevo"],
+          "alergenos": [
+            "lacteos",
+            "gluten",
+            "huevo"
+          ],
           "disponible": true
         }
       ]
