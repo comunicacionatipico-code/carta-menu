@@ -115,26 +115,35 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
       img.src = URL.createObjectURL(file)
     })
 
-  const subirACloudinary = async (file: File, esLogo = false): Promise<string> => {
+  const subirASupabase = async (file: File, esLogo = false): Promise<string> => {
     const blob = await comprimirParaSubir(file, esLogo)
     const ext = esLogo ? 'png' : 'jpg'
-    const fd = new FormData()
-    fd.append('file', blob, `foto.${ext}`)
-    fd.append('upload_preset', 'ml_default')
-    fd.append('folder', `carta-menu/${slug}`)
-    const res = await fetch('https://api.cloudinary.com/v1_1/dxlfyx8tq/image/upload', {
+    const filename = `${slug}/${Date.now()}.${ext}`
+
+    // Get signed upload URL
+    const urlRes = await fetch('/api/admin/upload-url', {
       method: 'POST',
-      body: fd,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ path: filename }),
     })
-    const json = await res.json()
-    if (!json.secure_url) throw new Error(json.error?.message ?? 'Error Cloudinary')
-    return json.secure_url as string
+    const { signedUrl, publicUrl, error } = await urlRes.json()
+    if (error) throw new Error(error)
+
+    // Upload directly to Supabase Storage
+    const uploadRes = await fetch(signedUrl, {
+      method: 'PUT',
+      body: blob,
+      headers: { 'Content-Type': esLogo ? 'image/png' : 'image/jpeg' },
+    })
+    if (!uploadRes.ok) throw new Error('Error subiendo a Supabase Storage')
+
+    return publicUrl as string
   }
 
   const subirImagen = useCallback(async (file: File, categoriaId: string, platoId: string) => {
     setUploadingId(platoId)
     try {
-      const url = await subirACloudinary(file)
+      const url = await subirASupabase(file)
       actualizarPlato(categoriaId, platoId, { imagen_url: url })
     } catch (e) {
       alert('Error subiendo imagen: ' + String(e))
@@ -146,7 +155,7 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
   const subirLogo = async (file: File) => {
     setLogoUploading(true)
     try {
-      const url = await subirACloudinary(file, true)
+      const url = await subirASupabase(file, true)
       setData(prev => ({ ...prev, logo_url: url }))
     } catch (e) {
       alert('Error subiendo logo: ' + String(e))
