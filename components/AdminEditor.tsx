@@ -120,24 +120,14 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
     const ext = esLogo ? 'png' : 'jpg'
     const filename = `${slug}/${Date.now()}.${ext}`
 
-    // Get signed upload URL
-    const urlRes = await fetch('/api/admin/upload-url', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ path: filename }),
-    })
-    const { signedUrl, publicUrl, error } = await urlRes.json()
-    if (error) throw new Error(error)
+    const fd = new FormData()
+    fd.append('file', blob, `foto.${ext}`)
+    fd.append('path', filename)
 
-    // Upload directly to Supabase Storage
-    const uploadRes = await fetch(signedUrl, {
-      method: 'PUT',
-      body: blob,
-      headers: { 'Content-Type': esLogo ? 'image/png' : 'image/jpeg' },
-    })
-    if (!uploadRes.ok) throw new Error('Error subiendo a Supabase Storage')
-
-    return publicUrl as string
+    const res = await fetch('/api/admin/upload-url', { method: 'POST', body: fd })
+    const json = await res.json()
+    if (json.error) throw new Error(json.error)
+    return json.publicUrl as string
   }
 
   const subirImagen = useCallback(async (file: File, categoriaId: string, platoId: string) => {
