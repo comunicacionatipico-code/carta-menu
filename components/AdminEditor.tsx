@@ -133,7 +133,8 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
       body: JSON.stringify({ base64, path: filename, contentType: esLogo ? 'image/png' : 'image/jpeg' }),
     })
     const json = await res.json()
-    if (json.error) throw new Error(json.error)
+    if (!res.ok || json.error) throw new Error(`HTTP ${res.status}: ${json.error ?? 'Error desconocido'}`)
+    if (!json.publicUrl) throw new Error('No se recibió URL de la imagen')
     return json.publicUrl as string
   }
 
