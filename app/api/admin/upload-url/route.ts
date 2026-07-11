@@ -6,14 +6,12 @@ export async function POST(req: NextRequest) {
   if (!supabase) return NextResponse.json({ error: 'No Supabase' }, { status: 500 })
 
   try {
-    const formData = await req.formData()
-    const file = formData.get('file') as File
-    const path = formData.get('path') as string
+    const { base64, path, contentType: ct } = await req.json() as { base64: string; path: string; contentType: string }
 
-    if (!file || !path) return NextResponse.json({ error: 'Missing file or path' }, { status: 400 })
+    if (!base64 || !path) return NextResponse.json({ error: 'Missing base64 or path' }, { status: 400 })
 
-    const buffer = Buffer.from(await file.arrayBuffer())
-    const contentType = file.type || 'image/jpeg'
+    const buffer = Buffer.from(base64, 'base64')
+    const contentType = ct || 'image/jpeg'
 
     // Ensure bucket exists
     await supabase.storage.createBucket('imagenes', { public: true, fileSizeLimit: 10485760 })

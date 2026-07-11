@@ -120,11 +120,18 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
     const ext = esLogo ? 'png' : 'jpg'
     const filename = `${slug}/${Date.now()}.${ext}`
 
-    const fd = new FormData()
-    fd.append('file', blob, `foto.${ext}`)
-    fd.append('path', filename)
+    // Convert blob to base64
+    const base64 = await new Promise<string>((resolve) => {
+      const reader = new FileReader()
+      reader.onload = () => resolve((reader.result as string).split(',')[1])
+      reader.readAsDataURL(blob)
+    })
 
-    const res = await fetch('/api/admin/upload-url', { method: 'POST', body: fd })
+    const res = await fetch('/api/admin/upload-url', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ base64, path: filename, contentType: esLogo ? 'image/png' : 'image/jpeg' }),
+    })
     const json = await res.json()
     if (json.error) throw new Error(json.error)
     return json.publicUrl as string
