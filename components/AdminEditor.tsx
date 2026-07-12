@@ -284,9 +284,26 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
           {/* Categorías y platos */}
           {data.categorias.map(cat => (
             <div key={cat.id} className="mb-6">
-              <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2 px-1">
-                {cat.nombre[data.idiomas[0]] ?? cat.nombre[Object.keys(cat.nombre)[0]]}
-              </h2>
+              <div className="flex items-center justify-between mb-2 px-1">
+                <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400">
+                  {cat.nombre[data.idiomas[0]] ?? cat.nombre[Object.keys(cat.nombre)[0]]}
+                </h2>
+                <select
+                  value={cat.tipo ?? 'carta'}
+                  onChange={e => setData(prev => ({
+                    ...prev,
+                    categorias: prev.categorias.map(c =>
+                      c.id !== cat.id ? c : { ...c, tipo: e.target.value as any }
+                    )
+                  }))}
+                  className="text-xs border border-gray-200 rounded-lg px-2 py-1 text-gray-500 focus:outline-none focus:border-blue-400"
+                >
+                  <option value="carta">🍽 Carta</option>
+                  <option value="bebidas">🥤 Bebidas</option>
+                  <option value="vinos">🍷 Vinos</option>
+                  <option value="cocktails">🍹 Cocktails</option>
+                </select>
+              </div>
               <div className="space-y-2">
                 {cat.platos.map(plato => {
                   const isEdit = editando?.platoId === plato.id && editando?.categoriaId === cat.id

@@ -51,6 +51,10 @@ export default function CartaCliente({ restaurante, slug, idiomaInicial, tipoCar
 
   const txt = (obj: Record<string, string>) => obj[idiomaActivo] ?? obj[restaurante.idiomas[0]] ?? ''
 
+  const categoriasFiltradas = tipoCarta
+    ? restaurante.categorias.filter(c => (c.tipo ?? 'carta') === tipoCarta)
+    : restaurante.categorias
+
   return (
     <div className="relative min-h-screen bg-[#f5f1ea]">
       {/* HERO */}
@@ -98,7 +102,7 @@ export default function CartaCliente({ restaurante, slug, idiomaInicial, tipoCar
         className="sticky top-0 z-30 flex gap-2 overflow-x-auto px-4 py-3 scrollbar-hide"
         style={{ backgroundColor: restaurante.color_primario }}
       >
-        {restaurante.categorias.map((cat) => (
+        {categoriasFiltradas.map((cat) => (
           <button
             key={cat.id}
             onClick={() => scrollToCategoria(cat.id)}
@@ -116,7 +120,7 @@ export default function CartaCliente({ restaurante, slug, idiomaInicial, tipoCar
 
       {/* CONTENIDO */}
       <div className="pb-20">
-        {restaurante.categorias.map((cat) => (
+        {categoriasFiltradas.map((cat) => (
           <section
             key={cat.id}
             data-id={cat.id}

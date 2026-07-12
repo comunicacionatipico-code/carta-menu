@@ -19,10 +19,13 @@ export interface Plato {
   oculto?: boolean
 }
 
+export type TipoCarta = 'carta' | 'bebidas' | 'vinos' | 'cocktails'
+
 export interface Categoria {
   id: string
   nombre: TextoMultiidioma
   platos: Plato[]
+  tipo?: TipoCarta
 }
 
 export interface Restaurante {
