@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from 'react'
 import { Restaurante } from '@/types/restaurante'
 import { ALERGENOS } from '@/lib/alergenos'
 
-export default function CartaCliente({ restaurante, slug, idiomaInicial }: { restaurante: Restaurante; slug: string; idiomaInicial?: string }) {
+export default function CartaCliente({ restaurante, slug, idiomaInicial, tipoCarta }: { restaurante: Restaurante; slug: string; idiomaInicial?: string; tipoCarta?: string }) {
+  const modoLista = tipoCarta === 'bebidas' || tipoCarta === 'vinos'
   const [idiomaActivo, setIdiomaActivo] = useState(idiomaInicial ?? restaurante.idiomas[0])
   const [categoriaActiva, setCategoriaActiva] = useState(restaurante.categorias[0]?.id)
   const chipsRef = useRef<HTMLDivElement>(null)
@@ -131,88 +132,81 @@ export default function CartaCliente({ restaurante, slug, idiomaInicial }: { res
             <div>
               {cat.platos.filter(p => !p.oculto).map((plato, idx) => (
                 <div key={plato.id}>
-                  <div className={`relative ${!plato.disponible ? 'opacity-60' : ''}`}>
-                    {/* FOTO 9:16 con overlay de info */}
-                    <div className="relative w-full overflow-hidden" style={{ aspectRatio: '9/16' }}>
-                      {/* Fondo: imagen o emoji */}
-                      {plato.imagen_url ? (
-                        <div
-                          className="absolute inset-0 bg-cover bg-center"
-                          style={{ backgroundImage: `url(${plato.imagen_url})` }}
-                        />
-                      ) : (
-                        <div
-                          className="absolute inset-0 flex items-center justify-center"
-                          style={{ backgroundColor: '#f0ece4' }}
-                        >
-                          <span style={{ fontSize: 80 }}>{plato.emoji}</span>
-                        </div>
-                      )}
-
-                      {/* Gradiente inferior para legibilidad del texto */}
-                      {(plato.imagen_url || true) && (
-                        <div
-                          className="absolute inset-x-0 bottom-0"
-                          style={{
-                            height: '55%',
-                            background: 'linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.4) 55%, transparent 100%)',
-                          }}
-                        />
-                      )}
-
-                      {/* INFO superpuesto */}
-                      <div className="absolute inset-x-0 bottom-0 px-5 pb-6">
-                        {/* PRECIO sin fondo */}
-                        <div className="flex items-baseline gap-3">
-                          <p className="text-white font-light text-[19px] drop-shadow-lg" style={{ fontStyle: 'italic', letterSpacing: '0.12em' }}>
-                            {plato.precio_label && <span className="text-[14px] mr-1 opacity-80">{plato.precio_label}</span>}
-                            {plato.precio.toFixed(2).replace('.', ',')} €
-                          </p>
-                          {plato.precio2 && (
-                            <p className="text-white/80 font-light text-[16px] drop-shadow-lg" style={{ fontStyle: 'italic' }}>
-                              {plato.precio2_label && <span className="text-[13px] mr-1 opacity-80">{plato.precio2_label}</span>}
-                              {plato.precio2.toFixed(2).replace('.', ',')} €
-                            </p>
-                          )}
-                        </div>
-
-                        <p className="text-white font-bold text-[22px] leading-tight drop-shadow-lg mt-1">
-                          {txt(plato.nombre)}
-                        </p>
-                        <p className="text-white/75 text-[14px] mt-2 leading-[1.5] drop-shadow">
-                          {txt(plato.descripcion)}
-                        </p>
-
-                        {/* ALÉRGENOS */}
+                  {modoLista ? (
+                    /* MODO LISTA (bebidas, vinos) */
+                    <div className={`flex items-center justify-between px-4 py-3 ${!plato.disponible ? 'opacity-50' : ''}`}>
+                      <div className="flex-1 min-w-0 pr-4">
+                        <p className="font-semibold text-[15px] text-gray-900 leading-tight">{txt(plato.nombre)}</p>
+                        {txt(plato.descripcion) && (
+                          <p className="text-[13px] text-gray-500 mt-0.5 leading-snug">{txt(plato.descripcion)}</p>
+                        )}
                         {plato.alergenos.length > 0 && (
-                          <div className="flex flex-wrap gap-1 mt-3">
+                          <div className="flex flex-wrap gap-1 mt-1">
                             {plato.alergenos.map((a) => (
-                              <span
-                                key={a}
-                                className="text-[11px] px-2 py-0.5 rounded-full font-medium"
-                                style={{ backgroundColor: 'rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.9)' }}
-                              >
-                                {ALERGENOS[a]?.emoji} {ALERGENOS[a]?.label ?? a}
-                              </span>
+                              <span key={a} className="text-[10px] text-gray-400">{ALERGENOS[a]?.emoji}</span>
                             ))}
                           </div>
                         )}
                       </div>
-
-                      {/* No disponible overlay */}
-                      {!plato.disponible && (
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                          <span
-                            className="text-xs font-semibold px-3 py-1.5 rounded-full bg-black/60 text-white"
-                          >
-                            No disponible
-                          </span>
-                        </div>
-                      )}
+                      <div className="flex-shrink-0 text-right">
+                        <p className="font-medium text-[15px]" style={{ color: restaurante.color_primario, fontStyle: 'italic' }}>
+                          {plato.precio_label && <span className="text-[12px] mr-1 opacity-70">{plato.precio_label}</span>}
+                          {plato.precio.toFixed(2).replace('.', ',')} €
+                        </p>
+                        {plato.precio2 && (
+                          <p className="text-[13px] text-gray-500" style={{ fontStyle: 'italic' }}>
+                            {plato.precio2_label && <span className="text-[11px] mr-1">{plato.precio2_label}</span>}
+                            {plato.precio2.toFixed(2).replace('.', ',')} €
+                          </p>
+                        )}
+                      </div>
                     </div>
-                  </div>
-
-                  {idx < cat.platos.length - 1 && (
+                  ) : (
+                    /* MODO FOTO 9:16 */
+                    <div className={`relative ${!plato.disponible ? 'opacity-60' : ''}`}>
+                      <div className="relative w-full overflow-hidden" style={{ aspectRatio: '9/16' }}>
+                        {plato.imagen_url ? (
+                          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${plato.imagen_url})` }} />
+                        ) : (
+                          <div className="absolute inset-0 flex items-center justify-center" style={{ backgroundColor: '#f0ece4' }}>
+                            <span style={{ fontSize: 80 }}>{plato.emoji}</span>
+                          </div>
+                        )}
+                        <div className="absolute inset-x-0 bottom-0" style={{ height: '55%', background: 'linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.4) 55%, transparent 100%)' }} />
+                        <div className="absolute inset-x-0 bottom-0 px-5 pb-6">
+                          <div className="flex items-baseline gap-3">
+                            <p className="text-white font-light text-[19px] drop-shadow-lg" style={{ fontStyle: 'italic', letterSpacing: '0.12em' }}>
+                              {plato.precio_label && <span className="text-[14px] mr-1 opacity-80">{plato.precio_label}</span>}
+                              {plato.precio.toFixed(2).replace('.', ',')} €
+                            </p>
+                            {plato.precio2 && (
+                              <p className="text-white/80 font-light text-[16px] drop-shadow-lg" style={{ fontStyle: 'italic' }}>
+                                {plato.precio2_label && <span className="text-[13px] mr-1 opacity-80">{plato.precio2_label}</span>}
+                                {plato.precio2.toFixed(2).replace('.', ',')} €
+                              </p>
+                            )}
+                          </div>
+                          <p className="text-white font-bold text-[22px] leading-tight drop-shadow-lg mt-1">{txt(plato.nombre)}</p>
+                          <p className="text-white/75 text-[14px] mt-2 leading-[1.5] drop-shadow">{txt(plato.descripcion)}</p>
+                          {plato.alergenos.length > 0 && (
+                            <div className="flex flex-wrap gap-1 mt-3">
+                              {plato.alergenos.map((a) => (
+                                <span key={a} className="text-[11px] px-2 py-0.5 rounded-full font-medium" style={{ backgroundColor: 'rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.9)' }}>
+                                  {ALERGENOS[a]?.emoji} {ALERGENOS[a]?.label ?? a}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                        {!plato.disponible && (
+                          <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                            <span className="text-xs font-semibold px-3 py-1.5 rounded-full bg-black/60 text-white">No disponible</span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                  {idx < cat.platos.filter(p => !p.oculto).length - 1 && (
                     <div className="h-px bg-gray-100 mx-4" />
                   )}
                 </div>

@@ -39,17 +39,15 @@ export default function RestauranteSplash({ restaurante, slug }: { restaurante: 
 
   const elegirTipo = (id: string) => {
     setTipoCarta(id)
-    if (id === 'carta') {
-      setSaliendo(true)
-      setTimeout(() => {
-        setPaso('carta')
-        setSaliendo(false)
-      }, 250)
-    }
+    setSaliendo(true)
+    setTimeout(() => {
+      setPaso('carta')
+      setSaliendo(false)
+    }, 250)
   }
 
   if (paso === 'carta') {
-    return <CartaCliente restaurante={restaurante} slug={slug} idiomaInicial={idioma} />
+    return <CartaCliente restaurante={restaurante} slug={slug} idiomaInicial={idioma} tipoCarta={tipoCarta} />
   }
 
   const labelTipo = (tipo: typeof TIPOS_CARTA[0]) =>
@@ -118,33 +116,19 @@ export default function RestauranteSplash({ restaurante, slug }: { restaurante: 
             }
           </p>
           <div className="flex flex-col gap-3 w-full">
-            {TIPOS_CARTA.filter(t => !(restaurante.menus_ocultos ?? []).includes(t.id)).map((tipo) => {
-              const disponible = tipo.id === 'carta'
-              return (
-                <button
-                  key={tipo.id}
-                  onClick={() => elegirTipo(tipo.id)}
-                  disabled={!disponible}
-                  className="flex items-center gap-4 px-5 py-4 rounded-2xl text-left transition-all active:scale-95"
-                  style={{
-                    backgroundColor: disponible ? restaurante.color_acento : 'rgba(255,255,255,0.05)',
-                    color: disponible ? restaurante.color_primario : 'rgba(255,255,255,0.3)',
-                    border: disponible ? 'none' : '1px solid rgba(255,255,255,0.08)',
-                    cursor: disponible ? 'pointer' : 'not-allowed',
-                  }}
-                >
-                  <div>
-                    <p className="font-semibold text-[15px]">{labelTipo(tipo)}</p>
-                    {!disponible && (
-                      <p className="text-[11px] mt-0.5 opacity-60">
-                        { { es: 'Próximamente', en: 'Coming soon', it: 'Prossimamente',
-                            fr: 'Bientôt', de: 'Demnächst', ru: 'Скоро' }[idioma] ?? 'Próximamente' }
-                      </p>
-                    )}
-                  </div>
-                </button>
-              )
-            })}
+            {TIPOS_CARTA.filter(t => !(restaurante.menus_ocultos ?? []).includes(t.id)).map((tipo) => (
+              <button
+                key={tipo.id}
+                onClick={() => elegirTipo(tipo.id)}
+                className="flex items-center gap-4 px-5 py-4 rounded-2xl text-left transition-all active:scale-95"
+                style={{
+                  backgroundColor: restaurante.color_acento,
+                  color: restaurante.color_primario,
+                }}
+              >
+                <p className="font-semibold text-[15px]">{labelTipo(tipo)}</p>
+              </button>
+            ))}
           </div>
 
           {/* Volver */}
