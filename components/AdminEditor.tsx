@@ -59,6 +59,30 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
     setEditando({ categoriaId, platoId: id })
   }
 
+  const añadirCategoria = () => {
+    const nombre = prompt('Nombre de la nueva sección (en español):')
+    if (!nombre?.trim()) return
+    const id = `cat-${Date.now()}`
+    setData(prev => ({
+      ...prev,
+      categorias: [...prev.categorias, {
+        id,
+        nombre: Object.fromEntries(prev.idiomas.map(l => [l, nombre.trim()])),
+        platos: [],
+        tipo: 'carta' as const,
+      }]
+    }))
+  }
+
+  const eliminarCategoria = (categoriaId: string) => {
+    if (!confirm('¿Eliminar esta sección y todos sus platos?')) return
+    setData(prev => ({
+      ...prev,
+      categorias: prev.categorias.filter(c => c.id !== categoriaId)
+    }))
+    if (editando?.categoriaId === categoriaId) setEditando(null)
+  }
+
   const eliminarPlato = (categoriaId: string, platoId: string) => {
     if (!confirm('¿Eliminar este plato?')) return
     setData(prev => ({
@@ -361,14 +385,30 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
                   )
                 })}
               </div>
-              <button
-                onClick={() => añadirPlato(cat.id)}
-                className="mt-2 w-full flex items-center justify-center gap-2 py-2 rounded-xl border border-dashed border-gray-300 text-gray-400 text-sm hover:border-gray-400 hover:text-gray-600 transition-all"
-              >
-                + Añadir plato
-              </button>
+              <div className="mt-2 flex gap-2">
+                <button
+                  onClick={() => añadirPlato(cat.id)}
+                  className="flex-1 flex items-center justify-center gap-2 py-2 rounded-xl border border-dashed border-gray-300 text-gray-400 text-sm hover:border-gray-400 hover:text-gray-600 transition-all"
+                >
+                  + Añadir plato
+                </button>
+                <button
+                  onClick={() => eliminarCategoria(cat.id)}
+                  className="px-3 py-2 rounded-xl border border-dashed border-red-200 text-red-300 text-sm hover:border-red-400 hover:text-red-500 transition-all"
+                  title="Eliminar sección"
+                >
+                  🗑
+                </button>
+              </div>
             </div>
           ))}
+
+          <button
+            onClick={añadirCategoria}
+            className="w-full flex items-center justify-center gap-2 py-3 rounded-xl border-2 border-dashed border-blue-200 text-blue-400 text-sm font-medium hover:border-blue-400 hover:text-blue-600 transition-all mt-2"
+          >
+            + Añadir sección
+          </button>
         </div>
 
         {/* PANEL DE EDICIÓN */}
