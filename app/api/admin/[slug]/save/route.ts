@@ -8,10 +8,41 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
 
     const supabase = getSupabase()
     if (!supabase) return NextResponse.json({ error: 'Supabase no configurado' }, { status: 500 })
+
+    // Leer datos actuales para preservar imágenes que ya estén en Supabase
+    const { data: current } = await supabase
+      .from('restaurantes').select('data').eq('slug', params.slug).single()
+
+    let datosAGuardar = body
+
+    if (current?.data) {
+      const currentData = current.data as Restaurante
+      // Mapa de imagen_url existentes por id de plato
+      const imagenesGuardadas: Record<string, string> = {}
+      for (const cat of currentData.categorias ?? []) {
+        for (const plato of cat.platos ?? []) {
+          if (plato.imagen_url) imagenesGuardadas[plato.id] = plato.imagen_url
+        }
+      }
+
+      // Si el body llega sin imagen pero Supabase ya la tiene, se preserva
+      datosAGuardar = {
+        ...body,
+        logo_url: body.logo_url ?? currentData.logo_url ?? null,
+        categorias: body.categorias.map(cat => ({
+          ...cat,
+          platos: cat.platos.map(plato => ({
+            ...plato,
+            imagen_url: plato.imagen_url ?? imagenesGuardadas[plato.id] ?? null,
+          })),
+        })),
+      }
+    }
+
     const now = new Date().toISOString()
     const { data: upsertData, error, status, statusText } = await supabase
       .from('restaurantes')
-      .upsert({ slug: params.slug, data: body, updated_at: now }, { onConflict: 'slug' })
+      .upsert({ slug: params.slug, data: datosAGuardar, updated_at: now }, { onConflict: 'slug' })
       .select('updated_at')
       .single()
 
@@ -20,7 +51,7 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
       return NextResponse.json({ error: error.message, code: error.code, details: { status, statusText } }, { status: 500 })
     }
 
-    const primerPlato = body.categorias?.[0]?.platos?.[0]
+    const primerPlato = datosAGuardar.categorias?.[0]?.platos?.[0]
     return NextResponse.json({
       ok: true,
       updated_at: upsertData?.updated_at ?? now,
