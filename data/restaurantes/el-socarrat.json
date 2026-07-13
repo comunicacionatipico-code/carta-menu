@@ -236,7 +236,8 @@
           "alergenos": [],
           "disponible": true
         }
-      ]
+      ],
+      "tipo": "carta"
     },
     {
       "id": "tablas",
@@ -325,7 +326,8 @@
           ],
           "disponible": true
         }
-      ]
+      ],
+      "tipo": "carta"
     },
     {
       "id": "tapas",
@@ -688,7 +690,8 @@
           ],
           "disponible": true
         }
-      ]
+      ],
+      "tipo": "carta"
     },
     {
       "id": "arroces",
@@ -860,7 +863,8 @@
           ],
           "disponible": true
         }
-      ]
+      ],
+      "tipo": "carta"
     },
     {
       "id": "carnes",
@@ -949,7 +953,8 @@
           ],
           "disponible": true
         }
-      ]
+      ],
+      "tipo": "carta"
     },
     {
       "id": "pescados",
@@ -1014,7 +1019,8 @@
           ],
           "disponible": true
         }
-      ]
+      ],
+      "tipo": "carta"
     },
     {
       "id": "postres",
@@ -1081,6 +1087,2690 @@
             "gluten",
             "huevo"
           ],
+          "disponible": true
+        }
+      ],
+      "tipo": "carta"
+    },
+    {
+      "id": "cat-cerveza",
+      "tipo": "bebidas",
+      "nombre": {
+        "es": "Cervezas",
+        "en": "Beers",
+        "it": "Birre",
+        "fr": "Bières",
+        "de": "Biere",
+        "ru": "Пиво"
+      },
+      "platos": [
+        {
+          "id": "beb-1",
+          "nombre": {
+            "es": "Doble Estrella Artois",
+            "en": "Doble Estrella Artois",
+            "it": "Doble Estrella Artois",
+            "fr": "Doble Estrella Artois",
+            "de": "Doble Estrella Artois",
+            "ru": "Doble Estrella Artois"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 5.5,
+          "emoji": "🍺",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "beb-2",
+          "nombre": {
+            "es": "Pinta Estrella Artois",
+            "en": "Pinta Estrella Artois",
+            "it": "Pinta Estrella Artois",
+            "fr": "Pinta Estrella Artois",
+            "de": "Pinta Estrella Artois",
+            "ru": "Pinta Estrella Artois"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🍺",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "beb-3",
+          "nombre": {
+            "es": "Doble San Miguel Selecta",
+            "en": "Doble San Miguel Selecta",
+            "it": "Doble San Miguel Selecta",
+            "fr": "Doble San Miguel Selecta",
+            "de": "Doble San Miguel Selecta",
+            "ru": "Doble San Miguel Selecta"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 5,
+          "emoji": "🍺",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "beb-4",
+          "nombre": {
+            "es": "Pinta San Miguel Selecta",
+            "en": "Pinta San Miguel Selecta",
+            "it": "Pinta San Miguel Selecta",
+            "fr": "Pinta San Miguel Selecta",
+            "de": "Pinta San Miguel Selecta",
+            "ru": "Pinta San Miguel Selecta"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.8,
+          "emoji": "🍺",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "beb-5",
+          "nombre": {
+            "es": "Doble Radler",
+            "en": "Doble Radler",
+            "it": "Doble Radler",
+            "fr": "Doble Radler",
+            "de": "Doble Radler",
+            "ru": "Doble Radler"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 6,
+          "emoji": "🍺",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "beb-6",
+          "nombre": {
+            "es": "Pinta Radler",
+            "en": "Pinta Radler",
+            "it": "Pinta Radler",
+            "fr": "Pinta Radler",
+            "de": "Pinta Radler",
+            "ru": "Pinta Radler"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.8,
+          "emoji": "🍺",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "beb-7",
+          "nombre": {
+            "es": "San Miguel 0.0",
+            "en": "San Miguel 0.0",
+            "it": "San Miguel 0.0",
+            "fr": "San Miguel 0.0",
+            "de": "San Miguel 0.0",
+            "ru": "San Miguel 0.0"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🍺",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "beb-8",
+          "nombre": {
+            "es": "San Miguel Sin Gluten",
+            "en": "San Miguel Sin Gluten",
+            "it": "San Miguel Sin Gluten",
+            "fr": "San Miguel Sin Gluten",
+            "de": "San Miguel Sin Gluten",
+            "ru": "San Miguel Sin Gluten"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🍺",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "beb-9",
+          "nombre": {
+            "es": "Alhambra",
+            "en": "Alhambra",
+            "it": "Alhambra",
+            "fr": "Alhambra",
+            "de": "Alhambra",
+            "ru": "Alhambra"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.8,
+          "emoji": "🍺",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "beb-10",
+          "nombre": {
+            "es": "Coronita",
+            "en": "Coronita",
+            "it": "Coronita",
+            "fr": "Coronita",
+            "de": "Coronita",
+            "ru": "Coronita"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 4.2,
+          "emoji": "🍺",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "beb-11",
+          "nombre": {
+            "es": "Estrella Galicia",
+            "en": "Estrella Galicia",
+            "it": "Estrella Galicia",
+            "fr": "Estrella Galicia",
+            "de": "Estrella Galicia",
+            "ru": "Estrella Galicia"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.8,
+          "emoji": "🍺",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "beb-12",
+          "nombre": {
+            "es": "Tercio 1906",
+            "en": "Tercio 1906",
+            "it": "Tercio 1906",
+            "fr": "Tercio 1906",
+            "de": "Tercio 1906",
+            "ru": "Tercio 1906"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🍺",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "cat-vermut",
+      "tipo": "bebidas",
+      "nombre": {
+        "es": "Vermut",
+        "en": "Vermouth",
+        "it": "Vermut",
+        "fr": "Vermouth",
+        "de": "Wermut",
+        "ru": "Вермут"
+      },
+      "platos": [
+        {
+          "id": "verm-1",
+          "nombre": {
+            "es": "Yzaguirre Tinto",
+            "en": "Yzaguirre Tinto",
+            "it": "Yzaguirre Tinto",
+            "fr": "Yzaguirre Tinto",
+            "de": "Yzaguirre Tinto",
+            "ru": "Yzaguirre Tinto"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "verm-2",
+          "nombre": {
+            "es": "Yzaguirre Blanco",
+            "en": "Yzaguirre Blanco",
+            "it": "Yzaguirre Blanco",
+            "fr": "Yzaguirre Blanco",
+            "de": "Yzaguirre Blanco",
+            "ru": "Yzaguirre Blanco"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🥂",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "cat-zumos",
+      "tipo": "bebidas",
+      "nombre": {
+        "es": "Zumos",
+        "en": "Juices",
+        "it": "Succhi",
+        "fr": "Jus",
+        "de": "Säfte",
+        "ru": "Соки"
+      },
+      "platos": [
+        {
+          "id": "zum-1",
+          "nombre": {
+            "es": "Naranja",
+            "en": "Naranja",
+            "it": "Naranja",
+            "fr": "Naranja",
+            "de": "Naranja",
+            "ru": "Naranja"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🍊",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "zum-2",
+          "nombre": {
+            "es": "Piña",
+            "en": "Piña",
+            "it": "Piña",
+            "fr": "Piña",
+            "de": "Piña",
+            "ru": "Piña"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🍍",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "zum-3",
+          "nombre": {
+            "es": "Melocotón",
+            "en": "Melocotón",
+            "it": "Melocotón",
+            "fr": "Melocotón",
+            "de": "Melocotón",
+            "ru": "Melocotón"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🍑",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "zum-4",
+          "nombre": {
+            "es": "Mango",
+            "en": "Mango",
+            "it": "Mango",
+            "fr": "Mango",
+            "de": "Mango",
+            "ru": "Mango"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🥭",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "zum-5",
+          "nombre": {
+            "es": "Tomate",
+            "en": "Tomate",
+            "it": "Tomate",
+            "fr": "Tomate",
+            "de": "Tomate",
+            "ru": "Tomate"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🍅",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "cat-refrescos",
+      "tipo": "bebidas",
+      "nombre": {
+        "es": "Refrescos y Agua",
+        "en": "Soft Drinks & Water",
+        "it": "Bibite e Acqua",
+        "fr": "Boissons & Eau",
+        "de": "Erfrischungsgetränke",
+        "ru": "Напитки и вода"
+      },
+      "platos": [
+        {
+          "id": "ref-1",
+          "nombre": {
+            "es": "Agua",
+            "en": "Agua",
+            "it": "Agua",
+            "fr": "Agua",
+            "de": "Agua",
+            "ru": "Agua"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 2.5,
+          "emoji": "💧",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ref-2",
+          "nombre": {
+            "es": "Agua con gas",
+            "en": "Agua con gas",
+            "it": "Agua con gas",
+            "fr": "Agua con gas",
+            "de": "Agua con gas",
+            "ru": "Agua con gas"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 2.5,
+          "emoji": "💧",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ref-3",
+          "nombre": {
+            "es": "Coca Cola",
+            "en": "Coca Cola",
+            "it": "Coca Cola",
+            "fr": "Coca Cola",
+            "de": "Coca Cola",
+            "ru": "Coca Cola"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🥤",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ref-4",
+          "nombre": {
+            "es": "Coca Cola Zero",
+            "en": "Coca Cola Zero",
+            "it": "Coca Cola Zero",
+            "fr": "Coca Cola Zero",
+            "de": "Coca Cola Zero",
+            "ru": "Coca Cola Zero"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🥤",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ref-5",
+          "nombre": {
+            "es": "Fanta Limón",
+            "en": "Fanta Limón",
+            "it": "Fanta Limón",
+            "fr": "Fanta Limón",
+            "de": "Fanta Limón",
+            "ru": "Fanta Limón"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🥤",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ref-6",
+          "nombre": {
+            "es": "Fanta Naranja",
+            "en": "Fanta Naranja",
+            "it": "Fanta Naranja",
+            "fr": "Fanta Naranja",
+            "de": "Fanta Naranja",
+            "ru": "Fanta Naranja"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🥤",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ref-7",
+          "nombre": {
+            "es": "Sprite",
+            "en": "Sprite",
+            "it": "Sprite",
+            "fr": "Sprite",
+            "de": "Sprite",
+            "ru": "Sprite"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🥤",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ref-8",
+          "nombre": {
+            "es": "Monster",
+            "en": "Monster",
+            "it": "Monster",
+            "fr": "Monster",
+            "de": "Monster",
+            "ru": "Monster"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🥤",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ref-9",
+          "nombre": {
+            "es": "Fuze Tea Mango",
+            "en": "Fuze Tea Mango",
+            "it": "Fuze Tea Mango",
+            "fr": "Fuze Tea Mango",
+            "de": "Fuze Tea Mango",
+            "ru": "Fuze Tea Mango"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🍵",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ref-10",
+          "nombre": {
+            "es": "Fuze Tea Maracuyá",
+            "en": "Fuze Tea Maracuyá",
+            "it": "Fuze Tea Maracuyá",
+            "fr": "Fuze Tea Maracuyá",
+            "de": "Fuze Tea Maracuyá",
+            "ru": "Fuze Tea Maracuyá"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🍵",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ref-11",
+          "nombre": {
+            "es": "Tónica",
+            "en": "Tónica",
+            "it": "Tónica",
+            "fr": "Tónica",
+            "de": "Tónica",
+            "ru": "Tónica"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🥤",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ref-12",
+          "nombre": {
+            "es": "Bitter Kas",
+            "en": "Bitter Kas",
+            "it": "Bitter Kas",
+            "fr": "Bitter Kas",
+            "de": "Bitter Kas",
+            "ru": "Bitter Kas"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🥤",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ref-13",
+          "nombre": {
+            "es": "Ginger Ale",
+            "en": "Ginger Ale",
+            "it": "Ginger Ale",
+            "fr": "Ginger Ale",
+            "de": "Ginger Ale",
+            "ru": "Ginger Ale"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🥤",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ref-14",
+          "nombre": {
+            "es": "Ginger Beer",
+            "en": "Ginger Beer",
+            "it": "Ginger Beer",
+            "fr": "Ginger Beer",
+            "de": "Ginger Beer",
+            "ru": "Ginger Beer"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 3.5,
+          "emoji": "🥤",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "cat-licores",
+      "tipo": "bebidas",
+      "nombre": {
+        "es": "Licores",
+        "en": "Liqueurs",
+        "it": "Liquori",
+        "fr": "Liqueurs",
+        "de": "Liköre",
+        "ru": "Ликёры"
+      },
+      "platos": [
+        {
+          "id": "lic-1",
+          "nombre": {
+            "es": "Terry",
+            "en": "Terry",
+            "it": "Terry",
+            "fr": "Terry",
+            "de": "Terry",
+            "ru": "Terry"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 5,
+          "emoji": "🥃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-2",
+          "nombre": {
+            "es": "Baileys",
+            "en": "Baileys",
+            "it": "Baileys",
+            "fr": "Baileys",
+            "de": "Baileys",
+            "ru": "Baileys"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 6,
+          "emoji": "🥃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-3",
+          "nombre": {
+            "es": "Frangelico",
+            "en": "Frangelico",
+            "it": "Frangelico",
+            "fr": "Frangelico",
+            "de": "Frangelico",
+            "ru": "Frangelico"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 6,
+          "emoji": "🥃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-4",
+          "nombre": {
+            "es": "Marie Brizard",
+            "en": "Marie Brizard",
+            "it": "Marie Brizard",
+            "fr": "Marie Brizard",
+            "de": "Marie Brizard",
+            "ru": "Marie Brizard"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 6,
+          "emoji": "🥃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-5",
+          "nombre": {
+            "es": "Licor 43",
+            "en": "Licor 43",
+            "it": "Licor 43",
+            "fr": "Licor 43",
+            "de": "Licor 43",
+            "ru": "Licor 43"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 6,
+          "emoji": "🥃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-6",
+          "nombre": {
+            "es": "Mangaroca",
+            "en": "Mangaroca",
+            "it": "Mangaroca",
+            "fr": "Mangaroca",
+            "de": "Mangaroca",
+            "ru": "Mangaroca"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 6,
+          "emoji": "🥃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-7",
+          "nombre": {
+            "es": "Pacharán",
+            "en": "Pacharán",
+            "it": "Pacharán",
+            "fr": "Pacharán",
+            "de": "Pacharán",
+            "ru": "Pacharán"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 6,
+          "emoji": "🥃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-8",
+          "nombre": {
+            "es": "Campari",
+            "en": "Campari",
+            "it": "Campari",
+            "fr": "Campari",
+            "de": "Campari",
+            "ru": "Campari"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 6,
+          "emoji": "🥃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-9",
+          "nombre": {
+            "es": "Cointreau",
+            "en": "Cointreau",
+            "it": "Cointreau",
+            "fr": "Cointreau",
+            "de": "Cointreau",
+            "ru": "Cointreau"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 6,
+          "emoji": "🥃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-10",
+          "nombre": {
+            "es": "Disaronno",
+            "en": "Disaronno",
+            "it": "Disaronno",
+            "fr": "Disaronno",
+            "de": "Disaronno",
+            "ru": "Disaronno"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 6,
+          "emoji": "🥃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-11",
+          "nombre": {
+            "es": "Tia Maria",
+            "en": "Tia Maria",
+            "it": "Tia Maria",
+            "fr": "Tia Maria",
+            "de": "Tia Maria",
+            "ru": "Tia Maria"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 6,
+          "emoji": "🥃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-12",
+          "nombre": {
+            "es": "Kahlúa",
+            "en": "Kahlúa",
+            "it": "Kahlúa",
+            "fr": "Kahlúa",
+            "de": "Kahlúa",
+            "ru": "Kahlúa"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 6,
+          "emoji": "🥃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-13",
+          "nombre": {
+            "es": "José Cuervo",
+            "en": "José Cuervo",
+            "it": "José Cuervo",
+            "fr": "José Cuervo",
+            "de": "José Cuervo",
+            "ru": "José Cuervo"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 6,
+          "emoji": "🥃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-14",
+          "nombre": {
+            "es": "Tequila de Fresa",
+            "en": "Tequila de Fresa",
+            "it": "Tequila de Fresa",
+            "fr": "Tequila de Fresa",
+            "de": "Tequila de Fresa",
+            "ru": "Tequila de Fresa"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 6,
+          "emoji": "🥃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-15",
+          "nombre": {
+            "es": "Limoncello",
+            "en": "Limoncello",
+            "it": "Limoncello",
+            "fr": "Limoncello",
+            "de": "Limoncello",
+            "ru": "Limoncello"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 5,
+          "emoji": "🍋",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-16",
+          "nombre": {
+            "es": "Orujo de Hierbas",
+            "en": "Orujo de Hierbas",
+            "it": "Orujo de Hierbas",
+            "fr": "Orujo de Hierbas",
+            "de": "Orujo de Hierbas",
+            "ru": "Orujo de Hierbas"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 5,
+          "emoji": "🌿",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-17",
+          "nombre": {
+            "es": "Mistela",
+            "en": "Mistela",
+            "it": "Mistela",
+            "fr": "Mistela",
+            "de": "Mistela",
+            "ru": "Mistela"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 5,
+          "emoji": "🍇",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-18",
+          "nombre": {
+            "es": "Jägermeister",
+            "en": "Jägermeister",
+            "it": "Jägermeister",
+            "fr": "Jägermeister",
+            "de": "Jägermeister",
+            "ru": "Jägermeister"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 7,
+          "emoji": "🥃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-19",
+          "nombre": {
+            "es": "Fireball",
+            "en": "Fireball",
+            "it": "Fireball",
+            "fr": "Fireball",
+            "de": "Fireball",
+            "ru": "Fireball"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 6,
+          "emoji": "🔥",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-20",
+          "nombre": {
+            "es": "Cassalla",
+            "en": "Cassalla",
+            "it": "Cassalla",
+            "fr": "Cassalla",
+            "de": "Cassalla",
+            "ru": "Cassalla"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 6,
+          "emoji": "🥃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-21",
+          "nombre": {
+            "es": "Herbero",
+            "en": "Herbero",
+            "it": "Herbero",
+            "fr": "Herbero",
+            "de": "Herbero",
+            "ru": "Herbero"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 5,
+          "emoji": "🌿",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "lic-22",
+          "nombre": {
+            "es": "Passoa",
+            "en": "Passoa",
+            "it": "Passoa",
+            "fr": "Passoa",
+            "de": "Passoa",
+            "ru": "Passoa"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 6,
+          "emoji": "🍹",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "cat-destilados",
+      "tipo": "bebidas",
+      "nombre": {
+        "es": "Destilados",
+        "en": "Spirits",
+        "it": "Distillati",
+        "fr": "Spiritueux",
+        "de": "Spirituosen",
+        "ru": "Крепкие напитки"
+      },
+      "platos": [
+        {
+          "id": "des-1",
+          "nombre": {
+            "es": "Ron",
+            "en": "Rum",
+            "it": "Rum",
+            "fr": "Rhum",
+            "de": "Rum",
+            "ru": "Ром"
+          },
+          "descripcion": {
+            "es": "Negrita, Brutal, Barceló, Bacardi, Malibu, Santa Teresa, Flor de Caña, Havana, Zacapa",
+            "en": "Negrita, Brutal, Barceló, Bacardi, Malibu, Santa Teresa, Flor de Caña, Havana, Zacapa",
+            "it": "Negrita, Brutal, Barceló, Bacardi, Malibu, Santa Teresa, Flor de Caña, Havana, Zacapa",
+            "fr": "Negrita, Brutal, Barceló, Bacardi, Malibu, Santa Teresa, Flor de Caña, Havana, Zacapa",
+            "de": "Negrita, Brutal, Barceló, Bacardi, Malibu, Santa Teresa, Flor de Caña, Havana, Zacapa",
+            "ru": "Negrita, Brutal, Barceló, Bacardi, Malibu, Santa Teresa, Flor de Caña, Havana, Zacapa"
+          },
+          "precio": 9,
+          "precio_label": "desde",
+          "emoji": "🍹",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "des-2",
+          "nombre": {
+            "es": "Whisky",
+            "en": "Whisky",
+            "it": "Whisky",
+            "fr": "Whisky",
+            "de": "Whisky",
+            "ru": "Whisky"
+          },
+          "descripcion": {
+            "es": "Curry Shark, Red Label, Ballantines, Jameson, Jim Beam, Jack Daniel's, Black Label, Macallan",
+            "en": "Curry Shark, Red Label, Ballantines, Jameson, Jim Beam, Jack Daniel's, Black Label, Macallan",
+            "it": "Curry Shark, Red Label, Ballantines, Jameson, Jim Beam, Jack Daniel's, Black Label, Macallan",
+            "fr": "Curry Shark, Red Label, Ballantines, Jameson, Jim Beam, Jack Daniel's, Black Label, Macallan",
+            "de": "Curry Shark, Red Label, Ballantines, Jameson, Jim Beam, Jack Daniel's, Black Label, Macallan",
+            "ru": "Curry Shark, Red Label, Ballantines, Jameson, Jim Beam, Jack Daniel's, Black Label, Macallan"
+          },
+          "precio": 9,
+          "precio_label": "desde",
+          "emoji": "🥃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "des-3",
+          "nombre": {
+            "es": "Ginebra",
+            "en": "Gin",
+            "it": "Gin",
+            "fr": "Gin",
+            "de": "Gin",
+            "ru": "Джин"
+          },
+          "descripcion": {
+            "es": "Beefeater, Tanqueray, Seagrams, Puerto de Indias, M'alegra, Martin Miller, Hendricks, Malfy Pomelo, Nordes, Brockmans, Roku, Gvine",
+            "en": "Beefeater, Tanqueray, Seagrams, Puerto de Indias, M'alegra, Martin Miller, Hendricks, Malfy Pomelo, Nordes, Brockmans, Roku, Gvine",
+            "it": "Beefeater, Tanqueray, Seagrams, Puerto de Indias, M'alegra, Martin Miller, Hendricks, Malfy Pomelo, Nordes, Brockmans, Roku, Gvine",
+            "fr": "Beefeater, Tanqueray, Seagrams, Puerto de Indias, M'alegra, Martin Miller, Hendricks, Malfy Pomelo, Nordes, Brockmans, Roku, Gvine",
+            "de": "Beefeater, Tanqueray, Seagrams, Puerto de Indias, M'alegra, Martin Miller, Hendricks, Malfy Pomelo, Nordes, Brockmans, Roku, Gvine",
+            "ru": "Beefeater, Tanqueray, Seagrams, Puerto de Indias, M'alegra, Martin Miller, Hendricks, Malfy Pomelo, Nordes, Brockmans, Roku, Gvine"
+          },
+          "precio": 9,
+          "precio_label": "desde",
+          "emoji": "🍸",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "des-4",
+          "nombre": {
+            "es": "Vodka",
+            "en": "Vodka",
+            "it": "Vodka",
+            "fr": "Vodka",
+            "de": "Vodka",
+            "ru": "Vodka"
+          },
+          "descripcion": {
+            "es": "Absolut, Grey Goose, Belvedere",
+            "en": "Absolut, Grey Goose, Belvedere",
+            "it": "Absolut, Grey Goose, Belvedere",
+            "fr": "Absolut, Grey Goose, Belvedere",
+            "de": "Absolut, Grey Goose, Belvedere",
+            "ru": "Absolut, Grey Goose, Belvedere"
+          },
+          "precio": 9,
+          "precio_label": "desde",
+          "emoji": "🍸",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "cat-cocktails",
+      "tipo": "cocktails",
+      "nombre": {
+        "es": "Cocktails",
+        "en": "Cocktails",
+        "it": "Cocktail",
+        "fr": "Cocktails",
+        "de": "Cocktails",
+        "ru": "Коктейли"
+      },
+      "platos": [
+        {
+          "id": "ckt-1",
+          "nombre": {
+            "es": "Negroni",
+            "en": "Negroni",
+            "it": "Negroni",
+            "fr": "Negroni",
+            "de": "Negroni",
+            "ru": "Negroni"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 12,
+          "emoji": "🍹",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ckt-2",
+          "nombre": {
+            "es": "Bloody Mary",
+            "en": "Bloody Mary",
+            "it": "Bloody Mary",
+            "fr": "Bloody Mary",
+            "de": "Bloody Mary",
+            "ru": "Bloody Mary"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 10,
+          "emoji": "🍅",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ckt-3",
+          "nombre": {
+            "es": "Caipiriña / Caipiroska",
+            "en": "Caipiriña / Caipiroska",
+            "it": "Caipiriña / Caipiroska",
+            "fr": "Caipiriña / Caipiroska",
+            "de": "Caipiriña / Caipiroska",
+            "ru": "Caipiriña / Caipiroska"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 9.5,
+          "emoji": "🍋",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ckt-4",
+          "nombre": {
+            "es": "Mojito",
+            "en": "Mojito",
+            "it": "Mojito",
+            "fr": "Mojito",
+            "de": "Mojito",
+            "ru": "Mojito"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 9.5,
+          "emoji": "🌿",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ckt-5",
+          "nombre": {
+            "es": "Moscow Mule",
+            "en": "Moscow Mule",
+            "it": "Moscow Mule",
+            "fr": "Moscow Mule",
+            "de": "Moscow Mule",
+            "ru": "Moscow Mule"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 11,
+          "emoji": "🫚",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ckt-6",
+          "nombre": {
+            "es": "Margarita Clásica o Spicy",
+            "en": "Margarita Clásica o Spicy",
+            "it": "Margarita Clásica o Spicy",
+            "fr": "Margarita Clásica o Spicy",
+            "de": "Margarita Clásica o Spicy",
+            "ru": "Margarita Clásica o Spicy"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 11,
+          "emoji": "🍸",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ckt-7",
+          "nombre": {
+            "es": "Piña Colada",
+            "en": "Piña Colada",
+            "it": "Piña Colada",
+            "fr": "Piña Colada",
+            "de": "Piña Colada",
+            "ru": "Piña Colada"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 10,
+          "emoji": "🍍",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ckt-8",
+          "nombre": {
+            "es": "Espresso Martini",
+            "en": "Espresso Martini",
+            "it": "Espresso Martini",
+            "fr": "Espresso Martini",
+            "de": "Espresso Martini",
+            "ru": "Espresso Martini"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 10,
+          "emoji": "☕",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ckt-9",
+          "nombre": {
+            "es": "Porn Star Martini",
+            "en": "Porn Star Martini",
+            "it": "Porn Star Martini",
+            "fr": "Porn Star Martini",
+            "de": "Porn Star Martini",
+            "ru": "Porn Star Martini"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 12,
+          "emoji": "🌟",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ckt-10",
+          "nombre": {
+            "es": "Daiquiri",
+            "en": "Daiquiri",
+            "it": "Daiquiri",
+            "fr": "Daiquiri",
+            "de": "Daiquiri",
+            "ru": "Daiquiri"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 9.5,
+          "emoji": "🍓",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "ckt-11",
+          "nombre": {
+            "es": "Old Fashioned",
+            "en": "Old Fashioned",
+            "it": "Old Fashioned",
+            "fr": "Old Fashioned",
+            "de": "Old Fashioned",
+            "ru": "Old Fashioned"
+          },
+          "descripcion": {
+            "es": "",
+            "en": "",
+            "it": "",
+            "fr": "",
+            "de": "",
+            "ru": ""
+          },
+          "precio": 10.5,
+          "emoji": "🥃",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "cat-tintos",
+      "tipo": "vinos",
+      "nombre": {
+        "es": "Vinos Tintos",
+        "en": "Red Wines",
+        "it": "Vini Rossi",
+        "fr": "Vins Rouges",
+        "de": "Rotweine",
+        "ru": "Красные вина"
+      },
+      "platos": [
+        {
+          "id": "tin-1",
+          "nombre": {
+            "es": "Juande Juanes Bronce",
+            "en": "Juande Juanes Bronce",
+            "it": "Juande Juanes Bronce",
+            "fr": "Juande Juanes Bronce",
+            "de": "Juande Juanes Bronce",
+            "ru": "Juande Juanes Bronce"
+          },
+          "descripcion": {
+            "es": "Joven. Tempranillo, Garnacha y Syrah. D.O. Valencia",
+            "en": "Joven. Tempranillo, Garnacha y Syrah. D.O. Valencia",
+            "it": "Joven. Tempranillo, Garnacha y Syrah. D.O. Valencia",
+            "fr": "Joven. Tempranillo, Garnacha y Syrah. D.O. Valencia",
+            "de": "Joven. Tempranillo, Garnacha y Syrah. D.O. Valencia",
+            "ru": "Joven. Tempranillo, Garnacha y Syrah. D.O. Valencia"
+          },
+          "precio": 18,
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tin-2",
+          "nombre": {
+            "es": "Tharsys City",
+            "en": "Tharsys City",
+            "it": "Tharsys City",
+            "fr": "Tharsys City",
+            "de": "Tharsys City",
+            "ru": "Tharsys City"
+          },
+          "descripcion": {
+            "es": "Bobal. Crianza en barrica. D.O. Valencia",
+            "en": "Bobal. Crianza en barrica. D.O. Valencia",
+            "it": "Bobal. Crianza en barrica. D.O. Valencia",
+            "fr": "Bobal. Crianza en barrica. D.O. Valencia",
+            "de": "Bobal. Crianza en barrica. D.O. Valencia",
+            "ru": "Bobal. Crianza en barrica. D.O. Valencia"
+          },
+          "precio": 19,
+          "precio_label": "copa 3,90€",
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tin-3",
+          "nombre": {
+            "es": "Venta del Puerto Nº12",
+            "en": "Venta del Puerto Nº12",
+            "it": "Venta del Puerto Nº12",
+            "fr": "Venta del Puerto Nº12",
+            "de": "Venta del Puerto Nº12",
+            "ru": "Venta del Puerto Nº12"
+          },
+          "descripcion": {
+            "es": "Tempranillo, Cabernet Sauvignon, Merlot y Syrah. Crianza en Barrica. D.O. Utiel Requena",
+            "en": "Tempranillo, Cabernet Sauvignon, Merlot y Syrah. Crianza en Barrica. D.O. Utiel Requena",
+            "it": "Tempranillo, Cabernet Sauvignon, Merlot y Syrah. Crianza en Barrica. D.O. Utiel Requena",
+            "fr": "Tempranillo, Cabernet Sauvignon, Merlot y Syrah. Crianza en Barrica. D.O. Utiel Requena",
+            "de": "Tempranillo, Cabernet Sauvignon, Merlot y Syrah. Crianza en Barrica. D.O. Utiel Requena",
+            "ru": "Tempranillo, Cabernet Sauvignon, Merlot y Syrah. Crianza en Barrica. D.O. Utiel Requena"
+          },
+          "precio": 28,
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tin-4",
+          "nombre": {
+            "es": "Pago de Tharsys Argila",
+            "en": "Pago de Tharsys Argila",
+            "it": "Pago de Tharsys Argila",
+            "fr": "Pago de Tharsys Argila",
+            "de": "Pago de Tharsys Argila",
+            "ru": "Pago de Tharsys Argila"
+          },
+          "descripcion": {
+            "es": "Merlot. Crianza en barrica. D.O. Utiel Requena",
+            "en": "Merlot. Crianza en barrica. D.O. Utiel Requena",
+            "it": "Merlot. Crianza en barrica. D.O. Utiel Requena",
+            "fr": "Merlot. Crianza en barrica. D.O. Utiel Requena",
+            "de": "Merlot. Crianza en barrica. D.O. Utiel Requena",
+            "ru": "Merlot. Crianza en barrica. D.O. Utiel Requena"
+          },
+          "precio": 28,
+          "precio_label": "copa 3,90€",
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tin-5",
+          "nombre": {
+            "es": "Celeste Roble",
+            "en": "Celeste Roble",
+            "it": "Celeste Roble",
+            "fr": "Celeste Roble",
+            "de": "Celeste Roble",
+            "ru": "Celeste Roble"
+          },
+          "descripcion": {
+            "es": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "en": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "it": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "fr": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "de": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "ru": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero"
+          },
+          "precio": 23,
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tin-6",
+          "nombre": {
+            "es": "Finca Rodma Select 12M",
+            "en": "Finca Rodma Select 12M",
+            "it": "Finca Rodma Select 12M",
+            "fr": "Finca Rodma Select 12M",
+            "de": "Finca Rodma Select 12M",
+            "ru": "Finca Rodma Select 12M"
+          },
+          "descripcion": {
+            "es": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "en": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "it": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "fr": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "de": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "ru": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero"
+          },
+          "precio": 30,
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tin-7",
+          "nombre": {
+            "es": "Celeste Crianza Skyline",
+            "en": "Celeste Crianza Skyline",
+            "it": "Celeste Crianza Skyline",
+            "fr": "Celeste Crianza Skyline",
+            "de": "Celeste Crianza Skyline",
+            "ru": "Celeste Crianza Skyline"
+          },
+          "descripcion": {
+            "es": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "en": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "it": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "fr": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "de": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "ru": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero"
+          },
+          "precio": 45,
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tin-8",
+          "nombre": {
+            "es": "Bosque de Matasnos Crianza",
+            "en": "Bosque de Matasnos Crianza",
+            "it": "Bosque de Matasnos Crianza",
+            "fr": "Bosque de Matasnos Crianza",
+            "de": "Bosque de Matasnos Crianza",
+            "ru": "Bosque de Matasnos Crianza"
+          },
+          "descripcion": {
+            "es": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "en": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "it": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "fr": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "de": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero",
+            "ru": "Tempranillo. Crianza en barrica. D.O. Ribera del Duero"
+          },
+          "precio": 55,
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tin-9",
+          "nombre": {
+            "es": "Glorioso Crianza",
+            "en": "Glorioso Crianza",
+            "it": "Glorioso Crianza",
+            "fr": "Glorioso Crianza",
+            "de": "Glorioso Crianza",
+            "ru": "Glorioso Crianza"
+          },
+          "descripcion": {
+            "es": "Tempranillo. Crianza en barrica. D.O.C. Rioja",
+            "en": "Tempranillo. Crianza en barrica. D.O.C. Rioja",
+            "it": "Tempranillo. Crianza en barrica. D.O.C. Rioja",
+            "fr": "Tempranillo. Crianza en barrica. D.O.C. Rioja",
+            "de": "Tempranillo. Crianza en barrica. D.O.C. Rioja",
+            "ru": "Tempranillo. Crianza en barrica. D.O.C. Rioja"
+          },
+          "precio": 24,
+          "precio_label": "copa 3,90€",
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tin-10",
+          "nombre": {
+            "es": "22 Pies Crianza",
+            "en": "22 Pies Crianza",
+            "it": "22 Pies Crianza",
+            "fr": "22 Pies Crianza",
+            "de": "22 Pies Crianza",
+            "ru": "22 Pies Crianza"
+          },
+          "descripcion": {
+            "es": "Tempranillo. Crianza en barrica. D.O.C. Rioja",
+            "en": "Tempranillo. Crianza en barrica. D.O.C. Rioja",
+            "it": "Tempranillo. Crianza en barrica. D.O.C. Rioja",
+            "fr": "Tempranillo. Crianza en barrica. D.O.C. Rioja",
+            "de": "Tempranillo. Crianza en barrica. D.O.C. Rioja",
+            "ru": "Tempranillo. Crianza en barrica. D.O.C. Rioja"
+          },
+          "precio": 26,
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tin-11",
+          "nombre": {
+            "es": "El Secreto",
+            "en": "El Secreto",
+            "it": "El Secreto",
+            "fr": "El Secreto",
+            "de": "El Secreto",
+            "ru": "El Secreto"
+          },
+          "descripcion": {
+            "es": "Tempranillo. Crianza en Barrica. D.O.C. Rioja",
+            "en": "Tempranillo. Crianza en Barrica. D.O.C. Rioja",
+            "it": "Tempranillo. Crianza en Barrica. D.O.C. Rioja",
+            "fr": "Tempranillo. Crianza en Barrica. D.O.C. Rioja",
+            "de": "Tempranillo. Crianza en Barrica. D.O.C. Rioja",
+            "ru": "Tempranillo. Crianza en Barrica. D.O.C. Rioja"
+          },
+          "precio": 40,
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tin-12",
+          "nombre": {
+            "es": "Marqués de Riscal XR",
+            "en": "Marqués de Riscal XR",
+            "it": "Marqués de Riscal XR",
+            "fr": "Marqués de Riscal XR",
+            "de": "Marqués de Riscal XR",
+            "ru": "Marqués de Riscal XR"
+          },
+          "descripcion": {
+            "es": "Tempranillo, Graciano y Mazuelo. Reserva. D.O.C. Rioja",
+            "en": "Tempranillo, Graciano y Mazuelo. Reserva. D.O.C. Rioja",
+            "it": "Tempranillo, Graciano y Mazuelo. Reserva. D.O.C. Rioja",
+            "fr": "Tempranillo, Graciano y Mazuelo. Reserva. D.O.C. Rioja",
+            "de": "Tempranillo, Graciano y Mazuelo. Reserva. D.O.C. Rioja",
+            "ru": "Tempranillo, Graciano y Mazuelo. Reserva. D.O.C. Rioja"
+          },
+          "precio": 42,
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tin-13",
+          "nombre": {
+            "es": "El Puntido",
+            "en": "El Puntido",
+            "it": "El Puntido",
+            "fr": "El Puntido",
+            "de": "El Puntido",
+            "ru": "El Puntido"
+          },
+          "descripcion": {
+            "es": "Tempranillo. 18 meses de Crianza en barrica. D.O.C. Rioja",
+            "en": "Tempranillo. 18 meses de Crianza en barrica. D.O.C. Rioja",
+            "it": "Tempranillo. 18 meses de Crianza en barrica. D.O.C. Rioja",
+            "fr": "Tempranillo. 18 meses de Crianza en barrica. D.O.C. Rioja",
+            "de": "Tempranillo. 18 meses de Crianza en barrica. D.O.C. Rioja",
+            "ru": "Tempranillo. 18 meses de Crianza en barrica. D.O.C. Rioja"
+          },
+          "precio": 85,
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tin-14",
+          "nombre": {
+            "es": "Valduero Una Cepa",
+            "en": "Valduero Una Cepa",
+            "it": "Valduero Una Cepa",
+            "fr": "Valduero Una Cepa",
+            "de": "Valduero Una Cepa",
+            "ru": "Valduero Una Cepa"
+          },
+          "descripcion": {
+            "es": "Tempranillo. Crianza 18 meses en barrica. D.O.C. Rioja",
+            "en": "Tempranillo. Crianza 18 meses en barrica. D.O.C. Rioja",
+            "it": "Tempranillo. Crianza 18 meses en barrica. D.O.C. Rioja",
+            "fr": "Tempranillo. Crianza 18 meses en barrica. D.O.C. Rioja",
+            "de": "Tempranillo. Crianza 18 meses en barrica. D.O.C. Rioja",
+            "ru": "Tempranillo. Crianza 18 meses en barrica. D.O.C. Rioja"
+          },
+          "precio": 55,
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tin-15",
+          "nombre": {
+            "es": "Almirez",
+            "en": "Almirez",
+            "it": "Almirez",
+            "fr": "Almirez",
+            "de": "Almirez",
+            "ru": "Almirez"
+          },
+          "descripcion": {
+            "es": "Tinta de Toro. 14 meses de Crianza en barrica. D.O. Toro",
+            "en": "Tinta de Toro. 14 meses de Crianza en barrica. D.O. Toro",
+            "it": "Tinta de Toro. 14 meses de Crianza en barrica. D.O. Toro",
+            "fr": "Tinta de Toro. 14 meses de Crianza en barrica. D.O. Toro",
+            "de": "Tinta de Toro. 14 meses de Crianza en barrica. D.O. Toro",
+            "ru": "Tinta de Toro. 14 meses de Crianza en barrica. D.O. Toro"
+          },
+          "precio": 38,
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tin-16",
+          "nombre": {
+            "es": "Victorino",
+            "en": "Victorino",
+            "it": "Victorino",
+            "fr": "Victorino",
+            "de": "Victorino",
+            "ru": "Victorino"
+          },
+          "descripcion": {
+            "es": "Tinta de Toro. 20 meses de crianza en barrica. D.O. Toro",
+            "en": "Tinta de Toro. 20 meses de crianza en barrica. D.O. Toro",
+            "it": "Tinta de Toro. 20 meses de crianza en barrica. D.O. Toro",
+            "fr": "Tinta de Toro. 20 meses de crianza en barrica. D.O. Toro",
+            "de": "Tinta de Toro. 20 meses de crianza en barrica. D.O. Toro",
+            "ru": "Tinta de Toro. 20 meses de crianza en barrica. D.O. Toro"
+          },
+          "precio": 82,
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "tin-17",
+          "nombre": {
+            "es": "Pittacum Barrica",
+            "en": "Pittacum Barrica",
+            "it": "Pittacum Barrica",
+            "fr": "Pittacum Barrica",
+            "de": "Pittacum Barrica",
+            "ru": "Pittacum Barrica"
+          },
+          "descripcion": {
+            "es": "Mencía. 8 meses de crianza en barrica. D.O. Bierzo",
+            "en": "Mencía. 8 meses de crianza en barrica. D.O. Bierzo",
+            "it": "Mencía. 8 meses de crianza en barrica. D.O. Bierzo",
+            "fr": "Mencía. 8 meses de crianza en barrica. D.O. Bierzo",
+            "de": "Mencía. 8 meses de crianza en barrica. D.O. Bierzo",
+            "ru": "Mencía. 8 meses de crianza en barrica. D.O. Bierzo"
+          },
+          "precio": 20,
+          "precio_label": "copa 3,90€",
+          "emoji": "🍷",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "cat-blancos",
+      "tipo": "vinos",
+      "nombre": {
+        "es": "Vinos Blancos",
+        "en": "White Wines",
+        "it": "Vini Bianchi",
+        "fr": "Vins Blancs",
+        "de": "Weißweine",
+        "ru": "Белые вина"
+      },
+      "platos": [
+        {
+          "id": "bla-1",
+          "nombre": {
+            "es": "Academia de los Nocturnos Blanco",
+            "en": "Academia de los Nocturnos Blanco",
+            "it": "Academia de los Nocturnos Blanco",
+            "fr": "Academia de los Nocturnos Blanco",
+            "de": "Academia de los Nocturnos Blanco",
+            "ru": "Academia de los Nocturnos Blanco"
+          },
+          "descripcion": {
+            "es": "Joven. Macabeo. D.O. Utiel Requena",
+            "en": "Joven. Macabeo. D.O. Utiel Requena",
+            "it": "Joven. Macabeo. D.O. Utiel Requena",
+            "fr": "Joven. Macabeo. D.O. Utiel Requena",
+            "de": "Joven. Macabeo. D.O. Utiel Requena",
+            "ru": "Joven. Macabeo. D.O. Utiel Requena"
+          },
+          "precio": 18,
+          "emoji": "🥂",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "bla-2",
+          "nombre": {
+            "es": "Tambora Godello",
+            "en": "Tambora Godello",
+            "it": "Tambora Godello",
+            "fr": "Tambora Godello",
+            "de": "Tambora Godello",
+            "ru": "Tambora Godello"
+          },
+          "descripcion": {
+            "es": "Joven. D.O. Ribeiro",
+            "en": "Joven. D.O. Ribeiro",
+            "it": "Joven. D.O. Ribeiro",
+            "fr": "Joven. D.O. Ribeiro",
+            "de": "Joven. D.O. Ribeiro",
+            "ru": "Joven. D.O. Ribeiro"
+          },
+          "precio": 18,
+          "emoji": "🥂",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "bla-3",
+          "nombre": {
+            "es": "Meu Godello",
+            "en": "Meu Godello",
+            "it": "Meu Godello",
+            "fr": "Meu Godello",
+            "de": "Meu Godello",
+            "ru": "Meu Godello"
+          },
+          "descripcion": {
+            "es": "Joven. D.O. Ribeiro",
+            "en": "Joven. D.O. Ribeiro",
+            "it": "Joven. D.O. Ribeiro",
+            "fr": "Joven. D.O. Ribeiro",
+            "de": "Joven. D.O. Ribeiro",
+            "ru": "Joven. D.O. Ribeiro"
+          },
+          "precio": 20,
+          "emoji": "🥂",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "bla-4",
+          "nombre": {
+            "es": "Venta del Puerto Nº5",
+            "en": "Venta del Puerto Nº5",
+            "it": "Venta del Puerto Nº5",
+            "fr": "Venta del Puerto Nº5",
+            "de": "Venta del Puerto Nº5",
+            "ru": "Venta del Puerto Nº5"
+          },
+          "descripcion": {
+            "es": "Crianza en lias y en barrica. Chardonnay, Malvasia y Viognier. D.O. Valencia",
+            "en": "Crianza en lias y en barrica. Chardonnay, Malvasia y Viognier. D.O. Valencia",
+            "it": "Crianza en lias y en barrica. Chardonnay, Malvasia y Viognier. D.O. Valencia",
+            "fr": "Crianza en lias y en barrica. Chardonnay, Malvasia y Viognier. D.O. Valencia",
+            "de": "Crianza en lias y en barrica. Chardonnay, Malvasia y Viognier. D.O. Valencia",
+            "ru": "Crianza en lias y en barrica. Chardonnay, Malvasia y Viognier. D.O. Valencia"
+          },
+          "precio": 20,
+          "emoji": "🥂",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "bla-5",
+          "nombre": {
+            "es": "Juande Juanes Bronce Blanco",
+            "en": "Juande Juanes Bronce Blanco",
+            "it": "Juande Juanes Bronce Blanco",
+            "fr": "Juande Juanes Bronce Blanco",
+            "de": "Juande Juanes Bronce Blanco",
+            "ru": "Juande Juanes Bronce Blanco"
+          },
+          "descripcion": {
+            "es": "Joven. Chardonnay y Macabeo. D.O. Valencia",
+            "en": "Joven. Chardonnay y Macabeo. D.O. Valencia",
+            "it": "Joven. Chardonnay y Macabeo. D.O. Valencia",
+            "fr": "Joven. Chardonnay y Macabeo. D.O. Valencia",
+            "de": "Joven. Chardonnay y Macabeo. D.O. Valencia",
+            "ru": "Joven. Chardonnay y Macabeo. D.O. Valencia"
+          },
+          "precio": 22,
+          "emoji": "🥂",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "bla-6",
+          "nombre": {
+            "es": "Viña Mayor Verdejo",
+            "en": "Viña Mayor Verdejo",
+            "it": "Viña Mayor Verdejo",
+            "fr": "Viña Mayor Verdejo",
+            "de": "Viña Mayor Verdejo",
+            "ru": "Viña Mayor Verdejo"
+          },
+          "descripcion": {
+            "es": "Verdejo. Joven. 3 meses crianza en lias. D.O. Rueda",
+            "en": "Verdejo. Joven. 3 meses crianza en lias. D.O. Rueda",
+            "it": "Verdejo. Joven. 3 meses crianza en lias. D.O. Rueda",
+            "fr": "Verdejo. Joven. 3 meses crianza en lias. D.O. Rueda",
+            "de": "Verdejo. Joven. 3 meses crianza en lias. D.O. Rueda",
+            "ru": "Verdejo. Joven. 3 meses crianza en lias. D.O. Rueda"
+          },
+          "precio": 23,
+          "emoji": "🥂",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "bla-7",
+          "nombre": {
+            "es": "Verdeo",
+            "en": "Verdeo",
+            "it": "Verdeo",
+            "fr": "Verdeo",
+            "de": "Verdeo",
+            "ru": "Verdeo"
+          },
+          "descripcion": {
+            "es": "Verdejo. Joven. D.O. Rueda",
+            "en": "Verdejo. Joven. D.O. Rueda",
+            "it": "Verdejo. Joven. D.O. Rueda",
+            "fr": "Verdejo. Joven. D.O. Rueda",
+            "de": "Verdejo. Joven. D.O. Rueda",
+            "ru": "Verdejo. Joven. D.O. Rueda"
+          },
+          "precio": 25,
+          "emoji": "🥂",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "bla-8",
+          "nombre": {
+            "es": "Aeronauta",
+            "en": "Aeronauta",
+            "it": "Aeronauta",
+            "fr": "Aeronauta",
+            "de": "Aeronauta",
+            "ru": "Aeronauta"
+          },
+          "descripcion": {
+            "es": "Crianza en lias. Godello. D.O. Valdeorras",
+            "en": "Crianza en lias. Godello. D.O. Valdeorras",
+            "it": "Crianza en lias. Godello. D.O. Valdeorras",
+            "fr": "Crianza en lias. Godello. D.O. Valdeorras",
+            "de": "Crianza en lias. Godello. D.O. Valdeorras",
+            "ru": "Crianza en lias. Godello. D.O. Valdeorras"
+          },
+          "precio": 25,
+          "emoji": "🥂",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "bla-9",
+          "nombre": {
+            "es": "Paza das Bruxas",
+            "en": "Paza das Bruxas",
+            "it": "Paza das Bruxas",
+            "fr": "Paza das Bruxas",
+            "de": "Paza das Bruxas",
+            "ru": "Paza das Bruxas"
+          },
+          "descripcion": {
+            "es": "Joven. Albariño. D.O. Rías Baixas",
+            "en": "Joven. Albariño. D.O. Rías Baixas",
+            "it": "Joven. Albariño. D.O. Rías Baixas",
+            "fr": "Joven. Albariño. D.O. Rías Baixas",
+            "de": "Joven. Albariño. D.O. Rías Baixas",
+            "ru": "Joven. Albariño. D.O. Rías Baixas"
+          },
+          "precio": 28,
+          "emoji": "🥂",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "bla-10",
+          "nombre": {
+            "es": "Terras Gauda",
+            "en": "Terras Gauda",
+            "it": "Terras Gauda",
+            "fr": "Terras Gauda",
+            "de": "Terras Gauda",
+            "ru": "Terras Gauda"
+          },
+          "descripcion": {
+            "es": "Joven. Albariño, Laureiro y Caiño blanco. D.O. Rías Baixas O Rosal",
+            "en": "Joven. Albariño, Laureiro y Caiño blanco. D.O. Rías Baixas O Rosal",
+            "it": "Joven. Albariño, Laureiro y Caiño blanco. D.O. Rías Baixas O Rosal",
+            "fr": "Joven. Albariño, Laureiro y Caiño blanco. D.O. Rías Baixas O Rosal",
+            "de": "Joven. Albariño, Laureiro y Caiño blanco. D.O. Rías Baixas O Rosal",
+            "ru": "Joven. Albariño, Laureiro y Caiño blanco. D.O. Rías Baixas O Rosal"
+          },
+          "precio": 29,
+          "emoji": "🥂",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "bla-11",
+          "nombre": {
+            "es": "Marqués de Riscal Verdejo Lias Finas",
+            "en": "Marqués de Riscal Verdejo Lias Finas",
+            "it": "Marqués de Riscal Verdejo Lias Finas",
+            "fr": "Marqués de Riscal Verdejo Lias Finas",
+            "de": "Marqués de Riscal Verdejo Lias Finas",
+            "ru": "Marqués de Riscal Verdejo Lias Finas"
+          },
+          "descripcion": {
+            "es": "Joven, con crianza en lias. D.O. Rueda",
+            "en": "Joven, con crianza en lias. D.O. Rueda",
+            "it": "Joven, con crianza en lias. D.O. Rueda",
+            "fr": "Joven, con crianza en lias. D.O. Rueda",
+            "de": "Joven, con crianza en lias. D.O. Rueda",
+            "ru": "Joven, con crianza en lias. D.O. Rueda"
+          },
+          "precio": 32,
+          "emoji": "🥂",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "bla-12",
+          "nombre": {
+            "es": "Cosme Palacio Blanco Reserva",
+            "en": "Cosme Palacio Blanco Reserva",
+            "it": "Cosme Palacio Blanco Reserva",
+            "fr": "Cosme Palacio Blanco Reserva",
+            "de": "Cosme Palacio Blanco Reserva",
+            "ru": "Cosme Palacio Blanco Reserva"
+          },
+          "descripcion": {
+            "es": "Crianza en lias y en barrica. Viura. D.O. Rioja Alavesa",
+            "en": "Crianza en lias y en barrica. Viura. D.O. Rioja Alavesa",
+            "it": "Crianza en lias y en barrica. Viura. D.O. Rioja Alavesa",
+            "fr": "Crianza en lias y en barrica. Viura. D.O. Rioja Alavesa",
+            "de": "Crianza en lias y en barrica. Viura. D.O. Rioja Alavesa",
+            "ru": "Crianza en lias y en barrica. Viura. D.O. Rioja Alavesa"
+          },
+          "precio": 38,
+          "emoji": "🥂",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "cat-rosados",
+      "tipo": "vinos",
+      "nombre": {
+        "es": "Vinos Rosados",
+        "en": "Rosé Wines",
+        "it": "Vini Rosati",
+        "fr": "Vins Rosés",
+        "de": "Roséweine",
+        "ru": "Розовые вина"
+      },
+      "platos": [
+        {
+          "id": "ros-1",
+          "nombre": {
+            "es": "Marqués de Riscal Rosado",
+            "en": "Marqués de Riscal Rosado",
+            "it": "Marqués de Riscal Rosado",
+            "fr": "Marqués de Riscal Rosado",
+            "de": "Marqués de Riscal Rosado",
+            "ru": "Marqués de Riscal Rosado"
+          },
+          "descripcion": {
+            "es": "Tempranillo. D.O.C. Rioja",
+            "en": "Tempranillo. D.O.C. Rioja",
+            "it": "Tempranillo. D.O.C. Rioja",
+            "fr": "Tempranillo. D.O.C. Rioja",
+            "de": "Tempranillo. D.O.C. Rioja",
+            "ru": "Tempranillo. D.O.C. Rioja"
+          },
+          "precio": 28,
+          "emoji": "🌸",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "cat-espumosos",
+      "tipo": "vinos",
+      "nombre": {
+        "es": "Vinos Espumosos",
+        "en": "Sparkling Wines",
+        "it": "Vini Spumanti",
+        "fr": "Vins Pétillants",
+        "de": "Schaumweine",
+        "ru": "Игристые вина"
+      },
+      "platos": [
+        {
+          "id": "esp-1",
+          "nombre": {
+            "es": "Alegria de Tharsys Brut Nature",
+            "en": "Alegria de Tharsys Brut Nature",
+            "it": "Alegria de Tharsys Brut Nature",
+            "fr": "Alegria de Tharsys Brut Nature",
+            "de": "Alegria de Tharsys Brut Nature",
+            "ru": "Alegria de Tharsys Brut Nature"
+          },
+          "descripcion": {
+            "es": "Macabeo. Reserva Brut Nature. D.O. Cava (Requena)",
+            "en": "Macabeo. Reserva Brut Nature. D.O. Cava (Requena)",
+            "it": "Macabeo. Reserva Brut Nature. D.O. Cava (Requena)",
+            "fr": "Macabeo. Reserva Brut Nature. D.O. Cava (Requena)",
+            "de": "Macabeo. Reserva Brut Nature. D.O. Cava (Requena)",
+            "ru": "Macabeo. Reserva Brut Nature. D.O. Cava (Requena)"
+          },
+          "precio": 25,
+          "precio_label": "copa 5€",
+          "emoji": "🍾",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "esp-2",
+          "nombre": {
+            "es": "Terrer de la Creu Brut Nature",
+            "en": "Terrer de la Creu Brut Nature",
+            "it": "Terrer de la Creu Brut Nature",
+            "fr": "Terrer de la Creu Brut Nature",
+            "de": "Terrer de la Creu Brut Nature",
+            "ru": "Terrer de la Creu Brut Nature"
+          },
+          "descripcion": {
+            "es": "Xarel·lo, Macabeo y Parellada. Reserva Brut Nature. D.O. Cava (Penedès)",
+            "en": "Xarel·lo, Macabeo y Parellada. Reserva Brut Nature. D.O. Cava (Penedès)",
+            "it": "Xarel·lo, Macabeo y Parellada. Reserva Brut Nature. D.O. Cava (Penedès)",
+            "fr": "Xarel·lo, Macabeo y Parellada. Reserva Brut Nature. D.O. Cava (Penedès)",
+            "de": "Xarel·lo, Macabeo y Parellada. Reserva Brut Nature. D.O. Cava (Penedès)",
+            "ru": "Xarel·lo, Macabeo y Parellada. Reserva Brut Nature. D.O. Cava (Penedès)"
+          },
+          "precio": 26,
+          "emoji": "🍾",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "esp-3",
+          "nombre": {
+            "es": "Pago Tharsys Millesime Rosado",
+            "en": "Pago Tharsys Millesime Rosado",
+            "it": "Pago Tharsys Millesime Rosado",
+            "fr": "Pago Tharsys Millesime Rosado",
+            "de": "Pago Tharsys Millesime Rosado",
+            "ru": "Pago Tharsys Millesime Rosado"
+          },
+          "descripcion": {
+            "es": "Garnacha. Reserva. D.O. Cava (Requena)",
+            "en": "Garnacha. Reserva. D.O. Cava (Requena)",
+            "it": "Garnacha. Reserva. D.O. Cava (Requena)",
+            "fr": "Garnacha. Reserva. D.O. Cava (Requena)",
+            "de": "Garnacha. Reserva. D.O. Cava (Requena)",
+            "ru": "Garnacha. Reserva. D.O. Cava (Requena)"
+          },
+          "precio": 38,
+          "emoji": "🍾",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "esp-4",
+          "nombre": {
+            "es": "Laurent Perrier La Cuvée",
+            "en": "Laurent Perrier La Cuvée",
+            "it": "Laurent Perrier La Cuvée",
+            "fr": "Laurent Perrier La Cuvée",
+            "de": "Laurent Perrier La Cuvée",
+            "ru": "Laurent Perrier La Cuvée"
+          },
+          "descripcion": {
+            "es": "Chardonnay, Pinot Noir y Pinot Meunier. Champagne",
+            "en": "Chardonnay, Pinot Noir y Pinot Meunier. Champagne",
+            "it": "Chardonnay, Pinot Noir y Pinot Meunier. Champagne",
+            "fr": "Chardonnay, Pinot Noir y Pinot Meunier. Champagne",
+            "de": "Chardonnay, Pinot Noir y Pinot Meunier. Champagne",
+            "ru": "Chardonnay, Pinot Noir y Pinot Meunier. Champagne"
+          },
+          "precio": 85,
+          "emoji": "🍾",
+          "imagen_url": null,
+          "alergenos": [],
+          "disponible": true
+        },
+        {
+          "id": "esp-5",
+          "nombre": {
+            "es": "Laurent Perrier Rosé",
+            "en": "Laurent Perrier Rosé",
+            "it": "Laurent Perrier Rosé",
+            "fr": "Laurent Perrier Rosé",
+            "de": "Laurent Perrier Rosé",
+            "ru": "Laurent Perrier Rosé"
+          },
+          "descripcion": {
+            "es": "Pinot Noir. Champagne",
+            "en": "Pinot Noir. Champagne",
+            "it": "Pinot Noir. Champagne",
+            "fr": "Pinot Noir. Champagne",
+            "de": "Pinot Noir. Champagne",
+            "ru": "Pinot Noir. Champagne"
+          },
+          "precio": 140,
+          "emoji": "🍾",
+          "imagen_url": null,
+          "alergenos": [],
           "disponible": true
         }
       ]
