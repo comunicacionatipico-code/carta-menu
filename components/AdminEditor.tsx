@@ -83,6 +83,17 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
     if (editando?.categoriaId === categoriaId) setEditando(null)
   }
 
+  const moverCategoria = (categoriaId: string, dir: -1 | 1) => {
+    setData(prev => {
+      const cats = [...prev.categorias]
+      const idx = cats.findIndex(c => c.id === categoriaId)
+      const newIdx = idx + dir
+      if (newIdx < 0 || newIdx >= cats.length) return prev
+      ;[cats[idx], cats[newIdx]] = [cats[newIdx], cats[idx]]
+      return { ...prev, categorias: cats }
+    })
+  }
+
   const eliminarPlato = (categoriaId: string, platoId: string) => {
     if (!confirm('¿Eliminar este plato?')) return
     setData(prev => ({
@@ -306,12 +317,28 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
           </div>
 
           {/* Categorías y platos */}
-          {data.categorias.map(cat => (
+          {data.categorias.map((cat, idx) => (
             <div key={cat.id} className="mb-6">
               <div className="flex items-center justify-between mb-2 px-1">
-                <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400">
-                  {cat.nombre[data.idiomas[0]] ?? cat.nombre[Object.keys(cat.nombre)[0]]}
-                </h2>
+                <div className="flex items-center gap-1.5">
+                  <div className="flex flex-col gap-0.5">
+                    <button
+                      onClick={() => moverCategoria(cat.id, -1)}
+                      disabled={idx === 0}
+                      className="w-5 h-5 flex items-center justify-center rounded text-gray-300 hover:text-gray-600 hover:bg-gray-100 disabled:opacity-20 disabled:cursor-default transition-all text-[10px] leading-none"
+                      title="Subir sección"
+                    >▲</button>
+                    <button
+                      onClick={() => moverCategoria(cat.id, 1)}
+                      disabled={idx === data.categorias.length - 1}
+                      className="w-5 h-5 flex items-center justify-center rounded text-gray-300 hover:text-gray-600 hover:bg-gray-100 disabled:opacity-20 disabled:cursor-default transition-all text-[10px] leading-none"
+                      title="Bajar sección"
+                    >▼</button>
+                  </div>
+                  <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400">
+                    {cat.nombre[data.idiomas[0]] ?? cat.nombre[Object.keys(cat.nombre)[0]]}
+                  </h2>
+                </div>
                 <select
                   value={cat.tipo ?? 'carta'}
                   onChange={e => setData(prev => ({
