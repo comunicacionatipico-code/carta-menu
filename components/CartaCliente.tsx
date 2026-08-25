@@ -5,7 +5,7 @@ import { Restaurante } from '@/types/restaurante'
 import { ALERGENOS } from '@/lib/alergenos'
 
 export default function CartaCliente({ restaurante, slug, idiomaInicial, tipoCarta }: { restaurante: Restaurante; slug: string; idiomaInicial?: string; tipoCarta?: string }) {
-  const modoLista = tipoCarta === 'bebidas' || tipoCarta === 'vinos'
+  const modoLista = tipoCarta === 'bebidas' || tipoCarta === 'vinos' || tipoCarta === 'cocktails'
   const [idiomaActivo, setIdiomaActivo] = useState(idiomaInicial ?? restaurante.idiomas[0])
   const [categoriaActiva, setCategoriaActiva] = useState(restaurante.categorias[0]?.id)
   const chipsRef = useRef<HTMLDivElement>(null)
