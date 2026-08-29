@@ -38,4 +38,5 @@ export interface Restaurante {
   menus_ocultos?: string[]
   idiomas: string[]
   categorias: Categoria[]
+  dominio_personalizado?: string
 }
