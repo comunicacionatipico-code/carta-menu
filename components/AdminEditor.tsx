@@ -19,8 +19,11 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
   const [guardadoOk, setGuardadoOk] = useState(false)
   const [uploadingId, setUploadingId] = useState<string | null>(null)
   const [logoUploading, setLogoUploading] = useState(false)
+  const [pdfImporting, setPdfImporting] = useState(false)
+  const [pdfMsg, setPdfMsg] = useState('')
   const fileInputRef = useRef<HTMLInputElement>(null)
   const logoInputRef = useRef<HTMLInputElement>(null)
+  const pdfInputRef = useRef<HTMLInputElement>(null)
 
   const platoActual = editando
     ? data.categorias.find(c => c.id === editando.categoriaId)?.platos.find(p => p.id === editando.platoId) ?? null
@@ -194,6 +197,28 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
       alert('Error subiendo logo: ' + String(e))
     } finally {
       setLogoUploading(false)
+    }
+  }
+
+  const importarPdf = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+    setPdfImporting(true)
+    setPdfMsg('Leyendo PDF…')
+    try {
+      const fd = new FormData()
+      fd.append('pdf', file)
+      setPdfMsg('Claude está analizando la carta…')
+      const res = await fetch(`/api/admin/${slug}/import-pdf`, { method: 'POST', body: fd })
+      const json = await res.json()
+      if (!res.ok) { setPdfMsg('Error: ' + (json.error || 'desconocido')); return }
+      setData(prev => ({ ...prev, categorias: [...prev.categorias, ...json.categorias] }))
+      setPdfMsg(`✓ Importadas ${json.total} secciones y ${json.platos} platos. Revisa y guarda.`)
+    } catch (err) {
+      setPdfMsg('Error: ' + String(err))
+    } finally {
+      setPdfImporting(false)
+      e.target.value = ''
     }
   }
 
@@ -436,6 +461,27 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
           >
             + Añadir sección
           </button>
+
+          {/* Importar PDF */}
+          <div className="mt-3 rounded-xl border-2 border-dashed border-purple-200 overflow-hidden">
+            <button
+              onClick={() => pdfInputRef.current?.click()}
+              disabled={pdfImporting}
+              className="w-full flex items-center justify-center gap-2 py-3 text-purple-400 text-sm font-medium hover:bg-purple-50 hover:text-purple-600 transition-all disabled:opacity-60"
+            >
+              {pdfImporting ? (
+                <><span className="animate-spin">⏳</span> {pdfMsg}</>
+              ) : (
+                <><span>📄</span> Importar carta desde PDF</>
+              )}
+            </button>
+            {pdfMsg && !pdfImporting && (
+              <p className={`text-xs text-center px-4 pb-3 ${pdfMsg.startsWith('✓') ? 'text-green-600' : 'text-red-500'}`}>
+                {pdfMsg}
+              </p>
+            )}
+            <input ref={pdfInputRef} type="file" accept="application/pdf" className="hidden" onChange={importarPdf} />
+          </div>
         </div>
 
         {/* PANEL DE EDICIÓN */}
