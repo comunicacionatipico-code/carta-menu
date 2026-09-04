@@ -239,6 +239,12 @@ export default function AdminEditor({ restaurante: inicial, slug }: { restaurant
         </div>
         <div className="flex items-center gap-2">
           <Link
+            href={`/admin/${slug}/galeria`}
+            className="text-xs text-gray-500 border border-gray-200 px-3 py-1.5 rounded-full hover:bg-gray-50 transition-colors"
+          >
+            🖼 Fotos
+          </Link>
+          <Link
             href={`/${slug}`}
             target="_blank"
             className="text-xs text-gray-500 border border-gray-200 px-3 py-1.5 rounded-full hover:bg-gray-50 transition-colors"
