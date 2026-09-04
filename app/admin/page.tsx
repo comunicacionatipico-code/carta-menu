@@ -1,4 +1,5 @@
 import { unstable_noStore as noStore } from 'next/cache'
+import { headers } from 'next/headers'
 import { getSupabase } from '@/lib/supabase'
 import { getAllSlugs, getRestaurante } from '@/lib/restaurante'
 import { Restaurante } from '@/types/restaurante'
@@ -21,7 +22,15 @@ async function getRestaurantes(): Promise<Item[]> {
 
 export default async function AdminIndex() {
   noStore()
-  const lista = await getRestaurantes()
+  const hdrs = headers()
+  const isSuperAdmin = hdrs.get('x-session-super') === '1'
+  const usuario = hdrs.get('x-session-usuario') ?? ''
+  const restaurantesAsignados: string[] = JSON.parse(hdrs.get('x-session-restaurantes') ?? '[]')
+
+  const todosLosRestaurantes = await getRestaurantes()
+  const lista = isSuperAdmin
+    ? todosLosRestaurantes
+    : todosLosRestaurantes.filter(r => restaurantesAsignados.includes(r.slug))
 
   return (
     <div className="min-h-screen bg-gray-50 p-8">
@@ -29,15 +38,31 @@ export default async function AdminIndex() {
         <div className="mb-8 flex items-start justify-between">
           <div>
             <h1 className="text-2xl font-bold text-gray-900">Panel de administración</h1>
-            <p className="text-sm text-gray-500 mt-1">Selecciona un restaurante para editar su carta</p>
+            <p className="text-sm text-gray-500 mt-1">
+              {isSuperAdmin ? 'Super administrador' : `Usuario: ${usuario}`}
+            </p>
           </div>
           <div className="flex items-center gap-3">
-            <NuevoRestauranteBtn />
+            {isSuperAdmin && <NuevoRestauranteBtn />}
+            {isSuperAdmin && (
+              <Link
+                href="/admin/usuarios"
+                className="text-sm px-3 py-1.5 rounded-full border border-gray-200 text-gray-600 hover:bg-gray-100 transition-colors"
+              >
+                👥 Usuarios
+              </Link>
+            )}
             <LogoutButton />
           </div>
         </div>
 
         <div className="space-y-3">
+          {lista.length === 0 && (
+            <div className="text-center py-12 text-gray-400">
+              <p className="text-4xl mb-3">🍽️</p>
+              <p>No tienes restaurantes asignados</p>
+            </div>
+          )}
           {lista.map((r) => {
             const totalPlatos = r.categorias?.reduce((acc, c) => acc + c.platos.length, 0) ?? 0
             return (
@@ -60,12 +85,6 @@ export default async function AdminIndex() {
               </Link>
             )
           })}
-        </div>
-
-        <div className="mt-6 pt-6 border-t border-gray-200">
-          <Link href="/" className="text-sm text-gray-400 hover:text-gray-600 transition-colors">
-            ← Volver al inicio
-          </Link>
         </div>
       </div>
     </div>
