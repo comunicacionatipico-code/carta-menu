@@ -47,7 +47,15 @@ export default function RestauranteSplash({ restaurante, slug }: { restaurante: 
   }
 
   if (paso === 'carta') {
-    return <CartaCliente restaurante={restaurante} slug={slug} idiomaInicial={idioma} tipoCarta={tipoCarta} />
+    return (
+      <CartaCliente
+        restaurante={restaurante}
+        slug={slug}
+        idiomaInicial={idioma}
+        tipoCarta={tipoCarta}
+        onVolver={() => { setSaliendo(true); setTimeout(() => { setPaso('tipo'); setSaliendo(false) }, 250) }}
+      />
+    )
   }
 
   const labelTipo = (tipo: typeof TIPOS_CARTA[0]) =>

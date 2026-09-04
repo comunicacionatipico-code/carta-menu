@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Restaurante } from '@/types/restaurante'
 import { ALERGENOS } from '@/lib/alergenos'
 
-export default function CartaCliente({ restaurante, slug, idiomaInicial, tipoCarta }: { restaurante: Restaurante; slug: string; idiomaInicial?: string; tipoCarta?: string }) {
+export default function CartaCliente({ restaurante, slug, idiomaInicial, tipoCarta, onVolver }: { restaurante: Restaurante; slug: string; idiomaInicial?: string; tipoCarta?: string; onVolver?: () => void }) {
   const modoLista = tipoCarta === 'bebidas' || tipoCarta === 'vinos' || tipoCarta === 'cocktails'
   const [idiomaActivo, setIdiomaActivo] = useState(idiomaInicial ?? restaurante.idiomas[0])
   const [categoriaActiva, setCategoriaActiva] = useState(restaurante.categorias[0]?.id)
@@ -102,6 +102,15 @@ export default function CartaCliente({ restaurante, slug, idiomaInicial, tipoCar
         className="sticky top-0 z-30 flex gap-2 overflow-x-auto px-4 py-3 scrollbar-hide"
         style={{ backgroundColor: restaurante.color_primario }}
       >
+        {onVolver && (
+          <button
+            onClick={onVolver}
+            className="flex-shrink-0 flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-full transition-all whitespace-nowrap"
+            style={{ backgroundColor: 'rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.85)' }}
+          >
+            ← Secciones
+          </button>
+        )}
         {categoriasFiltradas.map((cat) => (
           <button
             key={cat.id}
