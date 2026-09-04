@@ -3,8 +3,7 @@
 import { useState } from 'react'
 import { Restaurante } from '@/types/restaurante'
 
-type Plato = { id: string; nombre: { es: string }; imagen_url?: string | null; tipo?: string }
-type PlatoEntry = { catNombre: string; plato: Plato }
+type PlatoEntry = { catNombre: string; plato: { id: string; nombre: Record<string, string>; imagen_url?: string | null } }
 
 export default function GaleriaEditor({ slug, restaurante, imagenes }: { slug: string; restaurante: Restaurante; imagenes: string[] }) {
   const [data, setData] = useState<Restaurante>(restaurante)
