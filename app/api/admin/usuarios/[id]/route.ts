@@ -3,15 +3,15 @@ import bcrypt from 'bcryptjs'
 import { getSupabase } from '@/lib/supabase'
 import { verifySession } from '@/lib/session'
 
-function getSuperAdmin(req: NextRequest) {
+async function getSuperAdmin(req: NextRequest) {
   const cookie = req.cookies.get('admin_session')?.value
   if (!cookie) return null
-  const s = verifySession(cookie)
+  const s = await verifySession(cookie)
   return s?.superAdmin ? s : null
 }
 
 export async function PATCH(req: NextRequest, { params }: { params: { id: string } }) {
-  if (!getSuperAdmin(req)) return NextResponse.json({ error: 'Sin permiso' }, { status: 403 })
+  if (!await getSuperAdmin(req)) return NextResponse.json({ error: 'Sin permiso' }, { status: 403 })
   const supabase = getSupabase()
   if (!supabase) return NextResponse.json({ error: 'Sin Supabase' }, { status: 500 })
 
@@ -26,7 +26,7 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
 }
 
 export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
-  if (!getSuperAdmin(req)) return NextResponse.json({ error: 'Sin permiso' }, { status: 403 })
+  if (!await getSuperAdmin(req)) return NextResponse.json({ error: 'Sin permiso' }, { status: 403 })
   const supabase = getSupabase()
   if (!supabase) return NextResponse.json({ error: 'Sin Supabase' }, { status: 500 })
 

@@ -26,7 +26,7 @@ export async function middleware(req: NextRequest) {
   // Admin routes — verify session
   if (pathname.startsWith('/admin')) {
     const cookie = req.cookies.get('admin_session')?.value
-    const session = cookie ? verifySession(cookie) : null
+    const session = cookie ? await verifySession(cookie) : null
 
     if (!session) {
       const url = req.nextUrl.clone()

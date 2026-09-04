@@ -1,33 +1,44 @@
-import { createHmac } from 'crypto'
-
 export type SessionPayload = {
   id: string
   usuario: string
   superAdmin: boolean
-  restaurantes: string[] // slugs asignados; vacío = acceso a todos si superAdmin
+  restaurantes: string[]
   exp: number
 }
 
-export function signSession(payload: SessionPayload): string {
-  const data = Buffer.from(JSON.stringify(payload)).toString('base64url')
-  const sig = createHmac('sha256', process.env.ADMIN_SECRET ?? 'fallback')
-    .update(data).digest('base64url')
+function getSecret(): string {
+  return process.env.ADMIN_SECRET ?? 'fallback-secret-change-me'
+}
+
+async function hmacSign(data: string, secret: string): Promise<string> {
+  const enc = new TextEncoder()
+  const key = await crypto.subtle.importKey(
+    'raw', enc.encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']
+  )
+  const sig = await crypto.subtle.sign('HMAC', key, enc.encode(data))
+  return btoa(String.fromCharCode(...new Uint8Array(sig)))
+    .replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '')
+}
+
+export async function signSession(payload: SessionPayload): Promise<string> {
+  const data = btoa(JSON.stringify(payload)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '')
+  const sig = await hmacSign(data, getSecret())
   return `${data}.${sig}`
 }
 
-export function verifySession(cookie: string): SessionPayload | null {
-  const dot = cookie.lastIndexOf('.')
-  if (dot < 0) return null
-  const data = cookie.slice(0, dot)
-  const sig  = cookie.slice(dot + 1)
-  const expected = createHmac('sha256', process.env.ADMIN_SECRET ?? 'fallback')
-    .update(data).digest('base64url')
-  if (sig !== expected) return null
+export async function verifySession(cookie: string): Promise<SessionPayload | null> {
   try {
-    const payload = JSON.parse(Buffer.from(data, 'base64url').toString()) as SessionPayload
+    const [data, sig] = cookie.split('.')
+    if (!data || !sig) return null
+    const expected = await hmacSign(data, getSecret())
+    if (expected !== sig) return null
+    const padded = data.replace(/-/g, '+').replace(/_/g, '/') + '=='.slice((data.length * 3) % 4 || 4)
+    const payload: SessionPayload = JSON.parse(atob(padded))
     if (payload.exp < Date.now()) return null
     return payload
-  } catch { return null }
+  } catch {
+    return null
+  }
 }
 
 export function canAccessRestaurant(session: SessionPayload, slug: string): boolean {

@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
   const superUser = process.env.ADMIN_USER ?? 'admin'
   const superPass = process.env.ADMIN_PASSWORD ?? secret
   if (usuario === superUser && password === superPass) {
-    const token = signSession({ id: 'superadmin', usuario: superUser, superAdmin: true, restaurantes: [], exp: Date.now() + SESSION_TTL })
+    const token = await signSession({ id: 'superadmin', usuario: superUser, superAdmin: true, restaurantes: [], exp: Date.now() + SESSION_TTL })
     const res = NextResponse.json({ ok: true, superAdmin: true })
     res.cookies.set('admin_session', token, { httpOnly: true, secure: true, sameSite: 'lax', maxAge: 60 * 60 * 24 * 7, path: '/' })
     return res
@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
   const ok = await bcrypt.compare(password, user.password_hash)
   if (!ok) return NextResponse.json({ error: 'Usuario o contraseña incorrectos' }, { status: 401 })
 
-  const token = signSession({ id: user.id, usuario: user.usuario, superAdmin: false, restaurantes: user.restaurantes ?? [], exp: Date.now() + SESSION_TTL })
+  const token = await signSession({ id: user.id, usuario: user.usuario, superAdmin: false, restaurantes: user.restaurantes ?? [], exp: Date.now() + SESSION_TTL })
   const res = NextResponse.json({ ok: true, superAdmin: false, restaurantes: user.restaurantes ?? [] })
   res.cookies.set('admin_session', token, { httpOnly: true, secure: true, sameSite: 'lax', maxAge: 60 * 60 * 24 * 7, path: '/' })
   return res
