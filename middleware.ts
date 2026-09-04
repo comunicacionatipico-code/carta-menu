@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { verifySession, canAccessRestaurant } from '@/lib/session'
 
 const domainCache = new Map<string, { slug: string | null; ts: number }>()
 const CACHE_TTL = 5 * 60 * 1000
@@ -9,24 +8,50 @@ async function resolveCustomDomain(host: string, origin: string): Promise<string
   const cached = domainCache.get(host)
   if (cached && Date.now() - cached.ts < CACHE_TTL) return cached.slug
   try {
-    const res = await fetch(`${origin}/api/resolve-domain?host=${encodeURIComponent(host)}`, { headers: { 'x-internal': '1' }, next: { revalidate: 300 } })
+    const res = await fetch(`${origin}/api/resolve-domain?host=${encodeURIComponent(host)}`, { headers: { 'x-internal': '1' } })
     const json: { slug: string | null } = await res.json()
     domainCache.set(host, { slug: json.slug, ts: Date.now() })
     return json.slug
   } catch { return null }
 }
 
+async function decodeSession(cookie: string): Promise<{ id: string; usuario: string; superAdmin: boolean; restaurantes: string[]; exp: number } | null> {
+  try {
+    const [data, sig] = cookie.split('.')
+    if (!data || !sig) return null
+
+    const secret = process.env.ADMIN_SECRET ?? 'fallback-secret-change-me'
+    const enc = new TextEncoder()
+    const key = await crypto.subtle.importKey(
+      'raw', enc.encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']
+    )
+    const sigBuf = await crypto.subtle.sign('HMAC', key, enc.encode(data))
+    const expected = btoa(String.fromCharCode(...new Uint8Array(sigBuf)))
+      .replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '')
+
+    if (expected !== sig) return null
+
+    const padded = data.replace(/-/g, '+').replace(/_/g, '/')
+    const json = atob(padded + '=='.slice(padded.length % 4 || 4))
+    const payload = JSON.parse(json)
+    if (!payload || payload.exp < Date.now()) return null
+    return payload
+  } catch {
+    return null
+  }
+}
+
 export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl
   const host = req.headers.get('host') ?? ''
 
-  // Public: login page
+  // Public: login page and static assets
   if (pathname.startsWith('/admin/login')) return NextResponse.next()
 
   // Admin routes — verify session
   if (pathname.startsWith('/admin')) {
     const cookie = req.cookies.get('admin_session')?.value
-    const session = cookie ? await verifySession(cookie) : null
+    const session = cookie ? await decodeSession(cookie) : null
 
     if (!session) {
       const url = req.nextUrl.clone()
@@ -34,25 +59,24 @@ export async function middleware(req: NextRequest) {
       return NextResponse.redirect(url)
     }
 
-    // Restrict restaurant-specific routes to assigned users
-    const match = pathname.match(/^\/admin\/([^\/]+)/)
+    const match = pathname.match(/^\/admin\/([^/]+)/)
     if (match) {
       const slug = match[1]
       const reserved = ['login', 'usuarios']
-      if (!reserved.includes(slug) && !canAccessRestaurant(session, slug)) {
+
+      if (slug === 'usuarios' && !session.superAdmin) {
         const url = req.nextUrl.clone()
         url.pathname = '/admin'
         return NextResponse.redirect(url)
       }
-      // Only superAdmin can access /admin/usuarios
-      if (slug === 'usuarios' && !session.superAdmin) {
+
+      if (!reserved.includes(slug) && !session.superAdmin && !session.restaurantes.includes(slug)) {
         const url = req.nextUrl.clone()
         url.pathname = '/admin'
         return NextResponse.redirect(url)
       }
     }
 
-    // Inject session info as headers for server components
     const res = NextResponse.next()
     res.headers.set('x-session-super', session.superAdmin ? '1' : '0')
     res.headers.set('x-session-restaurantes', JSON.stringify(session.restaurantes))
