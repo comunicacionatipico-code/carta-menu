@@ -3,11 +3,11 @@ import { NextRequest, NextResponse } from 'next/server'
 export async function POST(req: NextRequest) {
   const { usuario, password } = await req.json()
 
-  const validUser = process.env.ADMIN_USER
-  const validPass = process.env.ADMIN_PASSWORD
+  const validUser = process.env.ADMIN_USER ?? 'admin'
+  const validPass = process.env.ADMIN_PASSWORD ?? process.env.ADMIN_SECRET
   const secret = process.env.ADMIN_SECRET
 
-  if (!validUser || !validPass || !secret) {
+  if (!secret) {
     return NextResponse.json({ error: 'Servidor no configurado' }, { status: 500 })
   }
 
