@@ -16,7 +16,7 @@ async function hmacSign(data: string, secret: string): Promise<string> {
     'raw', enc.encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']
   )
   const sig = await crypto.subtle.sign('HMAC', key, enc.encode(data))
-  return btoa(String.fromCharCode(...new Uint8Array(sig)))
+  return btoa(Array.from(new Uint8Array(sig), b => String.fromCharCode(b)).join(''))
     .replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '')
 }
 

@@ -26,7 +26,7 @@ async function decodeSession(cookie: string): Promise<{ id: string; usuario: str
       'raw', enc.encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']
     )
     const sigBuf = await crypto.subtle.sign('HMAC', key, enc.encode(data))
-    const expected = btoa(String.fromCharCode(...new Uint8Array(sigBuf)))
+    const expected = btoa(Array.from(new Uint8Array(sigBuf), b => String.fromCharCode(b)).join(''))
       .replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '')
 
     if (expected !== sig) return null
