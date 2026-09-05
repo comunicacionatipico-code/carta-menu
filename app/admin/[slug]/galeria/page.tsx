@@ -1,3 +1,4 @@
+import { unstable_noStore as noStore } from 'next/cache'
 import { notFound } from 'next/navigation'
 import { getSupabase } from '@/lib/supabase'
 import { Restaurante } from '@/types/restaurante'
@@ -6,6 +7,7 @@ import GaleriaEditor from '@/components/GaleriaEditor'
 export const dynamic = 'force-dynamic'
 
 export default async function GaleriaPage({ params }: { params: { slug: string } }) {
+  noStore()
   const supabase = getSupabase()
   if (!supabase) notFound()
 
