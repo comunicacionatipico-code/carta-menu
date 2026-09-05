@@ -1,3 +1,4 @@
+import { unstable_noStore as noStore } from 'next/cache'
 import { getSupabase } from '@/lib/supabase'
 import { Restaurante } from '@/types/restaurante'
 import UsuariosManager from '@/components/UsuariosManager'
@@ -16,13 +17,16 @@ async function getRestaurantes(): Promise<{ slug: string; nombre: string; color:
 }
 
 async function getUsuarios() {
+  noStore()
   const supabase = getSupabase()
   if (!supabase) return []
-  const { data } = await supabase.from('usuarios').select('id, usuario, restaurantes, created_at').order('created_at')
+  const { data, error } = await supabase.from('usuarios').select('id, usuario, restaurantes, created_at').order('created_at')
+  if (error) console.error('[usuarios] query error:', error)
   return data ?? []
 }
 
 export default async function UsuariosPage() {
+  noStore()
   const [restaurantes, usuarios] = await Promise.all([getRestaurantes(), getUsuarios()])
 
   return (
